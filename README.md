@@ -1,6 +1,6 @@
 # Lakshaya Coaching Institute Project
 
-This is a freelancing project for a Coaching institute named Lakshaya. Our target is to provide online education to the students by scaling from offline to online. Students can purchase courses, view notes, and watch course videos.
+This freelancing project involves transitioning a coaching institute, named Lakshaya, from offline to online education. The primary objective is to offer students the opportunity to purchase courses, access study materials such as notes, and watch instructional videos through the online platform.
 
 ## Setup Instructions
 
