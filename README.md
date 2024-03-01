@@ -41,13 +41,27 @@ export default {
 @tailwind components;
 @tailwind utilities;
 ```
-### Install PrimeReact Component Library
-PrimeReact is a collection of rich UI components for React. All widgets are open source and free to use under MIT License. PrimeReact is developed by PrimeTek Informatics, a vendor with years of expertise in developing open source UI solutions.
-
-To install PrimeReact and its dependencies, run the following commands:
+### Install Flowbite Component Library
+Install Flowbite and Flowbite React by running the following command in your terminal:
 
 ```bash
-npm install primereact
-npm install primeicons       
-npm install react-transition-group
+npm install flowbite flowbite-react
+```
+### Require Flowbite as a plugin inside your tailwind.config.js file:
+```bash
+module.exports = {
+  plugins: [
+    require('flowbite/plugin')
+  ]
+}
+```
+Additionally to your own content data you should add the Flowbite source paths to apply the classes from the interactive elements in the tailwind.config.js file:
+
+```bash
+module.exports = {
+  content: [
+    // ...
+    'node_modules/flowbite-react/lib/esm/**/*.js'
+  ]
+}
 ```
