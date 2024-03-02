@@ -19,12 +19,12 @@ const Navbar = () => {
       
       <nav className="hidden gap-12 lg:flex">
         <ul className="hidden gap-12 lg:flex">
-        <li  className="text-base font-semibold text-red-700 transition duration-100 hover:text-red-500 ">Courses</li>
-        <li  className="text-base font-semibold text-red-700 transition duration-100 hover:text-red-500 ">Residential Program</li>
-        <li  className="text-base font-semibold text-red-700 transition duration-100 hover:text-red-500 ">Result</li>
-        <li  className="text-base font-semibold text-red-700 transition duration-100 hover:text-red-500 ">Pay Fee</li>
-        <li  className="text-base font-semibold text-red-700 transition duration-100 hover:text-red-500 ">Resources</li>
-        <li  className="text-base font-semibold text-red-700 transition duration-100 hover:text-red-500 ">About Us</li>
+        <li  className="text-base font-semibold text-black transition duration-100 hover:text-red-500 ">Courses</li>
+        <li  className="text-base font-semibold text-black transition duration-100 hover:text-red-500 ">Residential Program</li>
+        <li  className="text-base font-semibold text-black transition duration-100 hover:text-red-500 ">Result</li>
+        <li  className="text-base font-semibold text-black transition duration-100 hover:text-red-500 ">Pay Fee</li>
+        <li  className="text-base font-semibold text-black transition duration-100 hover:text-red-500 ">Resources</li>
+        <li  className="text-base font-semibold text-black transition duration-100 hover:text-red-500 ">About Us</li>
         </ul>
         
       </nav>
@@ -32,7 +32,7 @@ const Navbar = () => {
 
       
       <div className="-ml-8 hidden flex-col gap-2.5 sm:flex-row sm:justify-center lg:flex lg:justify-start">
-        <a href="#" className="inline-block border-red-700 border-2 px-4 py-3 text-sm font-semibold text-center text-red-700 transition duration-100 rounded-lg  hover:text-red-500 focus-visible:ring md:text-base">Contact Us</a>
+        <a href="#" className="inline-block border-red-700 border-2 px-4 py-3 text-sm font-semibold text-center text-black transition duration-100 rounded-lg  hover:text-red-500 focus-visible:ring md:text-base">Contact Us</a>
 
         <a href="#" className="inline-block px-8 py-3 text-sm font-semibold text-center text-white transition duration-100 bg-red-700 rounded-lg outline-none ring-indigo-300 hover:bg-red-500 focus-visible:ring md:text-base">Sign up</a>
       </div>
