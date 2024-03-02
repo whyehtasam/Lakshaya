@@ -14,7 +14,7 @@ const FooterMain = () => {
     <Footer container className="">
       <div className="w-full">
         <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
-          <div className="flex pb-6 lg:p-0 ">
+          <div className="flex md:hidden lg:flex pb-6 lg:p-0 ">
             <a
               href="/"
               className="inline-flex items-center gap-2.5 text-2xl font-bold text-black md:text-3xl"
@@ -33,7 +33,7 @@ const FooterMain = () => {
               Lakshaya
             </a>
           </div>
-          <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 md:grid-cols-4 lg:gap-24">
+          <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 md:grid-cols-4 lg:gap-20">
             <div>
               <Footer.Title title="About Us" />
               <Footer.LinkGroup col>
