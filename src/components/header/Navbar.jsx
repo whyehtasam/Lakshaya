@@ -18,23 +18,23 @@ const Navbar = () => {
       
 
       
-      <nav className="hidden gap-12 lg:flex">
-        <ul className="hidden gap-12 lg:flex">
+      <nav className="hidden lg:gap-12 lg:flex">
+        <ul className="hidden lg:gap-[4vw] lg:flex">
 
         <Link to='/courses'> 
-        <li  className="text-base font-semibold text-black transition duration-100 hover:text-red-500 ">Courses</li>
+        <li  className="text-sm font-semibold text-black transition duration-100 hover:text-red-800 ">Courses</li>
         </Link>
         <Link to='/residentialProgram'> 
-        <li  className="text-base font-semibold text-black transition duration-100 hover:text-red-500 ">Residential Program</li>
+        <li  className="text-sm font-semibold text-black transition duration-100 hover:text-red-800 ">Residential Program</li>
         </Link>
         <Link to='/feePayment'> 
-        <li  className="text-base font-semibold text-black transition duration-100 hover:text-red-500 ">Fee Payment</li>
+        <li  className="text-sm font-semibold text-black transition duration-100 hover:text-red-800 ">Fee Payment</li>
         </Link>
         <Link to='/resources'> 
-        <li  className="text-base font-semibold text-black transition duration-100 hover:text-red-500 ">Resourses</li>
+        <li  className="text-sm font-semibold text-black transition duration-100 hover:text-red-800 ">Resourses</li>
         </Link>
         <Link to='/aboutUs'> 
-        <li  className="text-base font-semibold text-black transition duration-100 hover:text-red-500 ">About Us</li>
+        <li  className="text-sm font-semibold text-black transition duration-100 hover:text-red-800 ">About Us</li>
         </Link>
         
         </ul>
@@ -43,14 +43,18 @@ const Navbar = () => {
       
 
       
-      <div className="-ml-8 hidden flex-col gap-2.5 sm:flex-row sm:justify-center lg:flex lg:justify-start">
-        <Link to='contactUs'> <a href="#" className="inline-block border-red-700 border-2 px-4 py-3 text-sm font-semibold text-center text-black transition duration-100 rounded-lg  hover:text-red-500 focus-visible:ring md:text-base">Contact Us</a></Link>
+      {/* <div className="-ml-8 hidden flex-col gap-2.5 sm:flex-row sm:justify-center lg:flex lg:justify-start">
+        <Link to='contactUs'> <a href="#" className="inline-block border-red-800 border-2 px-4 py-3 text-sm font-semibold text-center text-black transition duration-100 rounded-lg  hover:text-red-800 focus-visible:ring md:text-sm">Contact Us</a></Link>
 
-        <Link to='signUp'><a href="#" className="inline-block px-8 py-3 text-sm font-semibold text-center text-white transition duration-100 bg-red-700 rounded-lg outline-none ring-indigo-300 hover:bg-red-500 focus-visible:ring md:text-base">Sign up</a></Link>
+        <Link to='signUp'><a href="#" className="inline-block px-8 py-3 text-sm font-semibold text-center text-white transition duration-100 bg-red-800 rounded-lg outline-none ring-indigo-300 hover:bg-red-500 focus-visible:ring md:text-sm">Sign up</a></Link>
         
-      </div>
+      </div> */}
+      <ul className='lg:flex gap-2.5 font-semibold text-sm hidden '>
+        <li className='rounded-md border-2 border-red-800 text-red-800  py-2 px-4'>Contact Us</li>
+        <li className='py-2 px-4 rounded-md bg-red-800 text-white'>Sign Up</li>
+      </ul>
 
-      <button type="button" className="inline-flex items-center gap-2 rounded-lg bg-gray-200 px-2.5 py-2 text-sm font-semibold text-gray-500 ring-indigo-300 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base lg:hidden">
+      <button type="button" className="inline-flex items-center gap-2 rounded-lg bg-gray-200 px-2.5 py-2 text-sm font-semibold text-gray-500 ring-indigo-300 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-sm lg:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 20 20" fill="currentColor">
           <path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
         </svg>

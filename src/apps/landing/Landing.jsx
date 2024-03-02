@@ -1,8 +1,11 @@
 import React from 'react'
+import Container from '../../components/wrappers/Container'
 
 const landing = () => {
   return (
-    <div>landing</div>
+   <Container style=" ">
+    Landing
+   </Container>
   )
 }
 
