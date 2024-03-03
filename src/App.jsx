@@ -5,6 +5,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import { useEffect } from "react";
+import Input from "./components/input/Input";
 
 import Navbar from "./components/header/Navbar";
 import Landing from "./apps/landing/Landing";
