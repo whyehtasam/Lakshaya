@@ -2,10 +2,15 @@
 'use client';
 
 import { Accordion } from 'flowbite-react';
+import Container from '../wrappers/Container';
 
 function AccordionD() {
   return (
-    <>
+    <div>
+      <Container>
+
+      
+
     <h1 className='text-center text-4xl  font-[700] text-[#a21a4c] uppercase'>Important information about lost</h1>
     <Accordion className='p-5 max-w-[80%] m-auto mt-5 mb-5'>
       <Accordion.Panel>
@@ -75,7 +80,9 @@ function AccordionD() {
         </Accordion.Content>
       </Accordion.Panel>
     </Accordion>
-    </>
+
+    </Container>
+    </div>
   );
 }
 
