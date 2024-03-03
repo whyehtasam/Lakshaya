@@ -41,17 +41,11 @@ const Navbar = () => {
         
       </nav>
       
-
-      
-      {/* <div className="-ml-8 hidden flex-col gap-2.5 sm:flex-row sm:justify-center lg:flex lg:justify-start">
-        <Link to='contactUs'> <a href="#" className="inline-block border-red-800 border-2 px-4 py-3 text-sm font-semibold text-center text-black transition duration-100 rounded-lg  hover:text-red-800 focus-visible:ring md:text-sm">Contact Us</a></Link>
-
-        <Link to='signUp'><a href="#" className="inline-block px-8 py-3 text-sm font-semibold text-center text-white transition duration-100 bg-red-800 rounded-lg outline-none ring-indigo-300 hover:bg-red-500 focus-visible:ring md:text-sm">Sign up</a></Link>
-        
-      </div> */}
       <ul className='lg:flex gap-2.5 font-semibold text-sm hidden '>
-        <li className='rounded-md border-2 border-red-800 text-red-800  py-2 px-4'>Contact Us</li>
-        <li className='py-2 px-4 rounded-md bg-red-800 text-white'>Sign Up</li>
+        <Link to='/contactUs'><li className='rounded-md border-2 border-red-800 text-red-800  py-2 px-4'>Contact Us</li></Link>
+        
+        <Link to='/signUp'> <li className='py-2 px-4 rounded-md bg-red-800 text-white'>Sign Up</li></Link>
+       
       </ul>
 
       <button type="button" className="inline-flex items-center gap-2 rounded-lg bg-gray-200 px-2.5 py-2 text-sm font-semibold text-gray-500 ring-indigo-300 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-sm lg:hidden">

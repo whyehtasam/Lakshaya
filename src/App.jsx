@@ -19,6 +19,7 @@ import SignUp from "./apps/signUp/SignUp";
 
 import Footer from "./components/footer/FooterMain";
 import Scholorship from "./apps/scholorship/Scholorship";
+import Login from "./apps/logIn/Login";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -42,6 +43,7 @@ function App() {
           <Route path="/resources" element={<Resources />} />
           <Route path="/aboutUs" element={<AboutUs />} />
           <Route path="/contactUs" element={<Contact />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/signUp" element={<SignUp />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="/" element={<Landing />} />
