@@ -14,8 +14,8 @@ const Hero = () => {
                 <p className="mt-4 text-lg text-gray-600 md:text-xl lg:text-2xl">JEE और NEET: नए प्रेरणा और सफलता की दिशा में एक नया मोड़।</p>
             </div>
             <div className='flex gap-5 mt-10'>
-                <PrimaryButton className='px-6 py-3 sm:text-lg font-semibold tracking-wider rounded-md outline outline-2 outline-red-800 outline-offset-2' label='Enroll Now'/>
-                <SecondaryButton className='px-6 py-3 sm:text-lg font-semibold tracking-wider text-black bg-white rounded-md outline outline-2 outline-red-800 outline-offset-2' label='Contact Us'/>
+                <PrimaryButton className='flex gap-2 px-6 py-3 sm:text-lg font-semibold tracking-wider rounded-md outline outline-2 outline-red-800 outline-offset-2 hover:bg-red-700' label='Enroll Now'/>
+                <SecondaryButton className='px-6 py-3 sm:text-lg font-bold tracking-wider text-black bg-white rounded-md outline outline-2 outline-red-800 outline-offset-2 hover:' label='Contact Us'/>
             </div>
             
             
