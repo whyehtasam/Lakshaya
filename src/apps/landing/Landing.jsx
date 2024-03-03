@@ -1,12 +1,18 @@
-import React from 'react'
-import Container from '../../components/wrappers/Container'
+import BlobCircle from "../../components/wrappers/BlobCircle";
+import Container from "../../components/wrappers/Container";
 
-const landing = () => {
+const Landing = () => {
   return (
-   <Container style=" ">
-    Landing
-   </Container>
-  )
-}
+    <div  className="relative overflow-hidden">
+      <Container className=''>
 
-export default landing
+<div className="w-8/12 -z-50 absolute -right-20 -top-40">
+
+      <BlobCircle  />
+</div>
+      </Container>
+    </div>
+  )
+};
+
+export default Landing;
