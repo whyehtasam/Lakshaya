@@ -35,7 +35,8 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/residentialProgram" element={<ResidentialProgram />} />
+          {/* <Route path="/residentialProgram" element={<ResidentialProgram />} /> */}
+          <Route path="/residentialProgram" element={<Scholorship />} />
           <Route path="/feePayment" element={<FeePayment />} />
           <Route path="/results" element={<Result />} />
           <Route path="/resources" element={<Resources />} />
