@@ -6,7 +6,7 @@ const Landing = () => {
   return (
     <div className="relative overflow-hidden">
       <Container className=" landing">
-        <div className="absolute h-[70vh] sm:w-8/12 -z-50 -right-40 -top-0 sm:-right-20 sm:-top-40  opacity-50 sm:opacity-80">
+        <div className="absolute h-[70vh] sm:h-auto sm:w-8/12 -z-50 -right-40 -top-0 sm:-right-20 sm:-top-40  opacity-50 sm:opacity-80">
           <BlobCircle />
         </div>
         <Hero />
