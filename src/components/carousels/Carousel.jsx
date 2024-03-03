@@ -2,10 +2,11 @@ import React from 'react'
 
 
 function Carousel() {
+  
   return (
-    <div class="  pt-[40px] pb-[40px] bg-[#a21a4c] text-[#434343] text-center">
+    <div className=' pt-[40px] pb-12 bg-[#a21a4c] text-[#434343] text-center '>
       <div class=" m-auto overflow-hidden max-w-[1200px] px-[20px]">
-        <h1 className="text-[#fff] text-4xl pb-3">WORDS FROM OUR CHAMP!</h1>
+        <h1 className="text-[#fff] text-4xl font-bold pb-8">WORDS FROM OUR CHAMP!</h1>
 
         <div class=" grid gap-4 lg:grid-cols-3 md:grid-cols-1 mx-auto ">
           <div class=" m-auto">
@@ -81,6 +82,7 @@ function Carousel() {
 
         </div>
       </div>
+      
     </div>
   );
 }
