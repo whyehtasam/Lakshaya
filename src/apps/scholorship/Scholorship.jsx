@@ -15,7 +15,7 @@ const Scholorship = () => {
       <AccordionD > </AccordionD>
       </Container>
       {/* <ScholarshipDetails/> */}
-      <Container style="bg-[#a21a4c] ">
+      <Container className={"bg-[#a21a4c] "}>
       <LastYearChamps/>
       </Container>
     </div>
