@@ -8,11 +8,11 @@ import Container from "../../components/wrappers/Container";
 const Scholorship = () => {
   return (
     <div>
+      <ScholarshipDetails/>
       <Carousel />
 
       <AccordionD />
 
-      {/* <ScholarshipDetails/> */}
 
       <LastYearChamps />
     </div>
