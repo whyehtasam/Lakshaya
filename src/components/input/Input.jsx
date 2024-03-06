@@ -4,7 +4,7 @@ import React from 'react';
 
 const Input = ({ label, type, name, placeholder, value, onChange }) => {
   return (
-    <div className="mb-4 ml-10">
+    <div className="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring">
       <label className="block text-sm font-medium text-gray-700">{label}</label>
       <input 
         type={type}
@@ -12,7 +12,7 @@ const Input = ({ label, type, name, placeholder, value, onChange }) => {
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        className="rounded-md py-2 px-4 w-48 border-gray-300 focus:outline-none focus:ring focus:ring-indigo-200"
+        className="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
       />
     </div>
   );

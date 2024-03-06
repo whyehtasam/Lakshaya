@@ -1,10 +1,10 @@
 import React from 'react';
 
-function Dropdown({ id, label, options, value, onChange }) {
+function Dropdown({ id, label, options, value, onChange, className }) {
     return (
-        <div className="mb-4 ml-10">
+        <div className={className}>
             <label htmlFor={id} className="block mb-1">{label}</label>
-            <select id={id} value={value} onChange={onChange} className="w-half px-3 py-2 border rounded-md">
+            <select id={id} value={value} onChange={onChange} className="w-full rounded-md border-none">
                 <option value="">Select {label}</option>
                 {options.map((option, index) => (
                     <option key={index} value={option}>

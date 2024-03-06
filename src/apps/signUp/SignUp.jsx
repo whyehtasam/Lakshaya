@@ -33,24 +33,48 @@ const handleSubmit = (event) => {
 
 
   return (
-     <div className='flex justify-end gap-10 mr-20 items-center h-screen '>
-        
-            <div className='shadow-sm flex-col items-center '>
-                <h2 className='text-center'>Register Now!</h2>
-                <div className='flex items-center '>
-                    <form className='bg-gray-200 p-10 bg-auto flex-col items-center' onSubmit={handleSubmit}>
-                        <Input label="Your Name" type="text" placeholder="Write your name" />
-                        <Input label="Mobile Number" type="phone" placeholder="Mobile number" />
-                        <Input label="Email" type="email" placeholder="abc@gmail.com" />
-                        <div>
-                            <Dropdown id="classSelect" label="Class" options={classes} value={selectedClass} onChange={handleClassChange} />
-                            <Dropdown id="streamSelect" label="Stream" options={streams} value={selectedStream} onChange={handleStreamChange} />
-                            <PrimaryButton className=' px-20 rounded-md' label="Submit" />
-                        </div>
-                    </form>
+
+    <div className='flex justify-between'>
+        <div className='w-1/3'>
+            <p>Poster</p>
+        </div>
+        <div className="bg-white py-6 sm:py-8 lg:py-12">
+      <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
+           <h2 className="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-8 lg:text-3xl">SignUp</h2>
+  
+            <form className="mx-auto max-w-lg rounded-lg border">
+                <div className="flex flex-col gap-4 p-4 md:p-8">
+                <div>
+                    <Input label="Your Name" type="phone" placeholder="enter name" />
                 </div>
-            </div>
-     </div>
+
+                <div>
+                    <Input label="Mobile Number" type="phone" placeholder="enter mobile number" />
+                </div>
+
+                <div>
+                    <Input label="Email ID" type="phone" placeholder="abc@gmail.com" q
+                    />
+                </div>
+                
+                <div>
+                        <Dropdown id="classSelect" label="Class" options={classes} value={selectedClass} onChange={handleClassChange}  />
+                        <Dropdown id="streamSelect" label="Stream" options={streams} value={selectedStream} onChange={handleStreamChange} />
+                        {/* <PrimaryButton className=' px-20 rounded-md' label="Submit" /> */}
+                    </div>
+                    <button className="block rounded-lg bg-gray-800 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-gray-300 transition duration-100 hover:bg-gray-700 focus-visible:ring active:bg-gray-600 md:text-base">Submit</button>
+
+                </div>
+        
+                <div className="flex items-center justify-center bg-gray-100 p-4">
+                <p className="text-center text-sm text-gray-500">Already have account? <a href="#" className="text-indigo-500 transition duration-100 hover:text-indigo-600 active:text-indigo-700">Login</a></p>
+                </div>
+            </form>
+       </div>
+    </div>
+    </div>
+
+    
   )
 }
 
