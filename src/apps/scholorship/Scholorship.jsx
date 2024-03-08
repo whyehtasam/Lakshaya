@@ -5,7 +5,7 @@ import ScholarshipDetails from "./ScholarshipDeatails";
 import LastYearChamps from "./LastYearChamps";
 import Container from "../../components/wrappers/Container";
 import BlobCircle from "../../components/wrappers/BlobCircle";
-import Hero from "../landing/Hero";
+import ScholarHero from "./ScholarHero";
 
 const Scholorship = () => {
   return (
@@ -14,10 +14,10 @@ const Scholorship = () => {
 
       <div className="relative overflow-hidden">
         <Container className=" landing">
-          <div className="absolute h-[70vh] sm:h-auto sm:w-8/12 -z-50 -right-40 -top-0 sm:-right-20 sm:-top-40  opacity-50 sm:opacity-80">
+          <div className="absolute h-[70vh] sm:h-auto sm:w-8/12 -z-50 -left-0 -top-0 sm:-right-20 sm:-top-40  opacity-50 sm:opacity-80">
             <BlobCircle />
           </div>
-          <Hero />
+          <ScholarHero />
         </Container>
       </div>
       <Carousel />
