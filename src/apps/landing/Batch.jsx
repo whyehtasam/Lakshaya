@@ -27,19 +27,19 @@ const Batch = () => {
         // Add more batches as needed
       ];
   return (
-    <section className="grid gap-12 my-8 batch-courses">
+    <section className="grid sm:gap-12 gap-5 sm:my-8 batch-courses">
         <h1 className="p-5 mx-auto text-4xl font-bold text-white md:text-5xl">Join our latest batches</h1>
-        <div className="flex justify-center gap-10 buttons ">
+        <div className="sm:flex grid  sm:flex-row  sm:justify-center gap-5 sm:gap-10 buttons ">
    
-        <SecondaryButton className='font-bold tracking-wider text-black bg-white rounded-md w-52 sm:px-6 sm:py-3 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 sm:text-lg outline outline-2 outline-red-800 outline-offset-2 focus:bg-red-900 focus:text-white ' label='JEE'/>
-        <SecondaryButton className='font-bold tracking-wider text-black bg-white rounded-md w-52 sm:px-6 sm:py-3 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 sm:text-lg outline outline-2 outline-red-800 outline-offset-2 focus:bg-red-900 focus:text-white' label='NEET'/>
-        <SecondaryButton className='font-bold tracking-wider text-black bg-white rounded-md w-52 sm:px-6 sm:py-3 sm:text-lg focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 outline outline-2 outline-red-800 outline-offset-2 focus:bg-red-900 focus:text-white' label='Foundation'/>
+        <SecondaryButton className='font-bold tracking-wider text-black bg-white rounded-md sm:w-52   w-full sm:px-6 sm:py-3 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 sm:text-lg outline outline-2 outline-red-800 outline-offset-2 focus:bg-red-900 focus:text-white ' label='JEE'/>
+        <SecondaryButton className='font-bold tracking-wider text-black bg-white rounded-md sm:w-52  w-full sm:px-6 sm:py-3 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 sm:text-lg outline outline-2 outline-red-800 outline-offset-2 focus:bg-red-900 focus:text-white' label='NEET'/>
+        <SecondaryButton className='font-bold tracking-wider text-black bg-white rounded-md sm:w-52 w-full sm:px-6 sm:py-3 sm:text-lg focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 outline outline-2 outline-red-800 outline-offset-2 focus:bg-red-900 focus:text-white' label='FOUNDATION'/>
 
         </div>
 
-       <div className="grid px-20 md:grid-cols-3 place-items-center">
+       <div className="grid md:px-20 md:grid-cols-3 grid-cols-1 sm:place-items-center gap-5">
        {batches.map((batch, index) => (
-      <div key={index} className="transition-all duration-300 bg-white border border-gray-200 rounded-lg max-w-80 dark:bg-gray-800 dark:border-gray-700 drop-shadow-lg hover:scale-105 hover:bg-slate-50">
+      <div key={index} className="transition-all duration-300 bg-white border border-gray-200 rounded-lg sm:max-w-80 dark:bg-gray-800 dark:border-gray-700 drop-shadow-lg hover:scale-105 hover:bg-slate-50">
         <div href="#" className="p-5">
           <img
             className="object-cover rounded-lg"
