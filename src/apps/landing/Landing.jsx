@@ -1,5 +1,6 @@
 import BlobCircle from "../../components/wrappers/BlobCircle";
 import Container from "../../components/wrappers/Container";
+import Batch from "./Batch";
 import Hero from "./Hero";
 
 const Landing = () => {
@@ -11,6 +12,11 @@ const Landing = () => {
         </div>
         <Hero />
       </Container>
+      <div className="bg-red-900">
+        <Container>
+          <Batch />
+        </Container>
+      </div>
     </div>
   );
 };
