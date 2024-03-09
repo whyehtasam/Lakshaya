@@ -12,13 +12,14 @@ function AccordionD() {
       
 
     <h1 className='text-center text-4xl  font-[700] text-[#a21a4c] uppercase'>Important information about lost</h1>
-    <Accordion className='p-5 max-w-[80%] m-auto mt-5 mb-5'>
+    <Accordion className='p-5  m-auto mt-5 mb-5'>
       <Accordion.Panel>
-        <Accordion.Title className=' hover:bg-[#a21a4c] hover:text-[#fff]'>What is Flowbite?</Accordion.Title>
+        <Accordion.Title className=' hover:bg-[#a21a4c] hover:text-[#fff]'>Pre-Medical (Class - 11th to 12th / 12th Pass)</Accordion.Title>
         <Accordion.Content>
           <p className="mb-2 text-[#a21a4c] font-[500] dark:text-gray-400">
-            Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons,
-            dropdowns, modals, navbars, and more.
+          LOST (Lakshaya Open Scholarship Test) is scholarship test which provides 
+scholarship for regular classroom program. 
+In MOST, students can get scholarship upto 100% in one year classroom program.
           </p>
           <p className=" dark:text-gray-400 text-[#a21a4c] font-[500]">
             Check out this guide to learn how to&nbsp;
@@ -33,7 +34,7 @@ function AccordionD() {
         </Accordion.Content>
       </Accordion.Panel>
       <Accordion.Panel>
-        <Accordion.Title className=' hover:bg-[#a21a4c] hover:text-[#fff]'>Is there a Figma file available?</Accordion.Title>
+        <Accordion.Title className=' hover:bg-[#a21a4c] hover:text-[#fff]'>Pre-Medical (Class - 11th to 12th / 12th Pass)</Accordion.Title>
         <Accordion.Content>
           <p className="mb-2 dark:text-gray-400 text-[#a21a4c] font-[500]">
             Flowbite is first conceptualized and designed using the Figma software so everything you see in the library
