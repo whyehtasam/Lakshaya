@@ -4,7 +4,7 @@ import SecondaryButton from '../../components/buttons/SecondaryButton'
 
 const ScholarHero = () => {
   return (
-    <div>
+    <>
         <div className="flex flex-col justify-start gap-3 sm:gap-6 my-7">
             <h1 className="text-4xl font-bold text-red-800 md:text-5xl lg:text-7xl">Lakshaya Scholarship Test</h1>
             <h1 className="text-4xl font-bold text-gray-800 md:text-5xl lg:text-7xl">They Say,</h1>
@@ -20,7 +20,7 @@ const ScholarHero = () => {
             
             
         </div>
-    </div>
+    </>
   )
 }
 

@@ -11,7 +11,7 @@ function scholarshipDetails() {
           <h1 className="text-center text-[#fff] text-4xl pt-4 font-bold uppercase">
             Lakshaya open scholarship test
           </h1>
-          <div className="grid lg:grid-cols-2 md:grid-cols-2 gap-4 max-w-[1200px] mx-auto mt-3">
+          <div className="grid lg:grid-cols-2 md:grid-cols-2 gap-4  mx-auto mt-3">
 
             <div className="m-auto mt-3 bg-[#fff]  lg:p-12  rounded-md w-[100%] p-2">
               <div className="p-2 m-2  text-center rounded-md bg-[#F6E9EE] lg:space-x-8 sm:space-x-1">
