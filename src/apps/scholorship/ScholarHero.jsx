@@ -2,16 +2,19 @@ import React from 'react'
 import PrimaryButton from '../../components/buttons/PrimaryButton'
 import SecondaryButton from '../../components/buttons/SecondaryButton'
 
-const ScholarHero = () => {
+const ScholarHero = (props) => {
+    const { title, subtitle, burdenText, inspirationText ,inspirationText2} = props;
   return (
     <div>
         <div className="flex flex-col justify-start gap-3 sm:gap-6 my-7">
-            <h1 className="text-4xl font-bold text-red-800 md:text-5xl lg:text-7xl">Lakshaya Scholarship Test</h1>
-            <h1 className="text-4xl font-bold text-gray-800 md:text-5xl lg:text-7xl">They Say,</h1>
-            <h1 className="text-4xl font-bold text-[#0a8c42] md:text-5xl lg:text-7xl">With Greay <br /> Journey Come Great <br /> Responsibility </h1>
+            <h1 className="text-4xl font-bold text-red-800 md:text-5xl lg:text-7xl">{title}</h1>
+            <h1 className="text-3xl font-bold text-gray-800 md:text-5xl lg:text-5xl">{subtitle}</h1>
+            {/* <h1 className="text-4xl font-bold text-[#0a8c42] md:text-5xl lg:text-7xl">With Greay <br /> Journey Come Great <br /> Responsibility </h1> */}
             <div>
-                <p className="mt-4 sm:text-lg text-gray-600 md:text-xl lg:text-3xl font-bold">here we are to help you lighten your burden.</p>
-                <p className="mt-4 sm:text-lg text-gray-600 md:text-xl lg:text-2xl">JEE और NEET: नए प्रेरणा और सफलता की दिशा में एक नया मोड़।</p>
+                <p className="mt-4 sm:text-lg text-gray-600 md:text-xl lg:text-3xl font-bold">{burdenText}</p>
+                <p className="mt-4 sm:text-lg text-gray-600 md:text-xl lg:text-2xl">{inspirationText}</p>
+                <p className="mt-4 sm:text-lg text-gray-600 md:text-xl lg:text-2xl">{inspirationText2}</p>
+
             </div>
 
             <div className="grid gap-5 mt-5 sm:flex sm:mt-10">
