@@ -4,6 +4,7 @@ import Batch from "./Batch";
 import Benefits from "./Benefits";
 import FeatureList from "./FeatureList";
 import Hero from "./Hero";
+import Results from "./Results";
 import ScholorshipHero from "./ScholorshipHero";
 
 const Landing = () => {
@@ -31,6 +32,9 @@ const Landing = () => {
       </Container>
       <Container>
         <FeatureList/>
+      </Container>
+      <Container>
+        <Results/>
       </Container>
 
     </div>

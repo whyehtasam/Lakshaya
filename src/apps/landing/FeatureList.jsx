@@ -65,13 +65,13 @@ const features = [
 const FeatureList = () => {
   return (
     <section className="text-gray-600 body-font">
-      <div className="container px-5 mx-auto">
+      <div className="container  mx-auto">
         <Header
           title="Benefits"
           header="Expert-Led Flexible Learning"
           description="Explore our diverse course offerings, all led by expert instructors. Find your perfect educational fit with us."
           titleStyle="lg:text-xl"
-          headerStyle="sm:text-4xl text-black"
+          headerStyle="sm:text-5xl text-black"
           descStyle="sm:text-lg text-gray-700"
           className="pb-6 pt-4 text-center"
         />
