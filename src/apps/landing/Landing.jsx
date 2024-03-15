@@ -2,10 +2,12 @@ import BlobCircle from "../../components/wrappers/BlobCircle";
 import Container from "../../components/wrappers/Container";
 import Batch from "./Batch";
 import Benefits from "./Benefits";
+import FAQs from "./FAQs";
 import FeatureList from "./FeatureList";
 import Hero from "./Hero";
 import Results from "./Results";
 import ScholorshipHero from "./ScholorshipHero";
+import Teams from "./Teams";
 
 const Landing = () => {
   return (
@@ -35,6 +37,12 @@ const Landing = () => {
       </Container>
       <Container>
         <Results/>
+      </Container>
+      <Container>
+        <Teams/>
+      </Container>
+      <Container>
+        <FAQs/>
       </Container>
 
     </div>
