@@ -14,7 +14,7 @@ const Benefits = () => {
           header="Flexible Learning with Expert Instructors"
           description="Our online coaching academy offers flexible learning options and is led by expert instructors. With a wide range of courses to choose from, you can easily find the perfect fit for your educational needs."
           titleStyle="lg:text-xl"
-          headerStyle="sm:text-6xl text-black "
+          headerStyle="sm:text-7xl text-black "
           descStyle="text-justify sm:text-lg text-gray-700"
           className="pb-6 pt-4 space-y-"
         />
