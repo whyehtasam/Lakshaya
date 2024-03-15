@@ -2,6 +2,7 @@ import BlobCircle from "../../components/wrappers/BlobCircle";
 import Container from "../../components/wrappers/Container";
 import Batch from "./Batch";
 import Benefits from "./Benefits";
+import FeatureList from "./FeatureList";
 import Hero from "./Hero";
 import ScholorshipHero from "./ScholorshipHero";
 
@@ -28,6 +29,10 @@ const Landing = () => {
       <Container>
         <Benefits/>
       </Container>
+      <Container>
+        <FeatureList/>
+      </Container>
+
     </div>
   );
 };
