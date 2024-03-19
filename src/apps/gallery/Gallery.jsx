@@ -2,6 +2,7 @@ import React from "react";
 import Container from "../../components/wrappers/Container";
 import LastYearChamp from "../scholorship/LastYearChamps";
 import PrimaryButton from "../../components/buttons/PrimaryButton";
+import Pagination from "../../components/pagination/Pagination";
 
 const Gallery = () => {
   return (
@@ -169,6 +170,7 @@ const Gallery = () => {
               />
             </div>
           </div>
+        <Pagination />
         </div>
       </div>
 
