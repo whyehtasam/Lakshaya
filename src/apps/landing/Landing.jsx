@@ -30,21 +30,22 @@ const Landing = () => {
         <ScholorshipHero />
       </Container> */}
       <Container>
-        <Benefits/>
+        <Benefits />
+      </Container>
+      <div className="bg-red-900">
+        <Container>
+          <FeatureList />
+        </Container>
+      </div>
+      <Container>
+        <Results />
       </Container>
       <Container>
-        <FeatureList/>
+        <Teams />
       </Container>
       <Container>
-        <Results/>
+        <FAQs />
       </Container>
-      <Container>
-        <Teams/>
-      </Container>
-      <Container>
-        <FAQs/>
-      </Container>
-
     </div>
   );
 };
