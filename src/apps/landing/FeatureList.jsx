@@ -21,7 +21,7 @@ const features = [
     ),
   },
   {
-    title: "Interactive Learning at Your Fingertips",
+    title: "Interactive Learning at Your Fingertips with our Platform",
     description:
       "Engage with our dynamic video lessons, practice with interactive tests, and track your progress in real-time.",
     Icon: () => (
@@ -64,20 +64,20 @@ const features = [
 
 const FeatureList = () => {
   return (
-    <section className="text-gray-600 body-font">
+    <section className="text-gray-600 body-font pb-8">
       <div className="container  mx-auto">
         <Header
-          title="Benefits"
-          header="Expert-Led Flexible Learning"
+          title="Features"
+          header="Expert-Led Learning Method"
           description="Explore our diverse course offerings, all led by expert instructors. Find your perfect educational fit with us."
-          titleStyle="lg:text-xl"
-          headerStyle="sm:text-5xl text-black"
-          descStyle="sm:text-lg text-gray-700"
+          titleStyle="lg:text-xl text-slate-300"
+          headerStyle="sm:text-5xl text-white"
+          descStyle="sm:text-lg text-slate-100"
           className="pb-6 pt-4 text-center"
         />
-        <div className="flex flex-wrap -m-4">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 p-4">
           {features.map((feature, index) => (
-            <div key={index} className="p-4 md:w-1/3 ">
+            <div key={index} className=" ">
               <div className="flex rounded-lg h-full bg-gray-100 p-8 flex-col shadow-md">
                 <div className="flex items-center mb-3">
                   <div className="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-red-800 text-white flex-shrink-0">
@@ -87,7 +87,7 @@ const FeatureList = () => {
                     {feature.title}
                   </h2>
                 </div>
-                <div className="flex-grow">
+                <div className="grid h-full justify-between">
                   <p className="leading-relaxed text-base">
                     {feature.description}
                   </p>
