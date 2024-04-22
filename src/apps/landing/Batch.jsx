@@ -1,44 +1,33 @@
+import { useState,useEffect } from "react";
 import PrimaryButton from "../../components/buttons/PrimaryButton";
 import SecondaryButton from "../../components/buttons/SecondaryButton";
+import { jee,neet,foundation } from "./data";
 
 const Batch = () => {
-    const batches = [
-        {
-          name: "Batch Name",
-          class: "Class XI",
-          targetYear: "2025",
-          price: "Rs. 3599",
-          imgSrc: "https://www.adarshbarnwal.com/wp-content/uploads/2022/03/Jee-Mains.jpg"
-        },
-        {
-          name: "Batch Name",
-          class: "Class XI",
-          targetYear: "2025",
-          price: "Rs. 1499",
-          imgSrc: "https://www.adarshbarnwal.com/wp-content/uploads/2022/03/Jee-Mains.jpg"
-        },
-        {
-          name: "Batch Name",
-          class: "Class XI",
-          targetYear: "2025",
-          price: "Rs. 2599",
-          imgSrc: "https://www.adarshbarnwal.com/wp-content/uploads/2022/03/Jee-Mains.jpg"
-        },
-        // Add more batches as needed
-      ];
+
+  const [isActive,setIsActive] = useState(jee);
+
+  const changehandler = (type) => {
+    setIsActive(type);
+  }
+ useEffect(() => { 
+  console.log(isActive);
+ },[isActive]
+  )
+  
   return (
     <section className="grid gap-5 sm:gap-12 sm:mb-4 batch-courses">
         <h1 className="sm:p-5 mx-auto text-4xl font-bold text-white md:text-5xl">Join our latest batches</h1>
         <div className="flex gap-5 sm:flex sm:flex-row sm:justify-center sm:gap-10 buttons ">
    
-        <SecondaryButton className='w-fit text-sm font-bold tracking-wider text-black bg-white rounded-md  sm:w-52 sm:px-6 sm:py-3 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 sm:text-lg outline outline-2 outline-red-800 outline-offset-2 focus:bg-red-900 focus:text-white' label='JEE'/>
-        <SecondaryButton className='w-fit text-sm font-bold tracking-wider text-black bg-white rounded-md sm:w-52 sm:px-6 sm:py-3 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 sm:text-lg outline outline-2 outline-red-800 outline-offset-2 focus:bg-red-900 focus:text-white' label='NEET'/>
-        <SecondaryButton className='w-fit text-sm font-bold tracking-wider text-black bg-white rounded-md sm:w-52 sm:px-6 sm:py-3 sm:text-lg focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 outline outline-2 outline-red-800 outline-offset-2 focus:bg-red-900 focus:text-white' label='FOUNDATION'/>
-
+        <SecondaryButton onClick={() => changehandler(jee)} className='w-fit text-sm font-bold tracking-wider text-black bg-white rounded-md  sm:w-52 sm:px-6 sm:py-3 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 sm:text-lg outline outline-2 outline-red-800 outline-offset-2 focus:bg-red-900 focus:text-white' label='JEE'/>
+        <SecondaryButton onClick={() => changehandler(neet)}className='w-fit text-sm font-bold tracking-wider text-black bg-white rounded-md sm:w-52 sm:px-6 sm:py-3 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 sm:text-lg outline outline-2 outline-red-800 outline-offset-2 focus:bg-red-900 focus:text-white' label='NEET'/>
+        <SecondaryButton onClick={() => changehandler(foundation)} className='w-fit text-sm font-bold tracking-wider text-black bg-white rounded-md sm:w-52 sm:px-6 sm:py-3 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 sm:text-lg outline outline-2 outline-red-800 outline-offset-2 focus:bg-red-900 focus:text-white' label='FOUNDATION'/>
         </div>
 
        <div className="grid grid-cols-1 gap-5  md:grid-cols-3 sm:place-items-center">
-       {batches.map((batch, index) => (
+        
+       {isActive.map((batch, index) => (
       <div key={index} className="sm:grid sm:grid-cols-2 transition-all duration-300 bg-white border border-gray-200 rounded-lg  dark:bg-gray-800 dark:border-gray-700 drop-shadow-lg sm:hover:scale-105 hover:bg-slate-50">
         <div href="#" className="p-5 ">
           <img
