@@ -89,18 +89,55 @@ const Newsupdates = () => {
 
         <div className="grow lg:col-span-4 p-6">
 
-            {/* add a horizontal row notice section with date notice title and download button */}
-            
-            <div className=" items-center justify-center">
-                <h1 className="text-3xl font-bold text-red-800 md:text-5xl lg:text-4xl hidden">
-                    No News Found
-                </h1>
+          <div className="grid lg:grid-cols-6 mb-2 content-center p-2 border border-red-800 rounded-md ">
 
-                
-
+            <div className="text-center  lg:w-[50%] border border-red-800 rounded-md">
+              <div className=" text-grey-900 ">
+                <span>12</span> <br />
+                <span className="text-md font-bold text-red-800"> Jan</span>
+              </div>
             </div>
 
+            <div className="grid lg:col-span-3 content-center ">
+              <h1 className="text-2xl font-bold text-center text-red-800">Notice Title</h1>
+              
+            </div>
 
+      
+
+            <div className=" grid lg:col-span-2 content-center text-center  ">
+              <a href="#" className="text-red-800 font-semibold text-lg">
+                Download
+              </a>
+            </div>
+            
+
+          </div>
+
+          <div className="grid lg:grid-cols-6 mb-2 content-center p-2 border border-red-800 rounded-md ">
+
+            <div className="text-center  lg:w-[50%] border border-red-800 rounded-md">
+              <div className=" text-grey-900 ">
+                <span>12</span> <br />
+                <span className="text-md font-bold text-red-800"> Jan</span>
+              </div>
+            </div>
+
+            <div className="grid lg:col-span-3 content-center text-center">
+              <h1 className="text-2xl font-bold text-red-800">Notice Title</h1>
+            </div>
+
+      
+
+            <div className=" grid lg:col-span-2 content-center text-center  ">
+              <a href="#" className="text-red-800 font-semibold text-lg">
+                Download
+              </a>
+            </div>
+            
+
+          </div>
+         
 
             <Pagination />
         </div>
@@ -108,7 +145,7 @@ const Newsupdates = () => {
 
       <LastYearChamp />
     </div>
-  );
+  );1
 };
 
 export default Newsupdates;

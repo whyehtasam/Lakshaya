@@ -83,7 +83,7 @@ const Gallery = () => {
           />
         </div>
 
-        <div className="grow lg:col-span-4 p-4">
+        <div className="grow lg:col-span-4 p-4 h-[80vh] overflow-y-auto">
           <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
             <div>
               <img
