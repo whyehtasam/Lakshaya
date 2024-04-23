@@ -23,6 +23,7 @@ import Scholorship from "./apps/scholorship/Scholorship";
 import Login from "./apps/logIn/Login";
 import Gallery from "./apps/gallery/Gallery";
 import Newsupdates from "./apps/newsupdates/Newsupdates";
+import SignUpNew from "./apps/signUp/SignUpNew";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -45,9 +46,10 @@ function App() {
           <Route path="/results" element={<Result />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/aboutUs" element={<AboutUs />} />
-          <Route path="/contactUs" element={<Announcement />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signUp" element={<SignUp />} />
+          <Route path="/announcement" element={<Newsupdates/>} />
+          {/* <Route path="/login" element={<Login />} /> */}
+          <Route path="/signUp" element={<SignUpNew/>} />
+          {/* <Route path="/login" element={<SignUp />} /> */}
           {/* <Route path="/courses" element={<Courses />} /> */}
           <Route path="/" element={<Landing />} />
           <Route path="/scholarship" element={<Scholorship />} />
