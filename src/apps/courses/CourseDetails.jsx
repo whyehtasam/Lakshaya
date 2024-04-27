@@ -33,7 +33,7 @@ const CourseDetails = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768); // Adjust breakpoint as needed
+      setIsMobile(window.innerWidth <= 768); 
     };
     handleResize();
     window.addEventListener("resize", handleResize);
@@ -52,15 +52,15 @@ const CourseDetails = () => {
         {/* Left menu with buttons */}
         <div
           className={
-            isMobile ? "flex justify-center gap-5 flex-col w-64" : "flex gap-5 w-64"
-          }
+            isMobile ? "flex justify-center gap-2.5 flex-col w-64" : "flex gap-2.5 w-64"
+          } 
         >
           <div
             className={
               isMobile
-                ? "flex gap-5 sm:hidden"
-                : "hidden sm:flex flex-col gap-5 sm:flex sm:flex-col sm:justify-start sm:gap-10 buttons"
-            }
+                ? "flex gap-2.5 sm:hidden"
+                : "hidden sm:flex flex-col gap-2.5 sm:flex sm:flex-col sm:justify-start sm:gap-5 buttons"
+            } 
           >
             <SecondaryButton
               onClick={() => changehandler("jee24")}
@@ -98,34 +98,117 @@ const CourseDetails = () => {
                 key={index}
                 className="w-full flex flex-col sm:flex-row transition-all duration-300 bg-white border border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-700 drop-shadow-lg sm:hover:scale-105 hover:bg-slate-50"
               >
-                <div className="p-5 sm:w-1/2">
+                <div className="p-5 sm:w-3/4 flex flex-col"> 
                   <h3 className="text-lg font-semibold tracking-tight text-gray-900 dark:text-white mb-2">
                     {batch.name}
                   </h3>
-                  <div className="mb-2">
-                    <p className="font-semibold text-gray-600 dark:text-white">
+                  <div className="mb-2 flex items-center"> 
+                    <p className="font-semibold text-gray-600 dark:text-white mr-2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-5 w-5 inline-block"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M10 18a.65.65 0 01-.38-.13l-7-5A.65.65 0 012 12V7c0-.24.13-.47.34-.6L10 2l7.66 4.4c.2.12.34.35.34.6v5c0 .24-.14.47-.34.6l-7 5a.65.65 0 01-.28.06zM3 7.72V12l6.3-3.62a.6.6 0 01.4 0L17 12V7.72l-7-4-7 4zM10 4.5L16 8v1l-6-3.46L4 9V8l6-3.5zM5 14v1h10v-1H5z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
                       Feature 1:
                     </p>
-                    {/* Add feature 1 details here */}
                   </div>
-                  <div className="mb-2">
-                    <p className="font-semibold text-gray-600 dark:text-white">
+                  <div className="mb-2 flex items-center"> 
+                    <p className="font-semibold text-gray-600 dark:text-white mr-2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-5 w-5 inline-block"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M10 18a.65.65 0 01-.38-.13l-7-5A.65.65 0 012 12V7c0-.24.13-.47.34-.6L10 2l7.66 4.4c.2.12.34.35.34.6v5c0 .24-.14.47-.34.6l-7 5a.65.65 0 01-.28.06zM3 7.72V12l6.3-3.62a.6.6 0 01.4 0L17 12V7.72l-7-4-7 4zM10 4.5L16 8v1l-6-3.46L4 9V8l6-3.5zM5 14v1h10v-1H5z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                      Feature 2:
+                    </p>
+                  </div>
+                  <div className="mb-2 flex items-center"> 
+                    <p className="font-semibold text-gray-600 dark:text-white mr-2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-5 w-5 inline-block"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M10 18a.65.65 0 01-.38-.13l-7-5A.65.65 0 012 12V7c0-.24.13-.47.34-.6L10 2l7.66 4.4c.2.12.34.35.34.6v5c0 .24-.14.47-.34.6l-7 5a.65.65 0 01-.28.06zM3 7.72V12l6.3-3.62a.6.6 0 01.4 0L17 12V7.72l-7-4-7 4zM10 4.5L16 8v1l-6-3.46L4 9V8l6-3.5zM5 14v1h10v-1H5z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                      Batch Starts on: <strong>{batch.startDate}</strong>
+                    </p>
+                  </div>
+                
+                
+                  <div className="mb-2 flex items-center"> 
+                    <p className="font-semibold text-gray-600 dark:text-white mr-2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-5 w-5 inline-block"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M10 18a.65.65 0 01-.38-.13l-7-5A.65.65 0 012 12V7c0-.24.13-.47.34-.6L10 2l7.66 4.4c.2.12.34.35.34.6v5c0 .24-.14.47-.34.6l-7 5a.65.65 0 01-.28.06zM3 7.72V12l6.3-3.62a.6.6 0 01.4 0L17 12V7.72l-7-4-7 4zM10 4.5L16 8v1l-6-3.46L4 9V8l6-3.5zM5 14v1h10v-1H5z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
                       Fee:
                     </p>
                     <p>{batch.price}</p>
                   </div>
-                  <div className="mb-2">
-                    <p className="font-semibold text-gray-600 dark:text-white">
+                  <div className="mb-2 flex items-center"> 
+                    <p className="font-semibold text-gray-600 dark:text-white mr-2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-5 w-5 inline-block"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M10 18a.65.65 0 01-.38-.13l-7-5A.65.65 0 012 12V7c0-.24.13-.47.34-.6L10 2l7.66 4.4c.2.12.34.35.34.6v5c0 .24-.14.47-.34.6l-7 5a.65.65 0 01-.28.06zM3 7.72V12l6.3-3.62a.6.6 0 01.4 0L17 12V7.72l-7-4-7 4zM10 4.5L16 8v1l-6-3.46L4 9V8l6-3.5zM5 14v1h10v-1H5z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
                       Year:
                     </p>
                     <p>{batch.targetYear}</p>
                   </div>
-                  <div className="mb-2">
-                    <p className="font-semibold text-gray-600 dark:text-white">
+                  <div className="mb-2 flex items-center"> 
+                    <p className="font-semibold text-gray-600 dark:text-white mr-2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-5 w-5 inline-block"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M10 18a.65.65 0 01-.38-.13l-7-5A.65.65 0 012 12V7c0-.24.13-.47.34-.6L10 2l7.66 4.4c.2.12.34.35.34.6v5c0 .24-.14.47-.34.6l-7 5a.65.65 0 01-.28.06zM3 7.72V12l6.3-3.62a.6.6 0 01.4 0L17 12V7.72l-7-4-7 4zM10 4.5L16 8v1l-6-3.46L4 9V8l6-3.5zM5 14v1h10v-1H5z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
                       Faculties:
                     </p>
                     <p>{batch.faculties.join(", ")}</p>{" "} 
-                    {/* array for faculty */}
+                   
                   </div>
                   <div>
                     <a
@@ -151,7 +234,7 @@ const CourseDetails = () => {
                     </a>
                   </div>
                 </div>
-                <div className="sm:w-40">
+                <div className="sm:w-40 sm:w-44 self-center ml-12"> 
                   <img
                     src={batch.imgSrc}
                     alt={batch.name}
