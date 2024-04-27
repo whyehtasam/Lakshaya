@@ -60,7 +60,7 @@ function FeeForm() {
   };
 
   return (
-    <div className="w-1/2 mx-auto mt-12">
+    <div className="w-1/2 mx-auto my-12">
       <div className="bg-[#eee9ea]/100 p-3 px-5 rounded-md pb-3 shadow-md ">
         <form onSubmit={handleSubmit} className="z-40">
           <h1 className="text-2xl font-bold text-gray-800 md:text-xl lg:text-xl text-center">
