@@ -15,4 +15,4 @@ const FeePayment = () => {
   )
 }
 
-export default FeePayment
+export default FeePayment;
