@@ -18,7 +18,6 @@ const CourseDetails = () => {
       case "neetA":
         setIsActive(neetA);
         break;
-        
       case "neetB":
         setIsActive(neetB);
         break;
@@ -33,7 +32,7 @@ const CourseDetails = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768); 
+      setIsMobile(window.innerWidth <= 768);
     };
     handleResize();
     window.addEventListener("resize", handleResize);
@@ -44,7 +43,7 @@ const CourseDetails = () => {
 
   return (
     <section className="grid gap-5 sm:gap-12 sm:mb-4 batch-courses">
-      <h1 className="sm:p-5 mx-auto text-4xl font-bold text-red-800 md:text-5xl ">
+      <h1 className="sm:p-5 mx-auto text-4xl font-bold text-red-800 md:text-5xl">
         Course Details
       </h1>
 
@@ -52,40 +51,41 @@ const CourseDetails = () => {
         {/* Left menu with buttons */}
         <div
           className={
-            isMobile ? "flex justify-center gap-2.5 flex-col w-64" : "flex gap-2.5 w-64"
-          } 
+            isMobile
+              ? "flex justify-center gap-2.5 flex-col w-full" // Adjusted to full width
+              : "flex gap-2.5 w-64"
+          }
         >
           <div
             className={
               isMobile
-                ? "flex gap-2.5 sm:hidden"
+                ? "flex gap-2.5 sm:hidden flex-wrap" // Adjusted for mobile and wrap content
                 : "hidden sm:flex flex-col gap-2.5 sm:flex sm:flex-col sm:justify-start sm:gap-5 buttons"
-            } 
+            }
           >
             <SecondaryButton
-              onClick={() => changehandler("jee")}
-              className="text-sm font-bold tracking-wider text-black rounded-md sm:text-lg hover:bg-red-700 focus:bg-red-700 focus:text-white border border-red-800 w-64"
+              onClick={() => changehandler("jeeA")}
+              className="text-sm font-bold tracking-wider text-black rounded-md sm:text-lg hover:bg-red-700 focus:bg-red-700 focus:text-white border border-red-800"
               label="JEE 24"
             />
             <SecondaryButton
               onClick={() => changehandler("jeeB")}
-              className="text-sm font-bold tracking-wider text-black rounded-md sm:text-lg hover:bg-red-700 focus:bg-red-700 focus:text-white border border-red-800 w-64"
+              className="text-sm font-bold tracking-wider text-black rounded-md sm:text-lg hover:bg-red-700 focus:bg-red-700 focus:text-white border border-red-800"
               label="JEE 25"
             />
             <SecondaryButton
               onClick={() => changehandler("neetA")}
-              className="text-sm font-bold tracking-wider text-black rounded-md sm:text-lg hover:bg-red-700 focus:bg-red-700 focus:text-white border border-red-800 w-64"
+              className="text-sm font-bold tracking-wider text-black rounded-md sm:text-lg hover:bg-red-700 focus:bg-red-700 focus:text-white border border-red-800"
               label="NEET 24"
             />
-            
             <SecondaryButton
               onClick={() => changehandler("neetB")}
-              className="text-sm font-bold tracking-wider text-black rounded-md sm:text-lg hover:bg-red-700 focus:bg-red-700 focus:text-white border border-red-800 w-64"
+              className="text-sm font-bold tracking-wider text-black rounded-md sm:text-lg hover:bg-red-700 focus:bg-red-700 focus:text-white border border-red-800"
               label="NEET 25"
             />
             <SecondaryButton
               onClick={() => changehandler("foundation")}
-              className="text-sm font-bold tracking-wider text-black rounded-md sm:text-lg hover:bg-red-700 focus:bg-red-700 focus:text-white border border-red-800 w-64"
+              className="text-sm font-bold tracking-wider text-black rounded-md sm:text-lg hover:bg-red-700 focus:bg-red-700 focus:text-white border border-red-800"
               label="Boards 25"
             />
           </div>
@@ -98,11 +98,11 @@ const CourseDetails = () => {
                 key={index}
                 className="w-full flex flex-col sm:flex-row transition-all duration-300 bg-white border border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-700 drop-shadow-lg sm:hover:scale-105 hover:bg-slate-50"
               >
-                <div className="p-5 sm:w-3/4 flex flex-col"> 
+                <div className="p-5 sm:w-3/4 flex flex-col">
                   <h3 className="text-lg font-semibold tracking-tight text-gray-900 dark:text-white mb-2">
                     {batch.name}
                   </h3>
-                  <div className="mb-2 flex items-center"> 
+                  <div className="mb-2 flex items-center">
                     <p className="font-semibold text-gray-600 dark:text-white mr-2">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -119,7 +119,7 @@ const CourseDetails = () => {
                       Feature 1:
                     </p>
                   </div>
-                  <div className="mb-2 flex items-center"> 
+                  <div className="mb-2 flex items-center">
                     <p className="font-semibold text-gray-600 dark:text-white mr-2">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -136,7 +136,7 @@ const CourseDetails = () => {
                       Feature 2:
                     </p>
                   </div>
-                  <div className="mb-2 flex items-center"> 
+                  <div className="mb-2 flex items-center">
                     <p className="font-semibold text-gray-600 dark:text-white mr-2">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -153,9 +153,7 @@ const CourseDetails = () => {
                       Batch Starts on: <strong>{batch.startDate}</strong>
                     </p>
                   </div>
-                
-                
-                  <div className="mb-2 flex items-center"> 
+                  <div className="mb-2 flex items-center">
                     <p className="font-semibold text-gray-600 dark:text-white mr-2">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -173,7 +171,7 @@ const CourseDetails = () => {
                     </p>
                     <p>{batch.price}</p>
                   </div>
-                  <div className="mb-2 flex items-center"> 
+                  <div className="mb-2 flex items-center">
                     <p className="font-semibold text-gray-600 dark:text-white mr-2">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -191,7 +189,7 @@ const CourseDetails = () => {
                     </p>
                     <p>{batch.targetYear}</p>
                   </div>
-                  <div className="mb-2 flex items-center"> 
+                  <div className="mb-2 flex items-center">
                     <p className="font-semibold text-gray-600 dark:text-white mr-2">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -207,8 +205,7 @@ const CourseDetails = () => {
                       </svg>
                       Faculties:
                     </p>
-                    <p>{batch.faculties.join(", ")}</p>{" "} 
-                   
+                    <p>{batch.faculties.join(", ")}</p>{" "}
                   </div>
                   <div>
                     <a
@@ -234,13 +231,15 @@ const CourseDetails = () => {
                     </a>
                   </div>
                 </div>
-                <div className="sm:w-40 sm:w-44 self-center ml-12"> 
-                  <img
-                    src={batch.imgSrc}
-                    alt={batch.name}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
+                {isMobile ? null : (
+                  <div className="sm:w-40 sm:w-44 self-center ml-12">
+                    <img
+                      src={batch.imgSrc}
+                      alt={batch.name}
+                      className="w-full h-auto rounded-lg"
+                    />
+                  </div>
+                )}
               </div>
             ))}
           </div>
