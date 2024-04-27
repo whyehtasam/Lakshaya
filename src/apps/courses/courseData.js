@@ -1,5 +1,5 @@
 
-export const jee24 = [
+export const jeeA = [
     {
       name: "JEE 24",
       class: "Class XI",
@@ -13,7 +13,7 @@ export const jee24 = [
     }
   ];
   
-export const jee25 = [
+export const jeeB = [
     {
       name: "JEE 25",
       class: "Class XI",
@@ -26,7 +26,7 @@ export const jee25 = [
       syllabusLink: "#" // Add syllabus link here
     }
   ];
-  export const neet24 = [
+  export const neetA = [
     {
       name: "Neet 24",
       class: "Class XI",
@@ -40,7 +40,7 @@ export const jee25 = [
     }
   ];
   
-  export const neet25 = [
+  export const neetB = [
     {
       name: "Neet 25",
       class: "Class XI",
@@ -54,7 +54,7 @@ export const jee25 = [
     }
   ];
   
-  export const foundation24 = [
+  export const foundation = [
     {
       name: "Batch Name 1",
       class: "Class IX",

@@ -1,32 +1,32 @@
 import React, { useState, useEffect } from "react";
 import PrimaryButton from "../../components/buttons/PrimaryButton";
 import SecondaryButton from "../../components/buttons/SecondaryButton";
-import { neet24, foundation24, jee24, jee25, neet25 } from "./courseData";
+import { neetA, foundation, jeeA, jeeB, neetB } from "./courseData";
 
 const CourseDetails = () => {
-  const [isActive, setIsActive] = useState(jee24); // Initially set to jee24
+  const [isActive, setIsActive] = useState(jeeA); // Initially set to jeeA
   const [isMobile, setIsMobile] = useState(false);
 
   const changehandler = (type) => {
     switch (type) {
-      case "jee24":
-        setIsActive(jee24);
+      case "jeeA":
+        setIsActive(jeeA);
         break;
-      case "jee":
-        setIsActive(jee25);
+      case "jeeB":
+        setIsActive(jeeB);
         break;
-      case "neet":
-        setIsActive(neet24);
+      case "neetA":
+        setIsActive(neetA);
         break;
         
-      case "neet25":
-        setIsActive(neet25);
+      case "neetB":
+        setIsActive(neetB);
         break;
       case "foundation":
-        setIsActive(foundation24);
+        setIsActive(foundation);
         break;
       default:
-        setIsActive(jee24); // Default to jee24 if type is not recognized
+        setIsActive(jeeA); // Default to jeeA if type is not recognized
         break;
     }
   };
@@ -63,23 +63,23 @@ const CourseDetails = () => {
             } 
           >
             <SecondaryButton
-              onClick={() => changehandler("jee24")}
+              onClick={() => changehandler("jee")}
               className="text-sm font-bold tracking-wider text-black rounded-md sm:text-lg hover:bg-red-700 focus:bg-red-700 focus:text-white border border-red-800 w-64"
               label="JEE 24"
             />
             <SecondaryButton
-              onClick={() => changehandler("jee")}
+              onClick={() => changehandler("jeeB")}
               className="text-sm font-bold tracking-wider text-black rounded-md sm:text-lg hover:bg-red-700 focus:bg-red-700 focus:text-white border border-red-800 w-64"
               label="JEE 25"
             />
             <SecondaryButton
-              onClick={() => changehandler("neet")}
+              onClick={() => changehandler("neetA")}
               className="text-sm font-bold tracking-wider text-black rounded-md sm:text-lg hover:bg-red-700 focus:bg-red-700 focus:text-white border border-red-800 w-64"
               label="NEET 24"
             />
             
             <SecondaryButton
-              onClick={() => changehandler("neet")}
+              onClick={() => changehandler("neetB")}
               className="text-sm font-bold tracking-wider text-black rounded-md sm:text-lg hover:bg-red-700 focus:bg-red-700 focus:text-white border border-red-800 w-64"
               label="NEET 25"
             />
@@ -112,7 +112,7 @@ const CourseDetails = () => {
                       >
                         <path
                           fillRule="evenodd"
-                          d="M10 18a.65.65 0 01-.38-.13l-7-5A.65.65 0 012 12V7c0-.24.13-.47.34-.6L10 2l7.66 4.4c.2.12.34.35.34.6v5c0 .24-.14.47-.34.6l-7 5a.65.65 0 01-.28.06zM3 7.72V12l6.3-3.62a.6.6 0 01.4 0L17 12V7.72l-7-4-7 4zM10 4.5L16 8v1l-6-3.46L4 9V8l6-3.5zM5 14v1h10v-1H5z"
+                          d="M10 18a.65.65 0 01-.38-.13l-7-5A.65.65 0 012 12V7c0-.A.13-.47.34-.6L10 2l7.66 4.4c.2.12.34.35.34.6v5c0 .A-.14.47-.34.6l-7 5a.65.65 0 01-.28.06zM3 7.72V12l6.3-3.62a.6.6 0 01.4 0L17 12V7.72l-7-4-7 4zM10 4.5L16 8v1l-6-3.46L4 9V8l6-3.5zM5 14v1h10v-1H5z"
                           clipRule="evenodd"
                         />
                       </svg>
@@ -129,7 +129,7 @@ const CourseDetails = () => {
                       >
                         <path
                           fillRule="evenodd"
-                          d="M10 18a.65.65 0 01-.38-.13l-7-5A.65.65 0 012 12V7c0-.24.13-.47.34-.6L10 2l7.66 4.4c.2.12.34.35.34.6v5c0 .24-.14.47-.34.6l-7 5a.65.65 0 01-.28.06zM3 7.72V12l6.3-3.62a.6.6 0 01.4 0L17 12V7.72l-7-4-7 4zM10 4.5L16 8v1l-6-3.46L4 9V8l6-3.5zM5 14v1h10v-1H5z"
+                          d="M10 18a.65.65 0 01-.38-.13l-7-5A.65.65 0 012 12V7c0-.A.13-.47.34-.6L10 2l7.66 4.4c.2.12.34.35.34.6v5c0 .A-.14.47-.34.6l-7 5a.65.65 0 01-.28.06zM3 7.72V12l6.3-3.62a.6.6 0 01.4 0L17 12V7.72l-7-4-7 4zM10 4.5L16 8v1l-6-3.46L4 9V8l6-3.5zM5 14v1h10v-1H5z"
                           clipRule="evenodd"
                         />
                       </svg>
@@ -146,7 +146,7 @@ const CourseDetails = () => {
                       >
                         <path
                           fillRule="evenodd"
-                          d="M10 18a.65.65 0 01-.38-.13l-7-5A.65.65 0 012 12V7c0-.24.13-.47.34-.6L10 2l7.66 4.4c.2.12.34.35.34.6v5c0 .24-.14.47-.34.6l-7 5a.65.65 0 01-.28.06zM3 7.72V12l6.3-3.62a.6.6 0 01.4 0L17 12V7.72l-7-4-7 4zM10 4.5L16 8v1l-6-3.46L4 9V8l6-3.5zM5 14v1h10v-1H5z"
+                          d="M10 18a.65.65 0 01-.38-.13l-7-5A.65.65 0 012 12V7c0-.A.13-.47.34-.6L10 2l7.66 4.4c.2.12.34.35.34.6v5c0 .A-.14.47-.34.6l-7 5a.65.65 0 01-.28.06zM3 7.72V12l6.3-3.62a.6.6 0 01.4 0L17 12V7.72l-7-4-7 4zM10 4.5L16 8v1l-6-3.46L4 9V8l6-3.5zM5 14v1h10v-1H5z"
                           clipRule="evenodd"
                         />
                       </svg>
@@ -165,7 +165,7 @@ const CourseDetails = () => {
                       >
                         <path
                           fillRule="evenodd"
-                          d="M10 18a.65.65 0 01-.38-.13l-7-5A.65.65 0 012 12V7c0-.24.13-.47.34-.6L10 2l7.66 4.4c.2.12.34.35.34.6v5c0 .24-.14.47-.34.6l-7 5a.65.65 0 01-.28.06zM3 7.72V12l6.3-3.62a.6.6 0 01.4 0L17 12V7.72l-7-4-7 4zM10 4.5L16 8v1l-6-3.46L4 9V8l6-3.5zM5 14v1h10v-1H5z"
+                          d="M10 18a.65.65 0 01-.38-.13l-7-5A.65.65 0 012 12V7c0-.A.13-.47.34-.6L10 2l7.66 4.4c.2.12.34.35.34.6v5c0 .A-.14.47-.34.6l-7 5a.65.65 0 01-.28.06zM3 7.72V12l6.3-3.62a.6.6 0 01.4 0L17 12V7.72l-7-4-7 4zM10 4.5L16 8v1l-6-3.46L4 9V8l6-3.5zM5 14v1h10v-1H5z"
                           clipRule="evenodd"
                         />
                       </svg>
@@ -183,7 +183,7 @@ const CourseDetails = () => {
                       >
                         <path
                           fillRule="evenodd"
-                          d="M10 18a.65.65 0 01-.38-.13l-7-5A.65.65 0 012 12V7c0-.24.13-.47.34-.6L10 2l7.66 4.4c.2.12.34.35.34.6v5c0 .24-.14.47-.34.6l-7 5a.65.65 0 01-.28.06zM3 7.72V12l6.3-3.62a.6.6 0 01.4 0L17 12V7.72l-7-4-7 4zM10 4.5L16 8v1l-6-3.46L4 9V8l6-3.5zM5 14v1h10v-1H5z"
+                          d="M10 18a.65.65 0 01-.38-.13l-7-5A.65.65 0 012 12V7c0-.A.13-.47.34-.6L10 2l7.66 4.4c.2.12.34.35.34.6v5c0 .A-.14.47-.34.6l-7 5a.65.65 0 01-.28.06zM3 7.72V12l6.3-3.62a.6.6 0 01.4 0L17 12V7.72l-7-4-7 4zM10 4.5L16 8v1l-6-3.46L4 9V8l6-3.5zM5 14v1h10v-1H5z"
                           clipRule="evenodd"
                         />
                       </svg>
@@ -201,7 +201,7 @@ const CourseDetails = () => {
                       >
                         <path
                           fillRule="evenodd"
-                          d="M10 18a.65.65 0 01-.38-.13l-7-5A.65.65 0 012 12V7c0-.24.13-.47.34-.6L10 2l7.66 4.4c.2.12.34.35.34.6v5c0 .24-.14.47-.34.6l-7 5a.65.65 0 01-.28.06zM3 7.72V12l6.3-3.62a.6.6 0 01.4 0L17 12V7.72l-7-4-7 4zM10 4.5L16 8v1l-6-3.46L4 9V8l6-3.5zM5 14v1h10v-1H5z"
+                          d="M10 18a.65.65 0 01-.38-.13l-7-5A.65.65 0 012 12V7c0-.A.13-.47.34-.6L10 2l7.66 4.4c.2.12.34.35.34.6v5c0 .A-.14.47-.34.6l-7 5a.65.65 0 01-.28.06zM3 7.72V12l6.3-3.62a.6.6 0 01.4 0L17 12V7.72l-7-4-7 4zM10 4.5L16 8v1l-6-3.46L4 9V8l6-3.5zM5 14v1h10v-1H5z"
                           clipRule="evenodd"
                         />
                       </svg>
