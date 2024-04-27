@@ -52,7 +52,7 @@ const CourseDetails = () => {
         {/* Left menu with buttons */}
         <div
           className={
-            isMobile ? "flex justify-center gap-5 flex-col" : "flex gap-5"
+            isMobile ? "flex justify-center gap-5 flex-col w-64" : "flex gap-5 w-64"
           }
         >
           <div
@@ -64,34 +64,34 @@ const CourseDetails = () => {
           >
             <SecondaryButton
               onClick={() => changehandler("jee24")}
-              className="text-sm font-bold tracking-wider text-black rounded-md sm:text-lg hover:bg-red-700 focus:bg-red-700 focus:text-white"
+              className="text-sm font-bold tracking-wider text-black rounded-md sm:text-lg hover:bg-red-700 focus:bg-red-700 focus:text-white border border-red-800 w-64"
               label="JEE 24"
             />
             <SecondaryButton
               onClick={() => changehandler("jee")}
-              className="text-sm font-bold tracking-wider text-black rounded-md sm:text-lg hover:bg-red-700 focus:bg-red-700 focus:text-white"
+              className="text-sm font-bold tracking-wider text-black rounded-md sm:text-lg hover:bg-red-700 focus:bg-red-700 focus:text-white border border-red-800 w-64"
               label="JEE 25"
             />
             <SecondaryButton
               onClick={() => changehandler("neet")}
-              className="text-sm font-bold tracking-wider text-black rounded-md sm:text-lg hover:bg-red-700 focus:bg-red-700 focus:text-white"
+              className="text-sm font-bold tracking-wider text-black rounded-md sm:text-lg hover:bg-red-700 focus:bg-red-700 focus:text-white border border-red-800 w-64"
               label="NEET 24"
             />
             
             <SecondaryButton
               onClick={() => changehandler("neet")}
-              className="text-sm font-bold tracking-wider text-black rounded-md sm:text-lg hover:bg-red-700 focus:bg-red-700 focus:text-white"
+              className="text-sm font-bold tracking-wider text-black rounded-md sm:text-lg hover:bg-red-700 focus:bg-red-700 focus:text-white border border-red-800 w-64"
               label="NEET 25"
             />
             <SecondaryButton
               onClick={() => changehandler("foundation")}
-              className="text-sm font-bold tracking-wider text-black rounded-md sm:text-lg hover:bg-red-700 focus:bg-red-700 focus:text-white"
+              className="text-sm font-bold tracking-wider text-black rounded-md sm:text-lg hover:bg-red-700 focus:bg-red-700 focus:text-white border border-red-800 w-64"
               label="Boards 25"
             />
           </div>
         </div>
         {/* Main content with single card */}
-        <div className="flex flex-col flex-grow">
+        <div className="flex flex-col flex-grow w-90">
           <div className="grid grid-cols-1 gap-5 sm:place-items-center">
             {isActive.map((batch, index) => (
               <div
@@ -151,7 +151,7 @@ const CourseDetails = () => {
                     </a>
                   </div>
                 </div>
-                <div className="sm:w-1/2">
+                <div className="sm:w-40">
                   <img
                     src={batch.imgSrc}
                     alt={batch.name}

@@ -174,7 +174,7 @@ const Gallery = () => {
         </div>
       </div>
 
-      <LastYearChamp />
+      {/* <LastYearChamp /> */}
     </div>
   );
 };
