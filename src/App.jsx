@@ -6,23 +6,17 @@ import {
 } from "react-router-dom";
 import { useEffect } from "react";
 import Input from "./components/input/Input";
-
 import Navbar from "./components/header/Navbar";
 import Landing from "./apps/landing/Landing";
 // import Announcement from "./apps/courses/Courses";
 // import ResidentialProgram from "./apps/residentialProgram/ResidentialProgram";
-
-import FeePayment from "./apps/feePayment.jsx/FeePayment";
+import FeePayment from "./apps/feePayment/FeePayment";
 import Result from "./apps/results/Result";
 import Resources from "./apps/resources/Resources";
 import AboutUs from "./apps/aboutUs/AboutUs";
-
 import Contact from "./apps/contactUs/Contact";
-
 import SignUp from "./apps/signUp/SignUp";
-
 import Courses from "./apps/courses/Courses";
-
 import Footer from "./components/footer/FooterMain";
 import Scholorship from "./apps/scholorship/Scholorship";
 import Login from "./apps/logIn/Login";

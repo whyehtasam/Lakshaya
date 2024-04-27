@@ -52,15 +52,15 @@ const CourseDetails = () => {
         <div
           className={
             isMobile
-              ? "flex justify-center gap-2.5 flex-col w-full" // Adjusted to full width
+              ? "flex justify-center gap-2.5 flex-col w-full" 
               : "flex gap-2.5 w-64"
           }
         >
           <div
             className={
               isMobile
-                ? "flex gap-2.5 sm:hidden flex-wrap" // Adjusted for mobile and wrap content
-                : "hidden sm:flex flex-col gap-2.5 sm:flex sm:flex-col sm:justify-start sm:gap-5 buttons"
+                ? "flex gap-2.5 sm:hidden flex-wrap"
+                : "hidden sm:flex flex-col gap-2.5 sm:flex sm:flex-col sm:justify-start sm:gap-5 buttons w-full"
             }
           >
             <SecondaryButton

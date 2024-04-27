@@ -4,7 +4,7 @@ import React from 'react'
 function Carousel() {
   
   return (
-    <div className=' pt-[40px] pb-12 bg-pink-800 text-[#434343] text-center '>
+    <div className=' pt-[40px] pb-12 bg-red-900 text-[#434343] text-center '>
       <div className=" m-auto overflow-hidden max-w-[1200px] px-[20px]">
         <h1 className="text-[#fff] text-4xl font-bold pb-8">WORDS FROM OUR CHAMP!</h1>
 
