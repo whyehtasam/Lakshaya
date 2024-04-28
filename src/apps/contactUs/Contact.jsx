@@ -68,7 +68,7 @@ const Contact = () => {
     <main className="py-14">
       <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
         <div className="max-w-lg mx-auto gap-12 justify-between lg:flex lg:max-w-none">
-          <div className="max-w-lg  space-y-3 ">
+          <div className="max-w-lg  space-y-5 ">
             <div className="space-y-3 ">
 
            
