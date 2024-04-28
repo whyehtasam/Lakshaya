@@ -6,7 +6,8 @@ import FAQs from "./FAQs";
 import FeatureList from "./FeatureList";
 import Hero from "./Hero";
 import Results from "./Results";
-import ScholorshipHero from "./ScholorshipHero";
+// import ScholorshipHero from "./ScholorshipHero";
+
 import Teams from "./Teams";
 
 const Landing = () => {

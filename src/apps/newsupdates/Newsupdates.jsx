@@ -142,8 +142,9 @@ const Newsupdates = () => {
             <Pagination />
         </div>
       </div>
-
+      <div>
       <LastYearChamp />
+      </div>
     </div>
   );1
 };
