@@ -51,6 +51,7 @@ function App() {
 
           {/* <Route path="/contactUs" element={<Announcement />} /> */}
 
+          <Route path="/contactUs" element={<Contact/>} />
           <Route path="/login" element={<Login />} />
           <Route path="/signUp" element={<SignUp />} />
           <Route path="/" element={<Landing />} />
