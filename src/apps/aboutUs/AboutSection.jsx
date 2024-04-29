@@ -1,5 +1,5 @@
 import React from "react";
-
+import svg from '../../assets/AboutUs.svg';
 const AboutSection = () => {
   return (
     <div>
@@ -9,11 +9,10 @@ const AboutSection = () => {
             <img
               className="object-cover object-center rounded-md"
               alt="hero"
-              src="https://images.unsplash.com/photo-1573164713619-24c711fe7878?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1738&q=80"
-            />
+              src={svg}     />
           </div>
           <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center space-y-6">
-            <h1 className="text-lg text-white font-medium">About Us</h1>
+            <h1 className="text-lg text-red-200 font-medium">About Us</h1>
             <h1 className="title-font sm:text-5xl text-3xl mb-4 font-bold text-white">
               Long heading is what you see here
               in this feature section
