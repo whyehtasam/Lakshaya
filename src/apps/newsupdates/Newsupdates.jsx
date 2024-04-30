@@ -27,8 +27,8 @@ const Newsupdates = () => {
       {/* <hr class="w-[80%] h-1 mx-auto my-4 bg-gray-100 border-0 rounded  dark:bg-gray-700"></hr> */}
 
       <div className="grid lg:grid-cols-5 sm:grid-cols-1 gap-4 p-5 ">
-        <div className=" flex-none p-6 sticky lg:border-r-2  rounded-md shadow">
-          <h1 className="text-3xl font-bold text-red-800 md:text-5xl lg:text-4xl ">
+        <div className=" flex-none p-6 sticky lg:border-r-2  rounded-md shadow bg-slate-50">
+          <h1 className="text-3xl font-bold text-gray-800 md:text-5xl lg:text-4xl ">
             Filter By
           </h1>
           <div className="pt-6">

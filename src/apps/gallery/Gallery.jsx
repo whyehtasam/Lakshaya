@@ -28,7 +28,7 @@ const Gallery = () => {
 
       <div className="grid lg:grid-cols-5 sm:grid-cols-1 p-5 gap-4">
         <div className=" flex-none p-6 sticky  rounded-md shadow ">
-          <h1 className="text-3xl font-bold text-black md:text-5xl lg:text-4xl ">
+          <h1 className="text-3xl font-bold text-gray-800 md:text-5xl lg:text-4xl ">
             Filter By
           </h1>
           <div className="pt-6">
@@ -96,11 +96,11 @@ const Gallery = () => {
           />
         </div>
 
-        <div className="grow lg:col-span-4 px-4 h-[80vh] overflow-y-auto rounded-md shadow">
+        <div className="grow lg:col-span-4 p-4 px-4 h-[80vh] overflow-y-auto rounded-md shadow ">
           <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-            <div>
+            <div className="">
               <img
-                class="h-auto max-w-full rounded-lg"
+                class="h-auto relative z-0 rounded-lg transition-all duration-300 hover:scale-95"
                 src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg"
                 alt=""
               />
