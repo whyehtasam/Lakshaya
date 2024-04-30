@@ -3,7 +3,7 @@ import svg from "../../assets/Service.svg";
 const AboutServices = () => {
   return (
     <div>
-      <section className="text-gray-600 body-font py-6">
+      <section className="text-gray-600 body-font sm:py-6">
         <div  className="px-5 sm:mb-16 mb-10 text-center space-y-3">
 
         <h1 className="text-lg text-red-200 font-medium">Explore</h1>
@@ -11,7 +11,7 @@ const AboutServices = () => {
           The Services We Offer
         </h1>
         </div> 
-        <div className="container px-5  mx-auto flex flex-wrap">
+        <div className="container sm:px-5  mx-auto flex flex-wrap">
           <div className="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden bg-slate-50  p-10">
             <img
               alt="feature"

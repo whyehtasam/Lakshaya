@@ -4,8 +4,8 @@ const AboutSection = () => {
   return (
     <div>
       <section className="text-gray-600 body-font">
-        <div className="container mx-auto flex px-10 py-10 md:flex-row flex-col items-center">
-          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+        <div className="container mx-auto flex sm:px-10 sm:py-10 md:flex-row flex-col items-center">
+          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-full mb-10 md:mb-0">
             <img
               className="object-cover object-center rounded-md"
               alt="hero"
@@ -17,7 +17,7 @@ const AboutSection = () => {
               Long heading is what you see here
               in this feature section
             </h1>
-            <p className="mb-8 leading-relaxed text-slate-100">
+            <p className="mb-8 leading-relaxed text-slate-100 text-center">
               Welcome to our platform, where we strive to provide top-notch
               services to our customers. We believe in the power of technology
               and its ability to simplify and enhance our lives. Our team is
