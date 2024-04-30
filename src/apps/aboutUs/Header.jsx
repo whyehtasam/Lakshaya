@@ -19,9 +19,10 @@ import { useState } from "react"
                         We are dedicated to providing quality education and empowering students to succeed.
                         </p>
                         <div className="items-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
-                            <a href="javascript:void(0)" className="block py-2 px-4 text-center text-white font-medium bg-red-800 duration-150 hover:bg-indigo-500 active:bg-indigo-700 rounded-lg shadow-lg hover:shadow-none">
+                            <a href="javascript:void(0)" className="block py-2 px-4 text-center text-white font-medium bg-red-800 duration-150 hover:bg-red-900 active:bg-red-700 rounded-lg shadow-lg hover:shadow-none">
                                 Learn more
                             </a>
+
                             <a href="javascript:void(0)" className="flex items-center justify-center gap-x-2 py-2 px-4 text-gray-700 hover:text-gray-500 font-medium duration-150 active:bg-gray-100 border rounded-lg md:inline-flex ">
                                 Let's talk
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
@@ -30,10 +31,10 @@ import { useState } from "react"
                             </a>
                         </div>
                     </div>
-                    <div className="flex-none mt-14 md:mt-0 md:max-w-xl">
+                    <div className="flex-none mt-5 p-5  md:mt-0 md:max-w-xl">
                         <img
                             src="https://images.unsplash.com/photo-1573164713619-24c711fe7878?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1738&q=80"
-                            className=" md:rounded-tl-[108px] md:rounded-br-[108px] md:rounded-tr-md md:rounded-bl-md"
+                            className=" md:rounded-tl-[108px] md:rounded-br-[108px] md:rounded-tr-md md:rounded-bl-md rounded-md "
                             alt=""
                         />
                     </div>
