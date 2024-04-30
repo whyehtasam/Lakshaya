@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PrimaryButton from "../../components/buttons/PrimaryButton";
+import axios from "axios";
 
 function FeeForm() {
   const [formData, setFormData] = useState({
@@ -41,6 +42,13 @@ function FeeForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    axios({method:'POST',url:'http://localhost:8000/api/v1/student/fee',data:formData
+    }).then((res)=>{
+      console.log(res.data);
+    })
+    .catch((e)=>{
+      console.log(e.message)
+    })
     // Hash sensitive data before submission
     // const hashedName = bcrypt.hashSync(formData.name, 10);
     // const hashedPhone = bcrypt.hashSync(formData.phone, 10);
