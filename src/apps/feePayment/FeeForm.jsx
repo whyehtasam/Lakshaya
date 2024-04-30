@@ -60,7 +60,7 @@ function FeeForm() {
   };
 
   return (
-    <div className="w-1/2 mx-auto my-12">
+    <div className=" p-5 sm:p-0 sm:w-1/2 mx-auto sm:my-12">
       <div className="bg-[#eee9ea]/100 p-3 px-5 rounded-md pb-3 shadow-md ">
         <form onSubmit={handleSubmit} className="z-40">
           <h1 className="text-2xl font-bold text-gray-800 md:text-xl lg:text-xl text-center">
@@ -91,7 +91,7 @@ function FeeForm() {
               <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                 Phone number
               </label>
-              <div className="flex">
+              <div className="flex gap-2">
                 <input
                   type="text"
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-16 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"

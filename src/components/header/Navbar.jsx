@@ -74,8 +74,10 @@ const Navbar = () => {
               </Link> */}
             </ul>
 
-            
+            <span className="block md:hidden ">
+
             <NavDrawer/>
+            </span>
           </header>
         </div>
       </div>
