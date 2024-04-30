@@ -13,12 +13,12 @@ const Newsupdates = () => {
       </h1> */}
       <div className="relative grid place-content-center">
         <Header
-          // title="Benefits"
+          title="Announcements"
           header="Latest News & Updates"
-          // description="Our online coaching academy offers flexible learning options and is led by expert instructors. With a wide range of courses to choose from, you can easily find the perfect fit for your educational needs."
-          titleStyle="lg:text-xl"
-          headerStyle="sm:text-5xl text-black "
-          descStyle="text-justify sm:text-lg text-gray-700"
+          description="Stay in the loop with our announcement page! Get the latest updates, news, and important information"
+          titleStyle="lg:text-xl text-center"
+          headerStyle="sm:text-5xl text-black text-center "
+          descStyle="text-justify sm:text-lg text-gray-700 text-center"
           className="pb-6 pt-4 space-y-"
         />
         
