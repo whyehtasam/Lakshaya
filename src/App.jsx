@@ -22,6 +22,7 @@ import Scholorship from "./apps/scholorship/Scholorship";
 import Login from "./apps/logIn/Login";
 import Gallery from "./apps/gallery/Gallery";
 import Newsupdates from "./apps/newsupdates/Newsupdates";
+import SignUpNew from "./apps/signUp/SignUpNew";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -50,6 +51,7 @@ function App() {
 
           {/* <Route path="/contactUs" element={<Announcement />} /> */}
 
+          <Route path="/contactUs" element={<Contact/>} />
           <Route path="/login" element={<Login />} />
           <Route path="/signUp" element={<SignUp />} />
           <Route path="/" element={<Landing />} />

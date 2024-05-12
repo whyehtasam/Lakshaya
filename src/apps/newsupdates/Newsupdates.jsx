@@ -3,19 +3,32 @@ import Container from "../../components/wrappers/Container";
 import LastYearChamp from "../scholorship/LastYearChamps";
 import PrimaryButton from "../../components/buttons/PrimaryButton";
 import Pagination from "../../components/pagination/Pagination";
+import Header from "../../components/header/Header";
 
 const Newsupdates = () => {
   return (
     <div>
-      <h1 className="text-4xl pb-4 font-bold text-red-800 md:text-5xl lg:text-7xl text-center">
+      {/* <h1 className="text-4xl pb-4 font-bold text-red-800 md:text-5xl lg:text-7xl text-center">
         Latest News & Updates
-      </h1>
+      </h1> */}
+      <div className="relative grid place-content-center">
+        <Header
+          title="Announcements"
+          header="Latest News & Updates"
+          description="Stay in the loop with our announcement page! Get the latest updates, news, and important information"
+          titleStyle="lg:text-xl text-center"
+          headerStyle="sm:text-5xl text-black text-center "
+          descStyle="text-justify sm:text-lg text-gray-700 text-center"
+          className="pb-6 pt-4 space-y-"
+        />
+        
+      </div>
 
       {/* <hr class="w-[80%] h-1 mx-auto my-4 bg-gray-100 border-0 rounded  dark:bg-gray-700"></hr> */}
 
-      <div className="grid lg:grid-cols-5 sm:grid-cols-1 border-t-2 border-t-red-800">
-        <div className=" flex-none p-6 sticky lg:border-r-2 border-r-red-800">
-          <h1 className="text-3xl font-bold text-red-800 md:text-5xl lg:text-4xl ">
+      <div className="grid lg:grid-cols-5 sm:grid-cols-1 gap-4 p-5 ">
+        <div className=" flex-none p-6 sticky lg:border-r-2  rounded-md shadow bg-slate-50">
+          <h1 className="text-3xl font-bold text-gray-800 md:text-5xl lg:text-4xl ">
             Filter By
           </h1>
           <div className="pt-6">
@@ -87,9 +100,9 @@ const Newsupdates = () => {
           />
         </div>
 
-        <div className="grow lg:col-span-4 p-6">
+        <div className="grow lg:col-span-4 p-6 rounded-md shadow">
 
-          <div className="grid lg:grid-cols-6 mb-2 content-center p-2 border border-red-800 rounded-md ">
+          <div className="grid lg:grid-cols-6 mb-2 content-center p-2 rounded-md shadow  ">
 
             <div className="text-center  lg:w-[50%] border border-red-800 rounded-md">
               <div className=" text-grey-900 ">
@@ -114,7 +127,7 @@ const Newsupdates = () => {
 
           </div>
 
-          <div className="grid lg:grid-cols-6 mb-2 content-center p-2 border border-red-800 rounded-md ">
+          <div className="grid lg:grid-cols-6 mb-2 content-center p-2 rounded-md shadow ">
 
             <div className="text-center  lg:w-[50%] border border-red-800 rounded-md">
               <div className=" text-grey-900 ">

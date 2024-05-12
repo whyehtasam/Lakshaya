@@ -91,7 +91,7 @@ const FeatureList = () => {
                   <p className="leading-relaxed text-base">
                     {feature.description}
                   </p>
-                  <a className="mt-3 text-red-800 inline-flex items-center">
+                  {/* <a className="mt-3 text-red-800 inline-flex items-center">
                     Learn More
                     <svg
                       fill="none"
@@ -104,7 +104,7 @@ const FeatureList = () => {
                     >
                       <path d="M5 12h14M12 5l7 7-7 7" />
                     </svg>
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>

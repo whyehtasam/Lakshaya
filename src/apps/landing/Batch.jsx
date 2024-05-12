@@ -21,7 +21,9 @@ const Batch = () => {
         <div className="flex gap-5 sm:flex sm:flex-row sm:justify-center sm:gap-10 buttons ">
    
         <SecondaryButton onClick={() => changehandler(jee)} className='w-fit text-sm font-bold tracking-wider text-black bg-white rounded-md  sm:w-52 sm:px-6 sm:py-3 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 sm:text-lg outline outline-2 outline-red-800 outline-offset-2 focus:bg-red-900 focus:text-white' label='JEE'/>
+
         <SecondaryButton onClick={() => changehandler(neet)}className='w-fit text-sm font-bold tracking-wider text-black bg-white rounded-md sm:w-52 sm:px-6 sm:py-3 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 sm:text-lg outline outline-2 outline-red-800 outline-offset-2 focus:bg-red-900 focus:text-white' label='NEET'/>
+        
         <SecondaryButton onClick={() => changehandler(foundation)} className='w-fit text-sm font-bold tracking-wider text-black bg-white rounded-md sm:w-52 sm:px-6 sm:py-3 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 sm:text-lg outline outline-2 outline-red-800 outline-offset-2 focus:bg-red-900 focus:text-white' label='FOUNDATION'/>
         </div>
 
