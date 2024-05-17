@@ -30,7 +30,7 @@ const FooterMain = () => {
               >
                 <path d="M96 0V47L48 94H0V47L48 0H96Z" />
               </svg>
-              Lakshaya
+              The Lakshya
             </a>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 md:grid-cols-4 lg:gap-20">

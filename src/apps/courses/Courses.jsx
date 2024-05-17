@@ -19,7 +19,7 @@ const Courses = () => {
           <div className="grid lg:grid-cols-3 md:grid-cols-1 ">
             <div className="lg:col-span-2 md:col-span-1">
               <CourseHero
-                title="Lakshaya Coaching:"
+                title="The Lakshya:"
                 subtitle="Coaching's moto"
                 burdenText="For Students in class 11th,12th & 13th"
                 inspirationText="JEE and NEET: A new paradigm in motivation and success direction."

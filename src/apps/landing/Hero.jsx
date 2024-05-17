@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <div>
         <div className="flex flex-col justify-start gap-3 sm:gap-6 my-7">
-            <h1 className="text-4xl font-bold text-red-800 md:text-5xl lg:text-7xl">Lakshaya Coaching:</h1>
+            <h1 className="text-4xl font-bold text-yellow-300 md:text-5xl lg:text-7xl">The Lakshaya:</h1>
             <h1 className="text-4xl font-bold text-gray-800 md:text-5xl lg:text-7xl">Guiding Minds,</h1>
             <h1 className="text-4xl font-bold text-gray-800 md:text-5xl lg:text-7xl">Building Generations</h1>
             <div>

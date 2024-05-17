@@ -3,15 +3,15 @@ export const Testimonials = () => {
     const testimonials = [
         {
             avatar: "https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg",
-            name: "Martin escobar",
-            title: "Founder of meta",
-            quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et est hendrerit, porta nunc vitae."
+            name: "Mohammad Faizan",
+            title: "IIT ISM dhanbad",
+            quote: "The Lakshya is not just a coaching but an environment to nurish ourselves."
         },
         {
             avatar: "https://randomuser.me/api/portraits/men/46.jpg",
-            name: "Simon andrew",
-            title: "Software engineer",
-            quote: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+            name: "Aakash kumar",
+            title: "NIT jamshedpur",
+            quote: "if your Lakshya is JEE/NEET then join THE LAKSHYA."
         },
         {
             avatar: "https://randomuser.me/api/portraits/men/86.jpg",
