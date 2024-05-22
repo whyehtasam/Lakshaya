@@ -70,17 +70,16 @@ const Contact = () => {
         <div className="max-w-lg mx-auto gap-12 justify-between lg:flex lg:max-w-none">
           <div className="max-w-lg  space-y-5 ">
             <div className="space-y-3 ">
-
-           
-            <h3 className="text-red-800 font-semibold">Contact</h3>
-            <p className="text-gray-800 text-3xl font-semibold sm:text-4xl">
-              Let us know how we can help
-            </p>
-            <p>
-              We’re here to help and answer any question you might have, We look
-              forward to hearing from you! Please fill out the form, or us the
-              contact information bellow .
-            </p> </div>
+              <h3 className="text-red-800 font-semibold">Contact</h3>
+              <p className="text-gray-800 text-3xl font-semibold sm:text-4xl">
+                Let us know how we can help
+              </p>
+              <p>
+                We’re here to help and answer any question you might have, We
+                look forward to hearing from you! Please fill out the form, or
+                us the contact information bellow .
+              </p>{" "}
+            </div>
             <div>
               <ul className="mt-6 flex flex-wrap gap-x-10 gap-y-6 items-center">
                 {contactMethods.map((item, idx) => (
@@ -92,8 +91,9 @@ const Contact = () => {
               </ul>
             </div>
             <div className="h-64">
+    
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1871125.2196485072!2d84.32653711687502!3d23.656587673004363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398b2386df480857%3A0x62c5b809eee29004!2sJharkhand!5e0!3m2!1sen!2sin!4v1714319343106!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.598141383644!2d86.4078180753374!3d23.797320378638414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f6a348e8ef3d69%3A0x41269b40d9ed0ef0!2sThe%20LAKSHYA!5e0!3m2!1sen!2sin!4v1715510830307!5m2!1sen!2sin"
                 className="w-full h-full rounded-md drop-shadow-sm"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -101,7 +101,10 @@ const Contact = () => {
             </div>
           </div>
           <div className="flex-1 h-full mt-8 sm:mt-0 sm:max-w-lg lg:max-w-md">
-            <form onSubmit={(e) => e.preventDefault()} className="space-y-5 h-full">
+            <form
+              onSubmit={(e) => e.preventDefault()}
+              className="space-y-5 h-full"
+            >
               <div>
                 <label className="font-medium">Full name</label>
                 <input

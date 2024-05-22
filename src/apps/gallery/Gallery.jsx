@@ -3,19 +3,32 @@ import Container from "../../components/wrappers/Container";
 import LastYearChamp from "../scholorship/LastYearChamps";
 import PrimaryButton from "../../components/buttons/PrimaryButton";
 import Pagination from "../../components/pagination/Pagination";
+import Header from "../../components/header/Header";
 
 const Gallery = () => {
   return (
     <div>
-      <h1 className="text-4xl pb-4 font-bold text-red-800 md:text-5xl lg:text-7xl text-center">
+      {/* <h1 className="text-4xl pb-4 font-bold text-red-800 md:text-5xl lg:text-7xl text-center">
         Photo Gallery
-      </h1>
+      </h1> */}
+      <div className="relative grid place-content-center p-5">
+        <Header
+          title="Extensive"
+          header="Our Champions"
+          description="These are the past years result that THE LAKSHYA produced with continuous hardword towards the student."
+          titleStyle="lg:text-xl text-center  "
+          headerStyle="sm:text-5xl text-black text-center"
+          descStyle="sm:text-lg text-gray-700 text-center"
+          className="pb-6 pt-4 space-y-"
+        />
+        
+      </div>
 
       {/* <hr class="w-[80%] h-1 mx-auto my-4 bg-gray-100 border-0 rounded  dark:bg-gray-700"></hr> */}
 
-      <div className="grid lg:grid-cols-5 sm:grid-cols-1 border-t-2 border-t-red-800">
-        <div className=" flex-none p-6 sticky lg:border-r-2 border-r-red-800">
-          <h1 className="text-3xl font-bold text-red-800 md:text-5xl lg:text-4xl ">
+      <div className="grid lg:grid-cols-5 sm:grid-cols-1 p-5 gap-4">
+        <div className=" flex-none p-6 sticky  rounded-md shadow ">
+          <h1 className="text-3xl font-bold text-gray-800 md:text-5xl lg:text-4xl ">
             Filter By
           </h1>
           <div className="pt-6">
@@ -83,11 +96,11 @@ const Gallery = () => {
           />
         </div>
 
-        <div className="grow lg:col-span-4 p-4 h-[80vh] overflow-y-auto">
+        <div className="grow lg:col-span-4 p-4 px-4 h-[80vh] overflow-y-auto rounded-md shadow ">
           <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-            <div>
+            <div className="">
               <img
-                class="h-auto max-w-full rounded-lg"
+                class="h-auto relative z-0 rounded-lg transition-all duration-300 hover:scale-95"
                 src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg"
                 alt=""
               />
