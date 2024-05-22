@@ -11,7 +11,7 @@ const AboutFeature = () => {
           <h1 className="title-font sm:text-5xl text-3xl mb-4 font-bold ">
           Tailored Learning Plans for Your Success
           </h1>
-          <p className="mb-8 leading-relaxed text-slate-400 text-center">
+          <p className="mb-8 leading-relaxed text-slate-400 text-center sm:text-justify">
           At our coaching service, we believe in providing personalized learning plans that cater to your unique needs. Our experienced team of educators will work closely with you to create a customized roadmap for your success.
           </p>
           

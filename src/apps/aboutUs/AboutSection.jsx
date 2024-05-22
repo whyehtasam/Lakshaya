@@ -17,7 +17,7 @@ const AboutSection = () => {
               Long heading is what you see here
               in this feature section
             </h1>
-            <p className="mb-8 leading-relaxed text-slate-100 text-center">
+            <p className="mb-8 leading-relaxed text-slate-100 text-center sm:text-justify">
               Welcome to our platform, where we strive to provide top-notch
               services to our customers. We believe in the power of technology
               and its ability to simplify and enhance our lives. Our team is
