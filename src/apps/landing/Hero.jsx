@@ -7,8 +7,8 @@ const Hero = () => {
     <div>
         <div className="flex flex-col justify-start gap-3 sm:gap-6 my-7">
             <h1 className="text-4xl font-bold text-yellow-300 md:text-5xl lg:text-7xl">The Lakshaya:</h1>
-            <h1 className="text-4xl font-bold text-gray-800 md:text-5xl lg:text-7xl">Guiding Minds,</h1>
-            <h1 className="text-4xl font-bold text-gray-800 md:text-5xl lg:text-7xl">Building Generations</h1>
+            <h1 className="text-4xl font-bold text-gray-800 md:text-5xl lg:text-7xl">Forum for</h1>
+            <h1 className="text-4xl font-bold text-gray-800 md:text-5xl lg:text-7xl">IIT-JEE and Medical</h1>
             <div>
                 <p className="mt-4 text-gray-600 sm:text-lg md:text-xl lg:text-2xl">JEE and NEET: A new paradigm in motivation and success direction.</p>
                 <p className="mt-4 text-gray-600 sm:text-lg md:text-xl lg:text-2xl">JEE और NEET: नए प्रेरणा और सफलता की दिशा में एक नया मोड़।</p>
