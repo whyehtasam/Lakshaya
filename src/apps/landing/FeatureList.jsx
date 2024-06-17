@@ -3,9 +3,9 @@ import Header from "../../components/header/Header";
 
 const features = [
   {
-    title: "Unlock Your Potential with Our Platform",
+    title: "Audio-visual classroom",
     description:
-      "Access our extensive video content, interactive tests, and progress tracking to enhance your learning experience.",
+      "Learn the concept in visual ways to have better graps on the topics.",
     Icon: () => (
       <svg
         fill="none"
@@ -21,9 +21,9 @@ const features = [
     ),
   },
   {
-    title: "Interactive Learning at Your Fingertips with our Platform",
+    title: "Practical Lab Classes",
     description:
-      "Engage with our dynamic video lessons, practice with interactive tests, and track your progress in real-time.",
+      "Our coaching provides you the practical lab class so that you can test the practical application the very same concept.",
     Icon: () => (
       <svg
         fill="none"
@@ -40,9 +40,69 @@ const features = [
     ),
   },
   {
-    title: "Track Your Progress and Achieve Success",
+    title: "Extra doubt classes",
     description:
-      "Monitor your performance, identify areas of improvement, and stay motivated on your learning journey.",
+      "Your are always welcome in the extra doubts classes 'NEVER CARRY YOUR DOUBT FORWARD'.",
+    Icon: () => (
+      <svg
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        className="w-5 h-5"
+        viewBox="0 0 24 24"
+      >
+        <circle cx="6" cy="6" r="3"></circle>
+        <circle cx="6" cy="18" r="3"></circle>
+        <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+      </svg>
+    ),
+  },
+  {
+    title: "Test series",
+    description:
+      "We provide the test series so that you can test your selves.",
+    Icon: () => (
+      <svg
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        className="w-5 h-5"
+        viewBox="0 0 24 24"
+      >
+        <circle cx="6" cy="6" r="3"></circle>
+        <circle cx="6" cy="18" r="3"></circle>
+        <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+      </svg>
+    ),
+  },
+  {
+    title: "Special attention to the needy students",
+    description:
+      "We regularly track the performance of the students and give them special attention to needy one so that our all student can be on the same page.",
+    Icon: () => (
+      <svg
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        className="w-5 h-5"
+        viewBox="0 0 24 24"
+      >
+        <circle cx="6" cy="6" r="3"></circle>
+        <circle cx="6" cy="18" r="3"></circle>
+        <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+      </svg>
+    ),
+  },
+  {
+    title: "Emphasis on the personality development",
+    description:
+      "We encourage our students to speak in the class even if they have a silly doubt , so that their personality can be developed.",
     Icon: () => (
       <svg
         fill="none"

@@ -5,16 +5,16 @@ const Teams = () => {
     {
       avatar:
         "https://images.unsplash.com/photo-1511485977113-f34c92461ad9?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ",
-      name: "Martiana dialan",
-      title: "Product designer",
+      name: "Sohail sir",
+      title: "Mathematics Guru",
       desc: "Lorem Ipsum is simply dummy text of the printing and typesettin industry.",
       linkedin: "javascript:void(0)",
       twitter: "javascript:void(0)",
     },
     {
       avatar: "https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg",
-      name: "Micheal colorand",
-      title: "Software engineer",
+      name: "Abul sir",
+      title: "Physics Wizards",
       desc: "Lorem Ipsum is simply dummy text of the printing and typesettin industry.",
       linkedin: "javascript:void(0)",
       twitter: "javascript:void(0)",
