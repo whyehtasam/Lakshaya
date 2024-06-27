@@ -188,6 +188,9 @@ const Gallery = () => {
       </div>
 
       {/* <LastYearChamp /> */}
+      <div>
+        <div className="text-center border-2">poster</div>
+      </div>
     </div>
   );
 };
