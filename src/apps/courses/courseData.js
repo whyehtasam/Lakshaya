@@ -1,15 +1,17 @@
 
 export const jeeA = [
     {
-      name: "JEE 24",
+      course_name: "JEE 24",
+      duration:"1 year",
+      description:"The only course you need to crack jee",
       class: "Class XI",
       targetYear: "2025",
       startDate: "04 April, 2024",
-      price: "Rs. 4000",
+      fee: "Rs. 4000",
       imgSrc:
         "https://www.adarshbarnwal.com/wp-content/uploads/2022/03/Jee-Mains.jpg",
       faculties: ["A", "B", "C", "D"],
-      syllabusLink: "#" // Add syllabus link here
+      syllabus: "#" // Add syllabus link here
     }
   ];
   

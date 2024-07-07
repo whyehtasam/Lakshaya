@@ -40,9 +40,10 @@ function FeeForm() {
   };
 
   const handleSubmit = (e) => {
+    const backend_url = import.meta.env.VITE_BACKEND_URL;
     e.preventDefault();
 
-    axios({method:'POST',url:'http://localhost:8000/api/v1/student/fee',data:formData
+    axios({method:'POST',url:`${backend_url}/api/v1/student/fee`,data:formData
     }).then((res)=>{
       console.log(res.data);
     })

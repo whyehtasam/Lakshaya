@@ -6,31 +6,51 @@ import { neetA, foundation, jeeA, jeeB, neetB } from "./courseData";
 const CourseDetails = () => {
   const [isActive, setIsActive] = useState(jeeA); // Initially set to jeeA
   const [isMobile, setIsMobile] = useState(false);
+  const [courseData, setCourseData] = useState([]);
 
   const changehandler = (type) => {
-    switch (type) {
-      case "jeeA":
-        setIsActive(jeeA);
-        break;
-      case "jeeB":
-        setIsActive(jeeB);
-        break;
-      case "neetA":
-        setIsActive(neetA);
-        break;
-      case "neetB":
-        setIsActive(neetB);
-        break;
-      case "foundation":
-        setIsActive(foundation);
-        break;
-      default:
-        setIsActive(jeeA); // Default to jeeA if type is not recognized
-        break;
-    }
+    // switch (type) {
+    //   case "jeeA":
+    //     setIsActive(jeeA);
+    //     break;
+    //   case "jeeB":
+    //     setIsActive(jeeB);
+    //     break;
+    //   case "neetA":
+    //     setIsActive(neetA);
+    //     break;
+    //   case "neetB":
+    //     setIsActive(neetB);
+    //     break;
+    //   case "foundation":
+    //     setIsActive(foundation);
+    //     break;
+    //   default:
+    //     setIsActive(jeeA); // Default to jeeA if type is not recognized
+    //     break;
+    // }
+
   };
 
+  const backend_url = import.meta.env.VITE_BACKEND_URL;
+
+
   useEffect(() => {
+    const token=localStorage.getItem('token');
+    if(!token) return;
+    fetch(backend_url+'/api/course/get',
+      {
+        headers:{
+          'Authorization':`Bearer ${token}`,
+        }
+      } 
+    ).then(res=> res.json()).then(data=>{ 
+      setCourseData([...data]);
+      setIsActive(data[0]);
+    }).catch(e=> {
+      console.log(e);
+    })
+
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
@@ -39,7 +59,10 @@ const CourseDetails = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
+
   }, []);
+
+            console.log(  isActive)
 
   return (
     <section className="grid gap-5 sm:gap-12 sm:mb-4 batch-courses">
@@ -63,7 +86,23 @@ const CourseDetails = () => {
                 : "hidden sm:flex flex-col gap-2.5 sm:flex sm:flex-col sm:justify-start sm:gap-5 buttons w-full"
             }
           >
-            <SecondaryButton
+
+          {
+            
+            courseData.map(e=>{
+              return (
+                <SecondaryButton
+                 onClick={() => setIsActive(e)}
+                  className="text-sm font-bold tracking-wider text-black rounded-md sm:text-lg hover:bg-red-700 focus:bg-red-700 focus:text-white border border-red-800"
+                  label={e.course_name}
+
+                />
+              )
+            }
+            )
+          }
+          
+            {/* <SecondaryButton
               onClick={() => changehandler("jeeA")}
               className="text-sm font-bold tracking-wider text-black rounded-md sm:text-lg hover:bg-red-700 focus:bg-red-700 focus:text-white border border-red-800"
               label="JEE 24"
@@ -87,10 +126,10 @@ const CourseDetails = () => {
               onClick={() => changehandler("foundation")}
               className="text-sm font-bold tracking-wider text-black rounded-md sm:text-lg hover:bg-red-700 focus:bg-red-700 focus:text-white border border-red-800"
               label="Boards 25"
-            />
+            /> */}
           </div>
         </div>
-        {/* Main content with single card */}
+  
         <div className="flex flex-col flex-grow w-90">
           <div className="grid grid-cols-1 gap-5 sm:place-items-center">
             {isActive.map((batch, index) => (
@@ -100,10 +139,10 @@ const CourseDetails = () => {
               >
                 <div className="p-5 sm:w-3/4 flex flex-col">
                   <h3 className="text-lg font-semibold tracking-tight text-gray-900 dark:text-white mb-2">
-                    {batch.name}
+                    {batch.course_name}
                   </h3>
                   <div className="mb-2 flex items-center">
-                    <p className="font-semibold text-gray-600 dark:text-white mr-2">
+                    <p className="flex font-semibold text-gray-600 dark:text-white mr-2 ">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="h-5 w-5 inline-block"
@@ -116,11 +155,12 @@ const CourseDetails = () => {
                           clipRule="evenodd"
                         />
                       </svg>
-                      Feature 1:
+                      Description: 
                     </p>
+                    <p className="w-max">{batch.description}</p>
                   </div>
                   <div className="mb-2 flex items-center">
-                    <p className="font-semibold text-gray-600 dark:text-white mr-2">
+                    <p className="font-semibold text-gray-600 dark:text-white mr-2 flex">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="h-5 w-5 inline-block"
@@ -133,8 +173,9 @@ const CourseDetails = () => {
                           clipRule="evenodd"
                         />
                       </svg>
-                      Feature 2:
+                      Duration:
                     </p>
+                      <p className="w-max">{batch.duration}</p>
                   </div>
                   <div className="mb-2 flex items-center">
                     <p className="font-semibold text-gray-600 dark:text-white mr-2">
@@ -169,7 +210,7 @@ const CourseDetails = () => {
                       </svg>
                       Fee:
                     </p>
-                    <p>{batch.price}</p>
+                    <p>{batch.fee}</p>
                   </div>
                   <div className="mb-2 flex items-center">
                     <p className="font-semibold text-gray-600 dark:text-white mr-2">
@@ -203,9 +244,9 @@ const CourseDetails = () => {
                           clipRule="evenodd"
                         />
                       </svg>
-                      Faculties:
+                      Syllabus:
                     </p>
-                    <p>{batch.faculties.join(", ")}</p>{" "}
+                    <p>{batch.syllabus}</p>{" "}
                   </div>
                   <div>
                     <a
@@ -235,7 +276,7 @@ const CourseDetails = () => {
                   <div className="sm:w-40 sm:w-44 self-center ml-12">
                     <img
                       src={batch.imgSrc}
-                      alt={batch.name}
+                      alt={batch.cours}
                       className="w-full h-auto rounded-lg"
                     />
                   </div>

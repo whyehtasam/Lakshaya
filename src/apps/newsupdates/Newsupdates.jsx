@@ -1,11 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "../../components/wrappers/Container";
 import LastYearChamp from "../scholorship/LastYearChamps";
 import PrimaryButton from "../../components/buttons/PrimaryButton";
 import Pagination from "../../components/pagination/Pagination";
 import Header from "../../components/header/Header";
+import { useEffect } from "react";
 
 const Newsupdates = () => {
+  const [announcement,setAnnouncement]=useState([]);
+  const backend_url = import.meta.env.VITE_BACKEND_URL;
+
+  useEffect(function(){
+    const token=localStorage.getItem('token');
+    if(!token) return;
+    fetch(backend_url+'/api/announcement/get',{
+      headers:{
+        'Authorization':`Bearer ${token}`,
+      }
+    }
+    ).then(res=>{
+      return res.json();
+    }).then(data=>{ 
+      setAnnouncement([...announcement,...data]);
+    }).catch(e=>{
+      console.log(e);
+    })
+  },[])
+
+
   return (
     <div>
       {/* <h1 className="text-4xl pb-4 font-bold text-red-800 md:text-5xl lg:text-7xl text-center">
@@ -100,57 +122,39 @@ const Newsupdates = () => {
           />
         </div>
 
+
+
         <div className="grow lg:col-span-4 p-6 rounded-md shadow">
 
-          <div className="grid lg:grid-cols-6 mb-2 content-center p-2 rounded-md shadow  ">
+          {
+            announcement.map(ann=>{
+              return (
+                <div className="grid lg:grid-cols-6 mb-2 content-center p-2 rounded-md shadow  ">
 
-            <div className="text-center  lg:w-[50%] border border-red-800 rounded-md">
-              <div className=" text-grey-900 ">
-                <span>12</span> <br />
-                <span className="text-md font-bold text-red-800"> Jan</span>
+                <div className="text-center  lg:w-[50%] border border-red-800 rounded-md">
+                  <div className=" text-grey-900 ">
+                   {ann.description}
+                  </div>
+                </div>
+    
+                <div className="grid lg:col-span-3 content-center ">
+                  <h1 className="text-2xl font-bold text-center text-red-800">{ann.title}</h1>
+                  
+                </div>
+    
+          
+    
+                {/* <div className=" grid lg:col-span-2 content-center text-center  ">
+                  <a href="#" className="text-red-800 font-semibold text-lg">
+                    Download
+                  </a>
+                </div>
+                 */}
+    
               </div>
-            </div>
-
-            <div className="grid lg:col-span-3 content-center ">
-              <h1 className="text-2xl font-bold text-center text-red-800">Notice Title</h1>
-              
-            </div>
-
-      
-
-            <div className=" grid lg:col-span-2 content-center text-center  ">
-              <a href="#" className="text-red-800 font-semibold text-lg">
-                Download
-              </a>
-            </div>
-            
-
-          </div>
-
-          <div className="grid lg:grid-cols-6 mb-2 content-center p-2 rounded-md shadow ">
-
-            <div className="text-center  lg:w-[50%] border border-red-800 rounded-md">
-              <div className=" text-grey-900 ">
-                <span>12</span> <br />
-                <span className="text-md font-bold text-red-800"> Jan</span>
-              </div>
-            </div>
-
-            <div className="grid lg:col-span-3 content-center text-center">
-              <h1 className="text-2xl font-bold text-red-800">Notice Title</h1>
-            </div>
-
-      
-
-            <div className=" grid lg:col-span-2 content-center text-center  ">
-              <a href="#" className="text-red-800 font-semibold text-lg">
-                Download
-              </a>
-            </div>
-            
-
-          </div>
-         
+              )
+            })
+          }         
 
             <Pagination />
         </div>
