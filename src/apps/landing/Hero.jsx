@@ -9,14 +9,14 @@ const Hero = () => {
     <div className="md:flex justify-between items-center">
       <div className="flex flex-col justify-start gap-3 sm:gap-6 my-7 md:w-[60vw]" >
         <h1 className="text-4xl font-bold text-red-800 md:text-5xl lg:text-7xl">
-          The Lakshaya:
+          The Lakshya:
         </h1>
-        <h1 className="text-4xl font-bold text-gray-800 md:text-5xl lg:text-7xl">
-          Forum for IIT-JEE & MEDICAL.
+        <h1 className="text-4xl font-bold text-gray-800 md:text-5xl lg:text-5xl">
+          Forum for IIT-JEE & Medical
         </h1>
-        <h1 className="text-4xl font-bold text-gray-800 md:text-5xl lg:text-7xl">
+        {/* <h1 className="text-4xl font-bold text-gray-800 md:text-5xl lg:text-7xl">
           Building Generations
-        </h1>
+        </h1> */}
         <div>
           <p className="mt-4 text-gray-600 sm:text-lg md:text-xl lg:text-2xl">
             JEE and NEET: A new paradigm in motivation and success direction.
