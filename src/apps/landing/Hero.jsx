@@ -12,7 +12,7 @@ const Hero = () => {
           The Lakshaya:
         </h1>
         <h1 className="text-4xl font-bold text-gray-800 md:text-5xl lg:text-7xl">
-          Guiding Minds,
+          Forum for IIT-JEE & MEDICAL.
         </h1>
         <h1 className="text-4xl font-bold text-gray-800 md:text-5xl lg:text-7xl">
           Building Generations

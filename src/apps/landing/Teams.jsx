@@ -21,7 +21,7 @@ const Teams = () => {
     },
     {
       avatar: "https://randomuser.me/api/portraits/women/79.jpg",
-      name: "Brown Luis",
+      name: "Iqbal sir",
       title: "Full stack engineer",
       desc: "Lorem Ipsum is simply dummy text of the printing and typesettin industry.",
       linkedin: "javascript:void(0)",
@@ -29,7 +29,7 @@ const Teams = () => {
     },
     {
       avatar: "https://randomuser.me/api/portraits/women/63.jpg",
-      name: "Lysa sandiago",
+      name: "Sarfraz sir",
       title: "Head of designers",
       desc: "Lorem Ipsum is simply dummy text of the printing and typesettin industry.",
       linkedin: "javascript:void(0)",
@@ -37,7 +37,7 @@ const Teams = () => {
     },
     {
       avatar: "https://randomuser.me/api/portraits/men/86.jpg",
-      name: "Daniel martin",
+      name: "Shahbaz sir",
       title: "Product designer",
       desc: "Lorem Ipsum is simply dummy text of the printing and typesettin industry.",
       linkedin: "javascript:void(0)",
@@ -45,7 +45,7 @@ const Teams = () => {
     },
     {
       avatar: "https://randomuser.me/api/portraits/men/46.jpg",
-      name: "Vicky tanson",
+      name: "Zeeshan sir",
       title: "Product manager",
       desc: "Lorem Ipsum is simply dummy text of the printing and typesettin industry.",
       linkedin: "javascript:void(0)",
