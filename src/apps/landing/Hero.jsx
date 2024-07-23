@@ -11,8 +11,11 @@ const Hero = () => {
         <h1 className="text-4xl font-bold text-red-800 md:text-5xl lg:text-7xl">
           The Lakshya:
         </h1>
-        <h1 className="text-4xl font-bold text-gray-800 md:text-5xl lg:text-5xl">
-          Forum for IIT-JEE & Medical
+        <h1 className="text-4xl font-bold text-gray-700 md:text-5xl lg:text-6xl">
+          Forum for  IIT-JEE &
+        </h1>
+        <h1 className="text-4xl font-bold text-gray-700 md:text-5xl lg:text-6xl">
+         NEET-UG Medical 
         </h1>
         {/* <h1 className="text-4xl font-bold text-gray-800 md:text-5xl lg:text-7xl">
           Building Generations
