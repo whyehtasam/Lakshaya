@@ -27,7 +27,7 @@ const Navbar = () => {
                 The Lakshya
               </a> */}
               <span>
-                <img src={logo} alt="logo" className="w-52 h-auto" />
+                <img src={logo} alt="logo" className="w-32 sm:w-52 h-auto" />
               </span>
 
             </Link>
