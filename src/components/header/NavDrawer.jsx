@@ -11,10 +11,10 @@ const NavDrawer = () => {
 
   const links = [
     { path: "/", name: "Home" },
+    { path: "/aboutUs", name: "About Us" },
     { path: "/courses", name: "Courses" },
     { path: "/newsupdates", name: "Announcement" },
     { path: "/feePayment", name: "Fee Payment" },
-    { path: "/aboutUs", name: "About Us" },
     { path: "/gallery", name: "Gallery" },
     // { path: "/contactUs", name: "Contact Us", isContact: true },
   ];

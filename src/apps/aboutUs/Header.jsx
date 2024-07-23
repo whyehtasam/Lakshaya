@@ -15,7 +15,7 @@ const Header = () => {
               We are dedicated to providing quality education and empowering
               students to succeed.
             </p>
-            <div className="items-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
+            <div className="items-center grid sm:gap-3 space-y-3 sm:flex sm:space-y-0">
               <a
                 href="javascript:void(0)"
                 className="block py-2 px-4 text-center text-white font-medium bg-red-800 duration-150 hover:bg-red-900 active:bg-red-700 rounded-lg shadow-lg hover:shadow-none"
