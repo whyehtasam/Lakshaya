@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import  NavDrawer  from "./NavDrawer";
-
+import logo from "../../assets/lakshaya-logo.svg"
 const Navbar = () => {
   return (
     <div>
@@ -9,7 +9,7 @@ const Navbar = () => {
         <div className="px-4 mx-auto max-w-screen-2xl md:px-8">
           <header className="flex items-center justify-between py-4 md:py-6">
             <Link to="/">
-              <a
+              {/* <a
                 href="/"
                 className="inline-flex items-center gap-2.5 text-2xl font-bold text-black md:text-3xl"
                 aria-label="logo"
@@ -25,7 +25,11 @@ const Navbar = () => {
                   <path d="M96 0V47L48 94H0V47L48 0H96Z" />
                 </svg>
                 The Lakshya
-              </a>
+              </a> */}
+              <span>
+                <img src={logo} alt="logo" className="w-52 h-auto" />
+              </span>
+
             </Link>
 
             <nav className="hidden lg:gap-12 lg:flex">
