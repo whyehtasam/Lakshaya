@@ -7,6 +7,7 @@ import BlobCircle from "../../components/wrappers/BlobCircle";
 import Batch from "./Batch";
 import CourseDetails from "./CourseDetails";
 import Carousel from "../../components/carousels/Carousel";
+import { Testimonials } from "../aboutUs/Testimonials";
 
 const Courses = () => {
   return (
@@ -45,7 +46,8 @@ const Courses = () => {
       </div>
 
       <div>
-        <Carousel />
+        {/* <Carousel /> */}
+        <Testimonials />
       </div>
       
     </>

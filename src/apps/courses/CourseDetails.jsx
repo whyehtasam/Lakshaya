@@ -91,7 +91,7 @@ const CourseDetails = () => {
             courseData.map(e=>{
               return (
                 <SecondaryButton
-                 onClick={() => setIsActive([e])}
+                 onClick={() => setIsActive([e])} 
                   className="text-sm font-bold tracking-wider text-black rounded-md sm:text-lg hover:bg-red-700 focus:bg-red-700 focus:text-white border border-red-800"
                   label={e.course_name}
 

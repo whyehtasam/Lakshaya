@@ -34,6 +34,11 @@ const Navbar = () => {
 
             <nav className="hidden lg:gap-12 lg:flex">
               <ul className="hidden lg:gap-[4vw] lg:flex">
+              <Link to="/aboutUs">
+                  <li className="text-sm font-semibold text-black transition duration-100 hover:text-red-800 ">
+                    About Us
+                  </li>
+                </Link>
                 <Link to="/courses">
                   <li className="text-sm font-semibold text-black transition duration-100 hover:text-red-800 ">
                     Courses
@@ -50,11 +55,7 @@ const Navbar = () => {
                   </li>
                 </Link>
                
-                <Link to="/aboutUs">
-                  <li className="text-sm font-semibold text-black transition duration-100 hover:text-red-800 ">
-                    About Us
-                  </li>
-                </Link>
+               
                 <Link to="/gallery">
                   <li className="text-sm font-semibold text-black transition duration-100 hover:text-red-800 ">
                     Gallery 
