@@ -11,29 +11,30 @@ const Newsupdates = () => {
   const backend_url = import.meta.env.VITE_BACKEND_URL;
 
   useEffect(function () {
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem("token");
     if (!token) return;
-    fetch(backend_url + '/api/announcement/get', {
+    fetch(backend_url + "/api/announcement/get", {
       headers: {
-        'Authorization': `Bearer ${token}`,
-      }
-    }
-    ).then(res => {
-      return res.json();
-    }).then(data => {
-      setAnnouncement([...announcement, ...data]);
-    }).catch(e => {
-      console.log(e);
+        Authorization: `Bearer ${token}`,
+      },
     })
-  }, [])
-
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setAnnouncement([...announcement, ...data]);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  }, []);
 
   return (
     <div>
       {/* <h1 className="text-4xl pb-4 font-bold text-red-800 md:text-5xl lg:text-7xl text-center">
         Latest News & Updates
       </h1> */}
-      <div className="relative grid place-content-center">
+      <div className="relative grid place-content-center p-5">
         <Header
           title="Announcements"
           header="Latest News & Updates"
@@ -43,10 +44,9 @@ const Newsupdates = () => {
           descStyle="text-justify sm:text-lg text-gray-700 text-center"
           className="pb-6 pt-4 space-y-"
         />
-
       </div>
 
-      {/* <hr class="w-[80%] h-1 mx-auto my-4 bg-gray-100 border-0 rounded  dark:bg-gray-700"></hr> */}
+      {/* <hr className="w-[80%] h-1 mx-auto my-4 bg-gray-100 border-0 rounded  dark:bg-gray-700"></hr> */}
 
       <div className="grid lg:grid-cols-5 sm:grid-cols-1 gap-4 p-5 ">
         <div className=" flex-none p-6 sticky lg:border-r-2  rounded-md shadow bg-slate-50">
@@ -55,14 +55,14 @@ const Newsupdates = () => {
           </h1>
           <div className="pt-6">
             <label
-              for="Month"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              htmlFor="Month"
+              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
             >
               Month
             </label>
             <select
               id="Month"
-              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               required
             >
               <option value="">Select Month</option>
@@ -85,14 +85,14 @@ const Newsupdates = () => {
 
           <div className="pb-6 pt-2">
             <label
-              for="moving Class"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              htmlFor="moving Class"
+              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
             >
               Year
             </label>
             <select
               id="moving Class"
-              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               required
             >
               <option value="">Select Year</option>
@@ -122,51 +122,44 @@ const Newsupdates = () => {
           />
         </div>
 
-
-
         <div className="grow lg:col-span-4 p-6 rounded-md shadow">
-
-          {
-            announcement.map(ann => {
-              return (
-                <div className="grid lg:grid-cols-6 mb-2 content-center p-2 rounded-md shadow  ">
-
-                  <div className="text-center  lg:w-[50%] border border-red-800 rounded-md">
-                    {/* <div className=" text-grey-900 ">
+          {announcement.map(({ ann, index }) => {
+            return (
+              <div
+                key={index}
+                className="grid lg:grid-cols-6 mb-2 content-center p-2 rounded-md shadow  "
+              >
+                <div className="text-center  lg:w-[50%] border border-red-800 rounded-md">
+                  {/* <div className=" text-grey-900 ">
                       {ann.description}
                     </div> */}
-                  </div>
+                </div>
 
-                  <div className="grid lg:col-span-3 content-center ">
-                    <h1 className="text-2xl font-bold text-center text-red-800">{ann.title}</h1>
+                <div className="grid lg:col-span-3 content-center ">
+                  <h1 className="text-2xl font-bold text-center text-red-800">
+                    {ann.title}
+                  </h1>
+                </div>
 
-                  </div>
-
-
-
-                  <div className=" grid lg:col-span-2 content-center text-center  ">
-                    {/* <a href="#" className="text-red-800 font-semibold text-lg">
+                <div className=" grid lg:col-span-2 content-center text-center  ">
+                  {/* <a href="#" className="text-red-800 font-semibold text-lg">
                     Download
                   </a> */}
-                    <div className=" text-grey-900 ">
-                      {ann.description}
-                    </div>
-                  </div>
-
-
+                  <div className=" text-grey-900 ">{ann.description}</div>
                 </div>
-              )
-            })
-          }
+              </div>
+            );
+          })}
 
           <Pagination />
         </div>
       </div>
       <div>
-        <LastYearChamp />
+        {/* <LastYearChamp /> */}
       </div>
     </div>
-  ); 1
+  );
+  1;
 };
 
 export default Newsupdates;
