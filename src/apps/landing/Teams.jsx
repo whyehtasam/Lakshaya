@@ -81,7 +81,7 @@ const Teams = () => {
                     {item.name}
                   </h4>
                   <p className="text-indigo-600">{item.title}</p>
-                  <p className="text-gray-600 mt-2 px-4">{item.desc}</p>
+                  {/* <p className="text-gray-600 mt-2 px-4">{item.desc}</p>
                   <div className="mt-4 flex justify-center gap-4 text-gray-400">
                     <a href={item.twitter}>
                       <svg
@@ -121,7 +121,7 @@ const Teams = () => {
                         </defs>
                       </svg>
                     </a>
-                  </div>
+                  </div> */}
                 </div>
               </li>
             ))}

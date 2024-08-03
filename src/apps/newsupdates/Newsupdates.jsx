@@ -12,7 +12,7 @@ const Newsupdates = () => {
 
   useEffect(function () {
     const token = localStorage.getItem("token");
-    if (!token) return;
+    // if (!token) return;
     fetch(backend_url + "/api/announcement/get", {
       headers: {
         Authorization: `Bearer ${token}`,
@@ -22,7 +22,8 @@ const Newsupdates = () => {
         return res.json();
       })
       .then((data) => {
-        setAnnouncement([...announcement, ...data]);
+        setAnnouncement(data);
+        console.log("Announcement", data);
       })
       .catch((e) => {
         console.log(e);
@@ -123,7 +124,7 @@ const Newsupdates = () => {
         </div>
 
         <div className="grow lg:col-span-4 p-6 rounded-md shadow">
-          {announcement.map(({ ann, index }) => {
+          {announcement.map(({title,description}, index ) => {
             return (
               <div
                 key={index}
@@ -137,7 +138,7 @@ const Newsupdates = () => {
 
                 <div className="grid lg:col-span-3 content-center ">
                   <h1 className="text-2xl font-bold text-center text-red-800">
-                    {ann.title}
+                    {title}
                   </h1>
                 </div>
 
@@ -145,7 +146,7 @@ const Newsupdates = () => {
                   {/* <a href="#" className="text-red-800 font-semibold text-lg">
                     Download
                   </a> */}
-                  <div className=" text-grey-900 ">{ann.description}</div>
+                  <div className=" text-grey-900 ">{description}</div>
                 </div>
               </div>
             );
