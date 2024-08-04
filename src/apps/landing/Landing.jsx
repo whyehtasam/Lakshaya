@@ -70,7 +70,7 @@ const Landing = () => {
             </div>
           ))}
         </Slider>
-        <Slider className="block md:hidden h-[30rem]">
+        <Slider className="block md:hidden ">
           {results.map((student) => (
             <ResultCard key={student.name} student={student} />
           ))}

@@ -32,10 +32,10 @@ const Newsupdates = () => {
 
   return (
     <div>
-      {/* <h1 className="text-4xl pb-4 font-bold text-red-800 md:text-5xl lg:text-7xl text-center">
+      {/* <h1 className="pb-4 text-4xl font-bold text-center text-red-800 md:text-5xl lg:text-7xl">
         Latest News & Updates
       </h1> */}
-      <div className="relative grid place-content-center p-5">
+      <div className="relative grid p-5 place-content-center">
         <Header
           title="Announcements"
           header="Latest News & Updates"
@@ -43,14 +43,14 @@ const Newsupdates = () => {
           titleStyle="lg:text-xl text-center"
           headerStyle="sm:text-5xl text-black text-center "
           descStyle="text-justify sm:text-lg text-gray-700 text-center"
-          className="pb-6 pt-4 space-y-"
+          className="pt-4 pb-6 space-y-"
         />
       </div>
 
       {/* <hr className="w-[80%] h-1 mx-auto my-4 bg-gray-100 border-0 rounded  dark:bg-gray-700"></hr> */}
 
-      <div className="grid lg:grid-cols-5 sm:grid-cols-1 gap-4 p-5 ">
-        <div className=" flex-none p-6 sticky lg:border-r-2  rounded-md shadow bg-slate-50">
+      <div className="grid gap-4 p-5 lg:grid-cols-5 sm:grid-cols-1 ">
+        <div className="sticky flex-none p-6 rounded-md shadow  bg-white">
           <h1 className="text-3xl font-bold text-gray-800 md:text-5xl lg:text-4xl ">
             Filter By
           </h1>
@@ -84,7 +84,7 @@ const Newsupdates = () => {
             </select>
           </div>
 
-          <div className="pb-6 pt-2">
+          <div className="pt-2 pb-6">
             <label
               htmlFor="moving Class"
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -118,35 +118,27 @@ const Newsupdates = () => {
           </div>
 
           <PrimaryButton
-            className=" w-full  sm:w-fit gap-2  lg:py-2 font-semibold tracking-wider text-center rounded-md sm:px-6 sm:py-3 sm:text-lg outline outline-2 outline-red-800 outline-offset-2 hover:bg-red-700"
+            className="w-full gap-2 font-semibold tracking-wider text-center rounded-md  sm:w-fit lg:py-2 sm:px-6 sm:py-3 sm:text-lg outline outline-2 outline-red-800 outline-offset-2 hover:bg-red-700"
             label="Apply"
           />
         </div>
 
-        <div className="grow lg:col-span-4 p-6 rounded-md shadow">
-          {announcement.map(({title,description}, index ) => {
+        <div className="p-6 rounded-md shadow grow lg:col-span-4">
+          {announcement.map(({ title, description }, index) => {
             return (
               <div
                 key={index}
-                className="grid lg:grid-cols-6 mb-2 content-center p-2 rounded-md shadow  "
+                className="grid content-center gap-2 p-5 mb-2 rounded-md shadow hover:shadow-md bg-white"
               >
-                <div className="text-center  lg:w-[50%] border border-red-800 rounded-md">
-                  {/* <div className=" text-grey-900 ">
-                      {ann.description}
-                    </div> */}
+                <div className="grid content-center ">
+                  <h1 className="text-2xl font-bold text-red-800">{title}</h1>
                 </div>
 
-                <div className="grid lg:col-span-3 content-center ">
-                  <h1 className="text-2xl font-bold text-center text-red-800">
-                    {title}
-                  </h1>
-                </div>
-
-                <div className=" grid lg:col-span-2 content-center text-center  ">
-                  {/* <a href="#" className="text-red-800 font-semibold text-lg">
+                <div className="grid content-center ">
+                  {/* <a href="#" className="text-lg font-semibold text-red-800">
                     Download
                   </a> */}
-                  <div className=" text-grey-900 ">{description}</div>
+                  <div className=" text-grey-900">{description}</div>
                 </div>
               </div>
             );
@@ -155,9 +147,7 @@ const Newsupdates = () => {
           <Pagination />
         </div>
       </div>
-      <div>
-        {/* <LastYearChamp /> */}
-      </div>
+      <div>{/* <LastYearChamp /> */}</div>
     </div>
   );
   1;

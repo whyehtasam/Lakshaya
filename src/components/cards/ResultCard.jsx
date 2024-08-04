@@ -1,4 +1,4 @@
-const ResultCard = ({ student: { image_url, exam, name, description, rank } } ) => {
+const ResultCard = ({ student: { image_url, exam, name, description, rank,exam_year } } ) => {
   return (
     <div className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 h-full ">
       <img
@@ -8,7 +8,7 @@ const ResultCard = ({ student: { image_url, exam, name, description, rank } } ) 
       />
       <div className="flex flex-col space-y-3 w-full p-4 h-full leading-normal">
         <h5 className="mb-2 text-xl font-bold tracking-tight bg-red-800 px-3  py-1 rounded text-white ">
-          {exam}
+          {exam+" "+exam_year}
         </h5>
         <h5 className="mb-2 text-xl font-bold tracking-tight  text-gray-800">
           {name}
