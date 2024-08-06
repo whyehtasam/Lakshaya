@@ -65,8 +65,8 @@ const Teams = () => {
           descStyle="sm:text-lg text-gray-700"
           className="pb-6 pt-4 text-center"
         />
-        <div className="sm:mt-12">
-          <ul className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
+        <div className="my-12">
+          <ul className="grid sm:gap-16 gap-8 grid-cols-2 md:grid-cols-3">
             {team.map((item, idx) => (
               <li key={idx}>
                 <div className="w-24 h-24 mx-auto">
@@ -81,8 +81,8 @@ const Teams = () => {
                     {item.name}
                   </h4>
                   <p className="text-indigo-600">{item.title}</p>
-                  {/* <p className="text-gray-600 mt-2 px-4">{item.desc}</p>
-                  <div className="mt-4 flex justify-center gap-4 text-gray-400">
+                  {/* <p className="text-gray-600 mt-2 px-4">{item.desc}</p> */}
+                  {/* <div className="mt-4 flex justify-center gap-4 text-gray-400">
                     <a href={item.twitter}>
                       <svg
                         className="w-5 h-5 duration-150 hover:text-gray-500"
