@@ -2,37 +2,30 @@
 
 import { Button, Modal } from "flowbite-react";
 import { useState } from "react";
-import jsPDF from "jspdf";
-import html2canvas from "html2canvas";
+import html2pdf from "html2pdf.js";
 
-export function ModalBox({ syllabus }) {
+export function ModalBox({ syllabus,filename }) {
   const [openModal, setOpenModal] = useState(false);
+ 
 
   const downloadPDF = () => {
-    const input = document.getElementById("syllabus-content");
-    const margin = 10; // Define margin size in mm
-    html2canvas(input, { scale: 2 }).then((canvas) => {
-      const imgData = canvas.toDataURL("image/png");
-      const pdf = new jsPDF("p", "mm", "a4");
-      const pdfWidth = pdf.internal.pageSize.getWidth() - 2 * margin;
-      const pdfHeight = pdf.internal.pageSize.getHeight() - 2 * margin;
-      const imgProps = pdf.getImageProperties(imgData);
-      const imgWidth = pdfWidth;
-      const imgHeight = (imgProps.height * imgWidth) / imgProps.width;
-      let heightLeft = imgHeight;
-      let position = margin;
+    const element = document.getElementById("syllabus-content");
+    const originalClass = element.className;
 
-      pdf.addImage(imgData, "PNG", margin, position, imgWidth, imgHeight);
-      heightLeft -= pdfHeight;
+    // Temporarily remove the scrollable class
+    element.className = element.className.replace("h-[65vh] overflow-y-auto", "");
 
-      while (heightLeft >= 0) {
-        position = heightLeft - imgHeight + margin;
-        pdf.addPage();
-        pdf.addImage(imgData, "PNG", margin, position, imgWidth, imgHeight);
-        heightLeft -= pdfHeight;
-      }
+    const opt = {
+      margin: 10,
+      filename: filename + " syllabus.pdf",
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2 },
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    };
 
-      pdf.save("syllabus.pdf");
+    html2pdf().from(element).set(opt).save().then(() => {
+      // Restore the original class
+      element.className = originalClass;
     });
   };
 
@@ -44,16 +37,17 @@ export function ModalBox({ syllabus }) {
       >
         Click here to view & download
       </p>
-      <Modal show={openModal} onClose={() => setOpenModal(false)} className="">
+      <Modal show={openModal} onClose={() => setOpenModal(false)} className="mb-4">
         <Modal.Header>Syllabus</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
             <pre
               id="syllabus-content"
-              className="text-base leading-relaxed text-gray-500 dark:text-gray-400 w-full break-words whitespace-pre-wrap "
+              className="text-base leading-relaxed text-gray-500 dark:text-gray-400 w-full break-words whitespace-pre-wrap h-[65vh] overflow-y-auto"
             >
               {syllabus}
             </pre>
+           
           </div>
         </Modal.Body>
         <Modal.Footer>

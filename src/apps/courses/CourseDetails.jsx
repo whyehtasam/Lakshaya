@@ -75,44 +75,44 @@ const CourseDetails = () => {
 
         <div className="flex flex-col flex-grow w-90">
           <div className="grid grid-cols-1 gap-5 sm:place-items-center">
-            {isActive.map((batch, index) => (
+            {isActive.map(({course_name,description,duration,syllabus,fee,startDate}, index) => (
               <div
                 key={index}
                 className="flex flex-col w-full transition-all duration-300 bg-white border border-gray-200 rounded-lg sm:flex-row dark:bg-gray-800 dark:border-gray-700 drop-shadow-lg hover:bg-slate-50"
               >
                 <div className="flex flex-col w-full p-5">
                   <h3 className="mb-2 text-lg font-semibold tracking-tight text-gray-900 dark:text-white">
-                    {batch.course_name}
+                    {course_name}
                   </h3>
                   <div className="flex mb-2">
                     <p className="flex mr-2 font-semibold text-gray-600 dark:text-white ">
                       Description:
                     </p>
-                    <p className="w">{batch.description}</p>
+                    <p className="w">{description}</p>
                   </div>
                   <div className="flex items-center mb-2">
                     <p className="flex mr-2 font-semibold text-gray-600 dark:text-white">
                       Duration:
                     </p>
-                    <p className="">{batch.duration}</p>
+                    <p className="">{duration}</p>
                   </div>
                   <div className="flex items-center mb-2">
                     <p className="mr-2 font-semibold text-gray-600 dark:text-white">
-                      Batch Starts on: <strong>{batch.startDate}</strong>
+                      Batch Starts on: <strong>{startDate}</strong>
                     </p>
                   </div>
                   <div className="flex items-center mb-2">
                     <p className="mr-2 font-semibold text-gray-600 dark:text-white">
                       Fee:
                     </p>
-                    <p>{batch.fee}</p>
+                    <p>{fee}</p>
                   </div>
                   {/* <div className="flex items-center mb-2">
                     <p className="mr-2 font-semibold text-gray-600 dark:text-white">
                       
                       Year:
                     </p>
-                    <p>{batch.targetYear}</p>
+                    <p>{targetYear}</p>
                   </div> */}
                   <div className="flex w-full mb-2">
                     <p className="mr-2 font-semibold text-gray-600 dark:text-white">
@@ -120,7 +120,7 @@ const CourseDetails = () => {
                     </p>
                     <pre className="w-full break-words whitespace-pre-wrap">
                       {}
-                      <ModalBox syllabus={batch.syllabus}/>
+                      <ModalBox syllabus={syllabus} filename={course_name}/>
                     </pre>
                   </div>
                   <div>
@@ -150,8 +150,8 @@ const CourseDetails = () => {
                 {/* {isMobile ? null : (
                   <div className="self-center ml-12 sm:w-40 sm:w-44">
                     <img
-                      src={batch.imgSrc}
-                      alt={batch.cours}
+                      src={imgSrc}
+                      alt={cours}
                       className="w-full h-auto rounded-lg"
                     />
                   </div>
