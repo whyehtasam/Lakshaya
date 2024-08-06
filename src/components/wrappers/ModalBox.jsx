@@ -2,33 +2,38 @@
 
 import { Button, Modal } from "flowbite-react";
 import { useState } from "react";
+import jsPDF from "jspdf";
+import html2canvas from "html2canvas";
 
 export function ModalBox({ syllabus }) {
   const [openModal, setOpenModal] = useState(false);
 
-  const downloadHTML = (syllabus) => {
-    const element = document.createElement("a");
-    const file = new Blob(
-      [
-        `<html>
-          <head>
-            <title>Syllabus</title>
-            <style>
-              body { font-family: Arial, sans-serif; }
-              pre { white-space: pre-wrap; word-wrap: break-word; }
-            </style>
-          </head>
-          <body>
-            <pre>${syllabus}</pre>
-          </body>
-        </html>`,
-      ],
-      { type: "text/html" }
-    );
-    element.href = URL.createObjectURL(file);
-    element.download = "syllabus.html";
-    document.body.appendChild(element); // Required for this to work in FireFox
-    element.click();
+  const downloadPDF = () => {
+    const input = document.getElementById("syllabus-content");
+    const margin = 10; // Define margin size in mm
+    html2canvas(input, { scale: 2 }).then((canvas) => {
+      const imgData = canvas.toDataURL("image/png");
+      const pdf = new jsPDF("p", "mm", "a4");
+      const pdfWidth = pdf.internal.pageSize.getWidth() - 2 * margin;
+      const pdfHeight = pdf.internal.pageSize.getHeight() - 2 * margin;
+      const imgProps = pdf.getImageProperties(imgData);
+      const imgWidth = pdfWidth;
+      const imgHeight = (imgProps.height * imgWidth) / imgProps.width;
+      let heightLeft = imgHeight;
+      let position = margin;
+
+      pdf.addImage(imgData, "PNG", margin, position, imgWidth, imgHeight);
+      heightLeft -= pdfHeight;
+
+      while (heightLeft >= 0) {
+        position = heightLeft - imgHeight + margin;
+        pdf.addPage();
+        pdf.addImage(imgData, "PNG", margin, position, imgWidth, imgHeight);
+        heightLeft -= pdfHeight;
+      }
+
+      pdf.save("syllabus.pdf");
+    });
   };
 
   return (
@@ -43,14 +48,17 @@ export function ModalBox({ syllabus }) {
         <Modal.Header>Syllabus</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
-            <pre className="text-base leading-relaxed text-gray-500 dark:text-gray-400 w-full break-words whitespace-pre-wrap ">
+            <pre
+              id="syllabus-content"
+              className="text-base leading-relaxed text-gray-500 dark:text-gray-400 w-full break-words whitespace-pre-wrap "
+            >
               {syllabus}
             </pre>
           </div>
         </Modal.Body>
         <Modal.Footer>
           <Button
-            onClick={() => downloadHTML(syllabus)}
+            onClick={downloadPDF}
             className="border border-gray-200 bg-red-800 focus:ring-0 focus:ring-white active:scale-95 duration-200"
           >
             Download
