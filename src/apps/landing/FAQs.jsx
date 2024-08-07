@@ -68,24 +68,36 @@ const FaqsCard = (props) => {
 const FAQs = () => {
   const faqsList = [
     {
-      q: "What are some random questions to ask?",
-      a: "That's exactly the reason we created this random question generator. There are hundreds of random questions to choose from so you're able to find the perfect random question.",
+      q: "What courses do you offer?",
+      a: "We offer a variety of courses including Mathematics, Physics, Chemistry, Biology, and Computer Science. Each course is designed to provide comprehensive knowledge and practical skills.",
     },
     {
-      q: "Do you include common questions?",
-      a: "This generator doesn't include most common questions. The thought is that you can come up with common questions on your own so most of the questions in this generator.",
+      q: "Who are the instructors?",
+      a: "Our instructors are highly qualified professionals with years of experience in their respective fields. They include research scholars, former lecturers, and industry experts.",
     },
     {
-      q: "Can I use this for 21 questions?",
-      a: "Yes! there are two ways that you can use this question generator depending on what you're after. You can indicate that you want 21 questions generated.",
+      q: "How can I enroll in a course?",
+      a: "You can enroll in a course by visiting our website and filling out the enrollment form. Once submitted, our team will contact you with further instructions.",
     },
     {
-      q: "Are these questions for girls or for boys?",
-      a: "The questions in this generator are gender neutral and can be used to ask either male of females (or any other gender the person identifies with).",
+      q: "What is the fee structure?",
+      a: "The fee structure varies depending on the course and duration. Detailed information about the fees can be found on our website or by contacting our support team.",
     },
     {
-      q: "What do you wish you had more talent doing?",
-      a: "If you've been searching for a way to get random questions, you've landed on the correct webpage. We created the Random Question Generator to ask you as many random questions as your heart desires.",
+      q: "How do I submit the fees?",
+      a: "Fees can be submitted online through our secure payment gateway. We accept various payment methods including credit/debit cards, net banking, and UPI.",
+    },
+    {
+      q: "Do you offer any discounts or scholarships?",
+      a: "Yes, we offer various discounts and scholarships based on merit and financial need. Please visit our scholarships page for more information.",
+    },
+    {
+      q: "What is the duration of the courses?",
+      a: "The duration of the courses varies. Some courses are short-term, lasting a few weeks, while others are long-term, spanning several months. Detailed information is available on the course pages.",
+    },
+    {
+      q: "Can I get a refund if I cancel my enrollment?",
+      a: "Yes, we have a refund policy in place. If you cancel your enrollment within the specified period, you are eligible for a partial or full refund. Please refer to our refund policy for more details.",
     },
   ];
 

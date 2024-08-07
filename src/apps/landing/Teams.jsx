@@ -8,54 +8,54 @@ const Teams = () => {
   const team = [
     {
       avatar: sohail,
-      name: "Sohail sir",
+      name: "Sohail Sir",
       title: "Mathematics Guru",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesettin industry.",
+      desc: "M.Sc. in Mathematics, B.Ed., PGT at ISL Bhuli with 15 Years of Mastery in Mathematics Education",
       linkedin: "javascript:void(0)",
       twitter: "javascript:void(0)",
     },
     {
       avatar: abul,
-      name: "Abul sir",
+      name: "Abul Sir",
       title: "Physics Wizards",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesettin industry.",
+      desc: "B. Tech in Electrical Engineering, Former Lecturer at GP Dhanbad with 10 Years of Experience in Teaching Physics",
       linkedin: "javascript:void(0)",
       twitter: "javascript:void(0)",
     },
     {
       avatar: iqbal,
-      name: "Iqbal sir",
+      name: "Iqbal Sir",
       title: "Chemistry Faculty",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesettin industry.",
+      desc: "B. Tech in Mechanical Engineering, HOD of Foundation Dept. with 10 Years of Expertise in Chemistry",
       linkedin: "javascript:void(0)",
       twitter: "javascript:void(0)",
     },
     {
       avatar: sarfraz,
-      name: "Sarfraz sir",
+      name: "Sarfraz Sir",
       title: "Biology Faculty",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesettin industry.",
+      desc: "Research Scholar at JNU Delhi, GATE - LS Qualified, Former Aakash Institute Faculty with 9 Years of Experience in Biology",
       linkedin: "javascript:void(0)",
       twitter: "javascript:void(0)",
     },
     {
       avatar: shahbaz,
-      name: "Shahbaz sir",
+      name: "Shahbaz Sir",
       title: "Foundation Faculty",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesettin industry.",
+      desc: "M.Sc. in Mathematics, 7 Years of Experience in Teaching and Curriculum Development",
       linkedin: "javascript:void(0)",
       twitter: "javascript:void(0)",
     },
     {
       avatar: "https://randomuser.me/api/portraits/men/46.jpg",
-      name: "Zeeshan sir",
+      name: "Zeeshan Sir",
       title: "Foundation Faculty",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesettin industry.",
+      desc: "B.Sc. in Physics, 5 Years of Experience in Teaching and Educational Research",
       linkedin: "javascript:void(0)",
       twitter: "javascript:void(0)",
     },
+    
   ];
-
   return (
     <section className="">
       <div className="max-w-screen-xl mx-auto text-center ">
@@ -72,10 +72,10 @@ const Teams = () => {
           <ul className="grid sm:gap-16 gap-8 grid-cols-2 md:grid-cols-3">
             {team.map((item, idx) => (
               <li key={idx}>
-                <div className="w-24 h-24 mx-auto">
+                <div className="w-24 h-24 mx-auto overflow-hidden rounded-full">
                   <img
                     src={item.avatar}
-                    className="w-full h-full rounded-full"
+                    className="w-full h-full rounded-full hover:scale-110 transition-all duration-300"
                     alt=""
                   />
                 </div>
@@ -84,7 +84,7 @@ const Teams = () => {
                     {item.name}
                   </h4>
                   <p className="text-indigo-600">{item.title}</p>
-                  {/* <p className="text-gray-600 mt-2 px-4">{item.desc}</p> */}
+                  <p className="text-gray-600 mt-2 px-4 text-xs sm:text-sm">{item.desc}</p>
                   {/* <div className="mt-4 flex justify-center gap-4 text-gray-400">
                     <a href={item.twitter}>
                       <svg
