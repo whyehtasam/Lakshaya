@@ -5,7 +5,7 @@ const features = [
   {
     title: "Audio-visual classroom",
     description:
-      "Learn the concept in visual ways to have better graps on the topics.",
+      "Learn concepts visually for better understanding and retention.",
     Icon: () => (
       <svg
         fill="none"
@@ -16,14 +16,15 @@ const features = [
         className="w-5 h-5"
         viewBox="0 0 24 24"
       >
-        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+        <path d="M23 7V17C23 18.1046 22.1046 19 21 19H3C1.89543 19 1 18.1046 1 17V7C1 5.89543 1.89543 5 3 5H21C22.1046 5 23 5.89543 23 7Z" />
+        <path d="M1 7L12 13L23 7" />
       </svg>
     ),
   },
   {
     title: "Practical Lab Classes",
     description:
-      "Our coaching provides you the practical lab class so that you can test the practical application the very same concept.",
+      "Experience hands-on learning with practical lab sessions.",
     Icon: () => (
       <svg
         fill="none"
@@ -34,15 +35,17 @@ const features = [
         className="w-5 h-5"
         viewBox="0 0 24 24"
       >
-        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-        <circle cx="12" cy="7" r="4"></circle>
+        <path d="M9 2L15 2L15 8L9 8L9 2Z" />
+        <path d="M3 8L21 8L21 22L3 22L3 8Z" />
+        <path d="M9 8L9 22" />
+        <path d="M15 8L15 22" />
       </svg>
     ),
   },
   {
     title: "Extra doubt classes",
     description:
-      "Your are always welcome in the extra doubts classes 'NEVER CARRY YOUR DOUBT FORWARD'.",
+      "Attend extra classes to clear all your doubts effectively.",
     Icon: () => (
       <svg
         fill="none"
@@ -53,16 +56,14 @@ const features = [
         className="w-5 h-5"
         viewBox="0 0 24 24"
       >
-        <circle cx="6" cy="6" r="3"></circle>
-        <circle cx="6" cy="18" r="3"></circle>
-        <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 19C10.34 19 9 17.66 9 16C9 14.34 10.34 13 12 13C13.66 13 15 14.34 15 16C15 17.66 13.66 19 12 19ZM12 11C10.9 11 10 10.1 10 9C10 7.9 10.9 7 12 7C13.1 7 14 7.9 14 9C14 10.1 13.1 11 12 11Z" />
       </svg>
     ),
   },
   {
     title: "Test series",
     description:
-      "We provide the test series so that you can test your selves.",
+      "Evaluate your knowledge with our comprehensive test series.",
     Icon: () => (
       <svg
         fill="none"
@@ -73,16 +74,16 @@ const features = [
         className="w-5 h-5"
         viewBox="0 0 24 24"
       >
-        <circle cx="6" cy="6" r="3"></circle>
-        <circle cx="6" cy="18" r="3"></circle>
-        <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+        <path d="M12 2L2 7L12 12L22 7L12 2Z" />
+        <path d="M2 17L12 22L22 17" />
+        <path d="M2 12L12 17L22 12" />
       </svg>
     ),
   },
   {
-    title: "Special attention to the needy students",
+    title: "Special attention to students",
     description:
-      "We regularly track the performance of the students and give them special attention to needy one so that our all student can be on the same page.",
+      "Receive personalized attention to ensure your success.",
     Icon: () => (
       <svg
         fill="none"
@@ -93,16 +94,14 @@ const features = [
         className="w-5 h-5"
         viewBox="0 0 24 24"
       >
-        <circle cx="6" cy="6" r="3"></circle>
-        <circle cx="6" cy="18" r="3"></circle>
-        <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 19C10.34 19 9 17.66 9 16C9 14.34 10.34 13 12 13C13.66 13 15 14.34 15 16C15 17.66 13.66 19 12 19ZM12 11C10.9 11 10 10.1 10 9C10 7.9 10.9 7 12 7C13.1 7 14 7.9 14 9C14 10.1 13.1 11 12 11Z" />
       </svg>
     ),
   },
   {
-    title: "Emphasis on the personality development",
+    title: "Personality development",
     description:
-      "We encourage our students to speak in the class even if they have a silly doubt , so that their personality can be developed.",
+      "Develop your personality through active class participation.",
     Icon: () => (
       <svg
         fill="none"
@@ -113,9 +112,7 @@ const features = [
         className="w-5 h-5"
         viewBox="0 0 24 24"
       >
-        <circle cx="6" cy="6" r="3"></circle>
-        <circle cx="6" cy="18" r="3"></circle>
-        <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 19C10.34 19 9 17.66 9 16C9 14.34 10.34 13 12 13C13.66 13 15 14.34 15 16C15 17.66 13.66 19 12 19ZM12 11C10.9 11 10 10.1 10 9C10 7.9 10.9 7 12 7C13.1 7 14 7.9 14 9C14 10.1 13.1 11 12 11Z" />
       </svg>
     ),
   },
