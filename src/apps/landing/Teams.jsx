@@ -1,10 +1,13 @@
 import Header from "../../components/header/Header";
-
+import sohail from "../../assets/sohailSir.jpg"
+import iqbal from "../../assets/iqbalSir.jpg"
+import abul from "../../assets/abulSir.jpg"
+import shahbaz from "../../assets/shahbazSir.jpg"
+import sarfraz from "../../assets/sarfarazSir.jpg"
 const Teams = () => {
   const team = [
     {
-      avatar:
-        "https://images.unsplash.com/photo-1511485977113-f34c92461ad9?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ",
+      avatar: sohail,
       name: "Sohail sir",
       title: "Mathematics Guru",
       desc: "Lorem Ipsum is simply dummy text of the printing and typesettin industry.",
@@ -12,7 +15,7 @@ const Teams = () => {
       twitter: "javascript:void(0)",
     },
     {
-      avatar: "https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg",
+      avatar: abul,
       name: "Abul sir",
       title: "Physics Wizards",
       desc: "Lorem Ipsum is simply dummy text of the printing and typesettin industry.",
@@ -20,7 +23,7 @@ const Teams = () => {
       twitter: "javascript:void(0)",
     },
     {
-      avatar: "https://randomuser.me/api/portraits/women/79.jpg",
+      avatar: iqbal,
       name: "Iqbal sir",
       title: "Chemistry Faculty",
       desc: "Lorem Ipsum is simply dummy text of the printing and typesettin industry.",
@@ -28,7 +31,7 @@ const Teams = () => {
       twitter: "javascript:void(0)",
     },
     {
-      avatar: "https://randomuser.me/api/portraits/women/63.jpg",
+      avatar: sarfraz,
       name: "Sarfraz sir",
       title: "Biology Faculty",
       desc: "Lorem Ipsum is simply dummy text of the printing and typesettin industry.",
@@ -36,7 +39,7 @@ const Teams = () => {
       twitter: "javascript:void(0)",
     },
     {
-      avatar: "https://randomuser.me/api/portraits/men/86.jpg",
+      avatar: shahbaz,
       name: "Shahbaz sir",
       title: "Foundation Faculty",
       desc: "Lorem Ipsum is simply dummy text of the printing and typesettin industry.",
