@@ -29,12 +29,12 @@ const Hero = () => {
             JEE और NEET: नए प्रेरणा और सफलता की दिशा में एक नया मोड़।
           </p>
           <p className="flex items-center mt-4 text-gray-600 sm:text-lg md:text-xl lg:text-2xl">
-            Lakshaya {"  "}
+            Lakshya {"  "}
             <span>
               <img src={target} className="w-10 ml-1" alt="target img" />
             </span>{" "}
             <span className="mx-1 font-medium text-red-800 animate-pulse">
-              The Lakshaya
+              The Lakshya
             </span>{" "}
             <span className="mt-1 ml-1">के साथ।</span>
           </p>
