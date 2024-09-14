@@ -47,8 +47,8 @@ const Teams = () => {
       twitter: "javascript:void(0)",
     },
     {
-      avatar: "https://randomuser.me/api/portraits/men/46.jpg",
-      name: "Zeeshan Sir",
+      avatar: "https://i.ibb.co/ynhbWyZ/IMG-20240914-WA0024.jpg",
+      name: "Junaid Sir",
       title: "Foundation Faculty",
       desc: "B.Sc. in Physics, 5 Years of Experience in Teaching and Educational Research",
       linkedin: "javascript:void(0)",
