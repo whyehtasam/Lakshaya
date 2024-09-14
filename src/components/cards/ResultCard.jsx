@@ -8,7 +8,7 @@ const ResultCard = ({
   return (
     <div className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 h-full ">
       <img
-        className="object-cover w-full rounded-t-lg h-52 md:h-full md:w-48 md:rounded-none md:rounded-s-lg"
+        className="object-contain md:object-cover bg-black w-full rounded-t-lg h-52 md:h-full md:w-48 md:rounded-none md:rounded-s-lg"
         src={image_url}
         alt={name}
       />
