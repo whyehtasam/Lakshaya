@@ -15,9 +15,12 @@ const Hero = () => {
         <h1 className="text-4xl font-bold text-gray-800 md:text-5xl lg:text-6xl">
           Forum for IIT-JEE &
         </h1>
-        <h1 className="text-4xl font-bold text-gray-800 md:text-5xl lg:text-6xl">
+        <h1 className="text-4xl font-bold text-gray-800 md:text-5xl lg:text-6xl">q
           NEET-UG Medical
         </h1>
+        <h3 className="text-2xl font-bold text-gray-800 md:text-3xl lg:text-3xl">
+          11th,12th,13th & Foundation(5th-10th)
+        </h3>
         {/* <h1 className="text-4xl font-bold text-gray-800 md:text-5xl lg:text-7xl">
           Building Generations
         </h1> */}
@@ -29,7 +32,7 @@ const Hero = () => {
             JEE और NEET: नए प्रेरणा और सफलता की दिशा में एक नया मोड़।
           </p>
           <p className="flex items-center mt-4 text-gray-600 sm:text-lg md:text-xl lg:text-2xl">
-            Lakshya {"  "}
+            Lakshya की प्राप्ति {"  "}
             <span>
               <img src={target} className="w-10 ml-1" alt="target img" />
             </span>{" "}

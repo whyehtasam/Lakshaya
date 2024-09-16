@@ -22,7 +22,7 @@ const Courses = () => {
               <CourseHero
                 title="The Lakshya:"
                 subtitle="Forum for IIT-JEE & MEDICAL"
-                burdenText="For Students in class 11th,12th & 13th"
+                burdenText="For Students in class 11th,12th,13th & Foundation(5th-10th)"
                 inspirationText="JEE and NEET: A new paradigm in motivation and success direction."
                 inspirationText2="JEE और NEET: नए प्रेरणा और सफलता की दिशा में एक नया मोड़।"
               />

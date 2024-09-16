@@ -38,9 +38,9 @@ const Gallery = () => {
     <div>
       <div className="relative grid place-content-center p-5">
         <Header
-          title="Extensive"
-          header="Our Champions"
-          description="These are the past years result that THE LAKSHYA produced with continuous hardword towards the student."
+          title="#MEMORIES"
+          header="Journey of our coaching"
+          description=""
           titleStyle="lg:text-xl text-center"
           headerStyle="sm:text-5xl text-black text-center"
           descStyle="sm:text-lg text-gray-700 text-center"

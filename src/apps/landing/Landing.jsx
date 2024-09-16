@@ -54,7 +54,7 @@ const Landing = () => {
           <Header
             title="Best Performance"
             header="Meet Our Top achievers"
-            description="Best performance in the last academic year of the students of The Lakshya."
+            description="Best performance in the past academic year of the students of The Lakshya."
             titleStyle="lg:text-xl"
             headerStyle="sm:text-5xl text-black"
             descStyle="sm:text-lg text-gray-700"

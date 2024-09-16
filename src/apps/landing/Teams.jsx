@@ -9,7 +9,7 @@ const Teams = () => {
     {
       avatar: sohail,
       name: "Sohail Sir",
-      title: "Mathematics Guru",
+      title: "Mathematics Faculty",
       desc: "M.Sc. in Mathematics, B.Ed., PGT at ISL Bhuli with 15 Years of Mastery in Mathematics Education",
       linkedin: "javascript:void(0)",
       twitter: "javascript:void(0)",
@@ -17,7 +17,7 @@ const Teams = () => {
     {
       avatar: abul,
       name: "Abul Sir",
-      title: "Physics Wizards",
+      title: "Physics Faculty",
       desc: "B. Tech in Electrical Engineering, Former Lecturer at GP Dhanbad with 10 Years of Experience in Teaching Physics",
       linkedin: "javascript:void(0)",
       twitter: "javascript:void(0)",
@@ -49,6 +49,14 @@ const Teams = () => {
     {
       avatar: "https://i.ibb.co/ynhbWyZ/IMG-20240914-WA0024.jpg",
       name: "Junaid Sir",
+      title: "Foundation Faculty",
+      desc: "B.Sc. in Physics, 5 Years of Experience in Teaching and Educational Research",
+      linkedin: "javascript:void(0)",
+      twitter: "javascript:void(0)",
+    },
+    {
+      avatar: ".........",
+      name: "Mehtab Sir",
       title: "Foundation Faculty",
       desc: "B.Sc. in Physics, 5 Years of Experience in Teaching and Educational Research",
       linkedin: "javascript:void(0)",

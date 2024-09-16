@@ -14,16 +14,14 @@ const AboutSection = () => {
           <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center space-y-6">
             <h1 className="text-lg text-red-200 font-medium">About Us</h1>
             <h1 className="title-font sm:text-5xl text-3xl mb-4 font-bold text-white">
-              Long heading is what you see here
-              in this feature section
+              We Are The Team Lakshya.
             </h1>
             <p className="mb-8 leading-relaxed text-slate-100 text-center sm:text-justify">
-              Welcome to our platform, where we strive to provide top-notch
-              services to our customers. We believe in the power of technology
-              and its ability to simplify and enhance our lives. Our team is
-              dedicated to offering innovative solutions that meet your needs
-              and exceed your expectations. Join us on this journey to a more
-              efficient and convenient digital experience.
+            At The Lakshya, we treat every student like our own, fostering a nurturing environment where academic growth and personal development go hand in hand. Our expert teachers, each with over a decade of experience, are dedicated to providing top-notch education tailored to individual needs. They bring a wealth of practical knowledge and industry insights to the classroom, ensuring that students not only excel in their studies but also gain real-world skills.
+
+            Our state-of-the-art facilities include well-stocked libraries and cutting-edge labs, designed to enhance learning and encourage hands-on experience. We believe that education extends beyond textbooks; our practical learning approach helps students apply their knowledge effectively, preparing them for future challenges.
+
+            At The Lakshya, we are committed to supporting your academic journey and career aspirations, guiding you every step of the way to achieve your highest potential.
             </p>
             {/* <div className="flex justify-center">
               <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
