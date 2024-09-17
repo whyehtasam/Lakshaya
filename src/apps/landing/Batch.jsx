@@ -79,7 +79,7 @@ const Batch = () => {
                 <svg
                   className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
                   aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns="http://www.w3.org/q2000/svg"
                   fill="none"
                   viewBox="0 0 14 10"
                 >

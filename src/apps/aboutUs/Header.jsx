@@ -9,19 +9,19 @@ const Header = () => {
           <div className="flex-none space-y-5 px-4 sm:max-w-lg md:px-0 lg:max-w-xl">
             <h1 className="text-lg text-red-800 font-medium">Empower</h1>
             <h2 className="text-4xl text-gray-800 font-extrabold md:text-5xl">
-              Unlock Your Potential
+              Unlock Your Potential with "The Lakshya"
             </h2>
             <p>
               We are dedicated to providing quality education and empowering
               students to succeed.
             </p>
             <div className="items-center grid sm:gap-3 space-y-3 sm:flex sm:space-y-0">
-              <a
+              {/* <a
                 href="javascript:void(0)"
                 className="block py-2 px-4 text-center text-white font-medium bg-red-800 duration-150 hover:bg-red-900 active:bg-red-700 rounded-lg shadow-lg hover:shadow-none"
               >
                 Learn more
-              </a>
+              </a> */}
               <Link to='/contactUs'>
                 <a
                   href="javascript:void(0)"

@@ -49,7 +49,7 @@ const FooterMain = () => {
                 <Footer.Link href="#">JEE Mains</Footer.Link>
                 <Footer.Link href="#">Jee Advance</Footer.Link>
                 <Footer.Link href="#">Neet</Footer.Link>
-                <Footer.Link href="#">Answer key & Solution</Footer.Link>
+                {/* <Footer.Link href="#">Answer key & Solution</Footer.Link> */}
               </Footer.LinkGroup>
             </div>
             <div>
@@ -65,10 +65,10 @@ const FooterMain = () => {
             <div>
               <Footer.Title title="Contact Us" className=""/>
               <Footer.LinkGroup col>
-                <Footer.Link href="#"> Dhanbad - 110025
+                <Footer.Link href="#"> Dhanbad-826001
                  </Footer.Link>
-                <Footer.Link href="#">+91-9874563210</Footer.Link>
-                <Footer.Link href="#">+91-7845962114</Footer.Link>
+                <Footer.Link href="#">+91-80925 37629</Footer.Link>
+                <Footer.Link href="#">+91-77818 82684</Footer.Link>
                
               </Footer.LinkGroup>
             </div>
@@ -78,8 +78,8 @@ const FooterMain = () => {
         <div className="w-full sm:flex sm:items-center sm:justify-between">
           <Footer.Copyright href="#" by="Lakshaya" year={2024} />
           <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
-            <Footer.Icon href="#" icon={BsFacebook} />
-            <Footer.Icon href="#" icon={BsInstagram} />
+            <Footer.Icon href="https://www.facebook.com/thelakshyadhanbad/" icon={BsFacebook} />
+            <Footer.Icon href="https://www.instagram.com/the_lakshya_dhanbad/" icon={BsInstagram} />
             <Footer.Icon href="#" icon={BsTwitter} />
             <Footer.Icon href="#" icon={BsGithub} />
            

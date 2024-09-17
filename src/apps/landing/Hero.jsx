@@ -15,7 +15,7 @@ const Hero = () => {
         <h1 className="text-4xl font-bold text-gray-800 md:text-5xl lg:text-6xl">
           Forum for IIT-JEE &
         </h1>
-        <h1 className="text-4xl font-bold text-gray-800 md:text-5xl lg:text-6xl">q
+        <h1 className="text-4xl font-bold text-gray-800 md:text-5xl lg:text-6xl">
           NEET-UG Medical
         </h1>
         <h3 className="text-2xl font-bold text-gray-800 md:text-3xl lg:text-3xl">

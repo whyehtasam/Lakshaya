@@ -55,7 +55,7 @@ const Teams = () => {
       twitter: "javascript:void(0)",
     },
     {
-      avatar: ".........",
+      avatar: "https://i.ibb.co/H4jv36Q/Whats-App-Image-2024-09-15-at-18-48-51-ddba8c51.jpg",
       name: "Mehtab Sir",
       title: "Foundation Faculty",
       desc: "B.Sc. in Physics, 5 Years of Experience in Teaching and Educational Research",
