@@ -12,10 +12,11 @@ import FeatureList from "./FeatureList";
 import Hero from "./Hero";
 import Results from "./Results";
 import Teams from "./Teams";
+import SkeletonResult from "./SkeletonResult";
 
 const Landing = () => {
   const [results, setResults] = useState([]);
-
+  const [showSkeleton, setShowSkeleton] = useState(true);
   const backend_url = import.meta.env.VITE_BACKEND_URL;
   const token = localStorage.getItem("token");
 
@@ -40,7 +41,15 @@ const Landing = () => {
   for (let i = 0; i < results.length; i += 3) {
     chunks.push(results.slice(i, i + 3));
   }
+  useEffect(() => {
+    // Set a delay of 2-3 seconds (here 2 seconds)
+    const timer = setTimeout(() => {
+      setShowSkeleton(false); // Hide the skeleton and show the results after 2 seconds
+    }, 2000);
 
+    // Clear the timeout if the component is unmounted to prevent memory leaks
+    return () => clearTimeout(timer);
+  }, []); // Only run once on component mount
   return (
     <div className="relative overflow-hidden">
       <Container className="landing">
@@ -64,8 +73,15 @@ const Landing = () => {
         <Slider className="hidden md:block h-[30rem] sm:h-96">
           {chunks.map((chunk, index) => (
             <div key={index} className="grid md:grid-cols-3 gap-5">
-              {chunk.map((student) => (
-                <ResultCard key={student.name} student={student} />
+              {chunk.map((student, studentIndex) => (
+                <div key={studentIndex}>
+                  {/* Show Skeleton for 2-3 seconds, then show the ResultCard */}
+                  {showSkeleton ? (
+                    <SkeletonResult />
+                  ) : (
+                    <ResultCard key={student.name} student={student} />
+                  )}
+                </div>
               ))}
             </div>
           ))}

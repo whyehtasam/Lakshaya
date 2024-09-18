@@ -19,7 +19,7 @@ const Hero = () => {
           NEET-UG Medical
         </h1>
         <h3 className="text-2xl font-bold text-gray-800 md:text-3xl lg:text-3xl">
-          11th,12th,13th & Foundation(5th-10th)
+          11th,12th & Foundation(5<sup>th</sup>-10<sup>th</sup>)
         </h3>
         {/* <h1 className="text-4xl font-bold text-gray-800 md:text-5xl lg:text-7xl">
           Building Generations
