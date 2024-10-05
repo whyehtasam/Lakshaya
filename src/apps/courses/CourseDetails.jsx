@@ -16,7 +16,7 @@ const CourseDetails = () => {
     // if(!token) return;
     fetch(backend_url + "/api/course/get", {
       headers: {
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer ${token}` ,
       },
     })
       .then((res) => res.json())
