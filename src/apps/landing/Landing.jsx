@@ -5,7 +5,7 @@ import Slider from "../../components/carousels/Slider";
 import Header from "../../components/header/Header";
 import BlobCircle from "../../components/wrappers/BlobCircle";
 import Container from "../../components/wrappers/Container";
-import Batch from "./Batch";
+import Batch from "../courses/Batch";
 import Benefits from "./Benefits";
 import FAQs from "./FAQs";
 import FeatureList from "./FeatureList";
