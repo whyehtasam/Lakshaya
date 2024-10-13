@@ -3,7 +3,6 @@ import axios from "axios";
 // import PrimaryButton from "../../components/buttons/PrimaryButton";
 import SecondaryButton from "../../components/buttons/SecondaryButton";
 
-
 const Batch = () => {
   const [batches, setBatches] = useState([]); // Original batches
   const [filteredBatches, setFilteredBatches] = useState([]); // Batches to display
@@ -14,7 +13,7 @@ const Batch = () => {
   const token = localStorage.getItem("token");
 
   const className =
-    "w-fit text-sm font-bold tracking-wider text-black bg-white rounded-md sm:w-52 sm:px-6 sm:py-3 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 sm:text-lg outline outline-2 outline-red-800 outline-offset-2 focus:bg-red-900 focus:text-white";
+    "w-fit text-sm font-bold tracking-wider text-black bg-white rounded-md sm:w-52 sm:px-6 sm:py-3 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 sm:text-lg outline outline-2 outline-red-800 outline-offset-2 focus:bg-red-900 focus:text-white data-[state=active]:";
 
   // Function to fetch batches from the API
   const fetchBatches = async () => {
@@ -25,8 +24,28 @@ const Batch = () => {
           Authorization: `Bearer ${token}`,
         },
       });
-      setBatches(response.data.reverse()); // Reverse the order to show latest first
-      setFilteredBatches(response.data.reverse()); // Initialize filtered batches
+
+      // Process batches to add category based on class
+      const processedBatches = response.data.reverse().map(batch => {
+        let category = "";
+        const classNameLower = batch.class ? batch.class.toLowerCase() : ""; // Use the correct property
+
+        if (classNameLower.includes("jee")) {
+          category = "jee";
+        } else if (classNameLower.includes("neet")) {
+          category = "neet";
+        } else if (classNameLower.includes("foundation")) {
+          category = "foundation";
+        }
+
+        return {
+          ...batch,
+          category: category || null, // Set to null if no category matches
+        };
+      });
+
+      setBatches(processedBatches); // Set processed batches
+      setFilteredBatches(processedBatches); // Initialize filtered batches
     } catch (error) {
       console.error(error);
       setError("Failed to fetch batches. Please try again.");
@@ -37,13 +56,10 @@ const Batch = () => {
 
   const changeHandler = (type) => {
     if (type) {
-      console.log("batch inside change handler: ", batches, type);
       const filtered = batches.filter((batch) => {
-        // Check if batch and batch.class_name exist before calling toLowerCase()
-        return batch && batch.class_name && batch.class_name.toLowerCase().includes(type.toLowerCase());
+        return batch.category && batch.category.toLowerCase() === type.toLowerCase(); // Use category instead of class_name
       });
       setFilteredBatches(filtered);
-      console.log("filtered: ", filtered);
     } else {
       setFilteredBatches(batches);
     }
@@ -52,7 +68,6 @@ const Batch = () => {
   // Fetch batches on component mount
   useEffect(() => {
     fetchBatches();
-    console.log("filtered: ",filteredBatches);
   }, []);
 
   return (
@@ -104,7 +119,7 @@ const Batch = () => {
         ) : (
           filteredBatches.map(
             (
-              { batch_name, fee, start_date, target_year, class: class_name },
+              { batch_name, fee, start_date, target_year, class: class_name, category }, // Use the correct property name
               index
             ) => (
               <div
@@ -112,21 +127,21 @@ const Batch = () => {
                 className="sm:grid sm:grid-cols-2 transition-all duration-300 bg-white border border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-700 drop-shadow-lg sm:hover:scale-105 hover:bg-slate-50"
               >
                 <div className="p-5">
-                  {class_name.toLowerCase().includes("jee") && (
+                  {category === "jee" && (
                     <img
                       className="object-cover rounded-lg h-full"
                       src="https://www.adarshbarnwal.com/wp-content/uploads/2022/03/Jee-Mains.jpg"
                       alt={class_name}
                     />
                   )}
-                  {class_name.toLowerCase().includes("neet") && (
+                  {category === "neet" && (
                     <img
                       className="object-cover rounded-lg h-full"
                       src="https://www.vvtcoaching.com/neet/wp-content/uploads/2018/09/All-you-need-to-know-about-.jpg"
                       alt={class_name}
                     />
                   )}
-                  {class_name.toLowerCase().includes("foundation") && (
+                  {category === "foundation" && (
                     <img
                       className="object-cover rounded-lg h-full"
                       src="https://www.thengpschool.ac.in/asset/frontend/images/about/accrediation/left-banner.jpg"
