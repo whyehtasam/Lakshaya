@@ -1,13 +1,16 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import axios from "axios";
 // import PrimaryButton from "../../components/buttons/PrimaryButton";
 import SecondaryButton from "../../components/buttons/SecondaryButton";
+import { BatchContext } from "../../context/BatchContext";
 
 const Batch = () => {
   const [batches, setBatches] = useState([]); // Original batches
   const [filteredBatches, setFilteredBatches] = useState([]); // Batches to display
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
+  const { handleBatchData } = useContext(BatchContext);
 
   const backend_url = import.meta.env.VITE_BACKEND_URL;
   const token = localStorage.getItem("token");
@@ -26,7 +29,7 @@ const Batch = () => {
       });
 
       // Process batches to add category based on class
-      const processedBatches = response.data.reverse().map(batch => {
+      const processedBatches = response.data.reverse().map((batch) => {
         let category = "";
         const classNameLower = batch.class ? batch.class.toLowerCase() : ""; // Use the correct property
 
@@ -57,12 +60,18 @@ const Batch = () => {
   const changeHandler = (type) => {
     if (type) {
       const filtered = batches.filter((batch) => {
-        return batch.category && batch.category.toLowerCase() === type.toLowerCase(); // Use category instead of class_name
+        return (
+          batch.category && batch.category.toLowerCase() === type.toLowerCase()
+        ); // Use category instead of class_name
       });
       setFilteredBatches(filtered);
     } else {
       setFilteredBatches(batches);
     }
+  };
+
+  const handleEnroll = (batch) => {
+    handleBatchData(batch);
   };
 
   // Fetch batches on component mount
@@ -77,17 +86,17 @@ const Batch = () => {
       </h1>
       <div className="flex gap-5 sm:flex flex-wrap  sm:flex-row sm:justify-center sm:gap-10 buttons">
         <SecondaryButton
-          onClick={() => changeHandler('jee')}
+          onClick={() => changeHandler("jee")}
           className={className}
           label="JEE"
         />
         <SecondaryButton
-          onClick={() => changeHandler('neet')}
+          onClick={() => changeHandler("neet")}
           className={className}
           label="NEET"
         />
         <SecondaryButton
-          onClick={() => changeHandler('foundation')}
+          onClick={() => changeHandler("foundation")}
           className={className}
           label="FOUNDATION"
         />
@@ -119,7 +128,14 @@ const Batch = () => {
         ) : (
           filteredBatches.map(
             (
-              { batch_name, fee, start_date, target_year, class: class_name, category }, // Use the correct property name
+              {
+                batch_name,
+                fee,
+                start_date,
+                target_year,
+                class: class_name,
+                category,
+              }, // Use the correct property name
               index
             ) => (
               <div
@@ -167,6 +183,17 @@ const Batch = () => {
                   </h5>
                   <a
                     href="#"
+                    onClick={() =>
+                      handleEnroll({
+                        batch_name,
+                        fee,
+                        start_date,
+                        target_year,
+                        class_name,
+                        category,
+                      })
+                    }
+                    
                     className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-800 rounded-lg w-fit hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                   >
                     Enroll

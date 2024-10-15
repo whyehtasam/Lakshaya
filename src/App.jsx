@@ -23,6 +23,7 @@ import Login from "./apps/logIn/Login";
 import Gallery from "./apps/gallery/Gallery";
 import Newsupdates from "./apps/newsupdates/Newsupdates";
 import SignUpNew from "./apps/signUp/SignUpNew";
+import BatchContextProvider from "./context/BatchContext";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -35,7 +36,7 @@ const ScrollToTop = () => {
 };
 function App() {
   return (
-    <>
+    <BatchContextProvider>
       <Router>
         <Navbar />
         <Routes>
@@ -62,8 +63,9 @@ function App() {
 
         <Footer />
       </Router>
-    </>
+    </BatchContextProvider>
   );
 }
 
 export default App;
+
