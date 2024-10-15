@@ -13,7 +13,7 @@ const Batch = () => {
   const token = localStorage.getItem("token");
 
   const className =
-    "w-fit text-sm font-bold tracking-wider text-black bg-white rounded-md sm:w-52 sm:px-6 sm:py-3 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 sm:text-lg outline outline-2 outline-red-800 outline-offset-2 focus:bg-red-900 focus:text-white data-[state=active]:";
+    "w-fit text-xs font-bold tracking-wider text-black bg-white rounded-md sm:w-52 sm:px-6 sm:py-3 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 sm:text-lg outline outline-2 outline-red-800 outline-offset-2 focus:bg-red-900 focus:text-white data-[state=active]:";
 
   // Function to fetch batches from the API
   const fetchBatches = async () => {
@@ -75,7 +75,7 @@ const Batch = () => {
       <h1 className="sm:p-5 mx-auto text-4xl font-bold text-white md:text-5xl">
         Join our latest batches
       </h1>
-      <div className="flex gap-5 sm:flex sm:flex-row sm:justify-center sm:gap-10 buttons">
+      <div className="flex gap-5 sm:flex flex-wrap  sm:flex-row sm:justify-center sm:gap-10 buttons">
         <SecondaryButton
           onClick={() => changeHandler('jee')}
           className={className}

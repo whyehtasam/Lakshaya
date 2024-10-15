@@ -60,7 +60,12 @@ const CourseDetails = () => {
                 : "hidden  flex-col gap-2.5 sm:flex sm:flex-col sm:justify-start sm:gap-5 buttons w-full"
             }
           >
-            {courseData.map((e, index) => {
+            {courseData === null ? (
+              <p className="text-center text-red-800">
+                No courses available. Please check again later.
+              </p>
+            ) : (
+              courseData.map((e, index) => {
               return (
                 <SecondaryButton
                   key={index}
@@ -69,7 +74,7 @@ const CourseDetails = () => {
                   label={e.course_name}
                 />
               );
-            })}
+            }))}
           </div>
         </div>
 
