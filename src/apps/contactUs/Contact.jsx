@@ -1,4 +1,40 @@
+import { useState } from "react";
+import emailjs from "emailjs-com";
+
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    course: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", formData, "YOUR_USER_ID")
+      .then(
+        (response) => {
+          alert("Email sent successfully!");
+          console.log("Email sent successfully!", response.status, response.text);
+          // Optionally reset the form
+          setFormData({ name: "", email: "", course: "", message: "" });
+        },
+        (error) => {
+          console.error("Failed to send email:", error);
+        }
+      );
+  };
+
   const contactMethods = [
     {
       icon: (
@@ -60,7 +96,7 @@ const Contact = () => {
           />
         </svg>
       ),
-      contact: "Mountain View, California, United State.",
+      contact: "Mountain View, California, United States.",
     },
   ];
 
@@ -68,17 +104,17 @@ const Contact = () => {
     <main className="sm:py-14 py-5">
       <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
         <div className="max-w-lg mx-auto gap-12 justify-between lg:flex lg:max-w-none">
-          <div className="max-w-lg  space-y-5 ">
+          <div className="max-w-lg space-y-5 ">
             <div className="space-y-3 ">
               <h3 className="text-red-800 font-semibold">Contact</h3>
               <p className="text-gray-800 text-3xl font-semibold sm:text-4xl">
                 Let us know how we can help
               </p>
               <p>
-                We’re here to help and answer any question you might have, We
+                We’re here to help and answer any question you might have. We
                 look forward to hearing from you! Please fill out the form, or
-                us the contact information bellow .
-              </p>{" "}
+                use the contact information below.
+              </p>
             </div>
             <div>
               <ul className="mt-6 flex flex-wrap gap-x-10 gap-y-6 items-center">
@@ -91,7 +127,6 @@ const Contact = () => {
               </ul>
             </div>
             <div className="h-64">
-    
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.598141383644!2d86.4078180753374!3d23.797320378638414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f6a348e8ef3d69%3A0x41269b40d9ed0ef0!2sThe%20LAKSHYA!5e0!3m2!1sen!2sin!4v1715510830307!5m2!1sen!2sin"
                 className="w-full h-full rounded-md drop-shadow-sm"
@@ -101,14 +136,14 @@ const Contact = () => {
             </div>
           </div>
           <div className="flex-1 h-full mt-8 sm:mt-0 sm:max-w-lg lg:max-w-md">
-            <form
-              onSubmit={(e) => e.preventDefault()}
-              className="space-y-5 h-full"
-            >
+            <form onSubmit={handleSubmit} className="space-y-5 h-full">
               <div>
                 <label className="font-medium">Full name</label>
                 <input
                   type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   required
                   className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
                 />
@@ -117,14 +152,20 @@ const Contact = () => {
                 <label className="font-medium">Email</label>
                 <input
                   type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   required
                   className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
                 />
               </div>
               <div>
-                <label className="font-medium">Company</label>
+                <label className="font-medium">Course</label>
                 <input
                   type="text"
+                  name="course"
+                  value={formData.course}
+                  onChange={handleChange}
                   required
                   className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
                 />
@@ -132,12 +173,19 @@ const Contact = () => {
               <div>
                 <label className="font-medium">Message</label>
                 <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   required
-                  className="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                  rows={4}
+                  className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
                 ></textarea>
               </div>
-              <button className="w-full px-4 py-2 text-white font-medium bg-red-800 hover:bg-red-900 active:bg-red-600 rounded-lg duration-150">
-                Submit
+              <button
+                type="submit"
+                className="block w-full px-4 py-2 text-white bg-red-600 rounded-lg hover:bg-red-700 focus:outline-none focus:bg-red-700"
+              >
+                Send message
               </button>
             </form>
           </div>

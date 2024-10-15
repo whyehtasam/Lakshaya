@@ -12,6 +12,7 @@ function Register() {
   });
 
   const formRef = useRef();
+  const formResetRef = useRef();
   const { batch } = useContext(BatchContext);
   const { class_name, category } = batch;
 
@@ -61,16 +62,18 @@ function Register() {
         },
         body: JSON.stringify(dataToSend),
       });
-
+    
       if (!response.ok) {
-        throw new Error("Failed to submit the form");
+        const errorText = await response.text();
+        throw new Error(`Failed to submit the form: ${errorText}`);
       }
-
-      const result = await response.json();
+    
+      const result = await response.json(); // Parse directly as JSON if the response is valid
+    
       if (result.status === "registered") {
         alert("Registration successful!");
       }
-
+      
       // Optionally, clear the form after successful submission
       setFormData({
         name: "",
@@ -82,6 +85,8 @@ function Register() {
     } catch (error) {
       console.log(error.message);
     }
+    
+    
   }
 
   const inputClass =
