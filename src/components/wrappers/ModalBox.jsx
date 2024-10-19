@@ -37,13 +37,13 @@ export function ModalBox({ syllabus,filename }) {
       >
         Click here to view & download
       </p>
-      <Modal show={openModal} onClose={() => setOpenModal(false)} className="mb-4">
+      <Modal show={openModal} onClose={() => setOpenModal(false)} className="mb-4 bg-black/60">
         <Modal.Header>Syllabus</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
             <pre
               id="syllabus-content"
-              className="text-base leading-relaxed text-gray-500 dark:text-gray-400 w-full break-words whitespace-pre-wrap h-[65vh] overflow-y-auto"
+              className="text-base font-sans leading-relaxed text-gray-500 dark:text-gray-400 w-full break-words whitespace-pre-wrap h-[65vh] overflow-y-auto"
             >
               {syllabus}
             </pre>
