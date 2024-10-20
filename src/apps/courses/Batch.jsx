@@ -16,7 +16,7 @@ const Batch = () => {
   const token = localStorage.getItem("token");
 
   const className =
-    "w-fit text-xs font-bold tracking-wider text-black bg-white rounded-md sm:w-52 sm:px-6 sm:py-3 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 sm:text-lg outline outline-2 outline-red-800 outline-offset-2 focus:bg-red-900 focus:text-white data-[state=active]:";
+    "w-fit text-sm font-bold tracking-wider text-black bg-white rounded-md sm:w-52 sm:px-6 sm:py-3 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 sm:text-lg outline outline-2 outline-red-800 outline-offset-2 focus:bg-red-900 focus:text-white data-[state=active]:";
 
   // Function to fetch batches from the API
   const fetchBatches = async () => {
@@ -140,26 +140,26 @@ const Batch = () => {
             ) => (
               <div
                 key={index}
-                className="sm:grid sm:grid-cols-2 transition-all duration-300 bg-white border border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-700 drop-shadow-lg sm:hover:scale-105 hover:bg-slate-50"
+                className="sm:grid sm:grid-cols-2 transition-all duration-300 bg-white border border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-700 drop-shadow-lg sm:hover:scale-105 max-h- hover:bg-slate-50"
               >
-                <div className="p-5">
+                <div className="p-5 h-72 w-full">
                   {category === "jee" && (
                     <img
-                      className="object-cover rounded-lg h-full"
+                      className="object-cover rounded-lg h-full w-full mx-auto"
                       src="https://www.adarshbarnwal.com/wp-content/uploads/2022/03/Jee-Mains.jpg"
                       alt={class_name}
                     />
                   )}
                   {category === "neet" && (
                     <img
-                      className="object-cover rounded-lg h-full"
+                      className="object-cover rounded-lg h-full w-full mx-auto"
                       src="https://www.vvtcoaching.com/neet/wp-content/uploads/2018/09/All-you-need-to-know-about-.jpg"
                       alt={class_name}
                     />
                   )}
                   {category === "foundation" && (
                     <img
-                      className="object-cover rounded-lg h-full"
+                      className="sm:object-cover object-contain rounded-lg h-full w-full mx-auto"
                       src="https://www.thengpschool.ac.in/asset/frontend/images/about/accrediation/left-banner.jpg"
                       alt={class_name}
                     />

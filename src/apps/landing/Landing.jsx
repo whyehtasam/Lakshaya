@@ -78,7 +78,37 @@ const Landing = () => {
         <Hero />
       </Container>
       <Container className="result pt-0 lg-pt-0">
-        {/* ... (rest of the components) ... */}
+        <div className="relative grid place-content-center">
+          <Header
+            title="Best Performance"
+            header="Meet Our Top achievers"
+            description="Best performance in the past academic year of the students of The Lakshya."
+            titleStyle="lg:text-xl"
+            headerStyle="sm:text-5xl text-black"
+            descStyle="sm:text-lg text-gray-700"
+            className="pb-6 pt-4 text-center"
+          />
+        </div>
+        <Slider className="hidden md:block h-[30rem] sm:h-96">
+          {chunks.map((chunk, index) => (
+            <div key={index} className="grid md:grid-cols-3 gap-5">
+              {chunk.map((student, studentIndex) => (
+                <div key={studentIndex}>
+                  {showSkeleton ? (
+                    <SkeletonResult />
+                  ) : (
+                    <ResultCard key={student.name} student={student} />
+                  )}
+                </div>
+              ))}
+            </div>
+          ))}
+        </Slider>
+        <Slider className="block md:hidden ">
+          {results.map((student) => (
+            <ResultCard key={student.name} student={student} />
+          ))}
+        </Slider>
       </Container>
       <div className="bg-red-900">
         <Container>

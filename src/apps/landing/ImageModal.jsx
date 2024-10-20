@@ -13,6 +13,7 @@ const ImageModal = ({ show, onClose, imageSrc }) => {
         <div className="flex justify-center items-center  overflow-hidden">
           <img src={img} alt="Modal content" className="w-full max-h-[65vh] object-contain  rounded-br-lg rounded-bl-lg sm:rounded-none" />
         </div>
+        
       </Modal.Body>
     </Modal>
   );
