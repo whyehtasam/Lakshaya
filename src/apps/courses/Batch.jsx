@@ -3,6 +3,7 @@ import axios from "axios";
 // import PrimaryButton from "../../components/buttons/PrimaryButton";
 import SecondaryButton from "../../components/buttons/SecondaryButton";
 import { BatchContext } from "../../context/BatchContext";
+import { Link } from "react-router-dom";
 
 const Batch = () => {
   const [batches, setBatches] = useState([]); // Original batches
@@ -142,7 +143,7 @@ const Batch = () => {
                 key={index}
                 className="sm:grid sm:grid-cols-2 transition-all duration-300 bg-white border border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-700 drop-shadow-lg sm:hover:scale-105 max-h- hover:bg-slate-50"
               >
-                <div className="p-5 h-72 w-full">
+                <div className="p-5 h-72 sm:h-auto w-full">
                   {category === "jee" && (
                     <img
                       className="object-cover rounded-lg h-full w-full mx-auto"
@@ -181,6 +182,8 @@ const Batch = () => {
                   <h5 className="mb-2 font-semibold tracking-tight text-gray-600 dark:text-white">
                     Fee: {fee}
                   </h5>
+                  <Link to="/courses">
+                  
                   <a
                     href="#"
                     onClick={() =>
@@ -212,7 +215,8 @@ const Batch = () => {
                         d="M1 5h12m0 0L9 1m4 4L9 9"
                       />
                     </svg>
-                  </a>
+                    </a>
+                  </Link>
                 </div>
               </div>
             )

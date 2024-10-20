@@ -3,7 +3,7 @@ import PrimaryButton from "../../components/buttons/PrimaryButton";
 import SecondaryButton from "../../components/buttons/SecondaryButton";
 import { jee, neet, foundation } from "./data";
 import Header from "../../components/header/Header";
-
+import { Link } from "react-router-dom";
 const Batch = () => {
   const [isActive, setIsActive] = useState(jee);
 
@@ -16,15 +16,15 @@ const Batch = () => {
 
   return (
     <section className="grid gap-5 sm:gap-12 sm:mb-4 batch-courses">
-       <Header
-          title="Bathces"
-          header="Join our latest batches"
-          description="Choose from our diverse range of courses and get started on your learning journey today."
-          titleStyle="lg:text-xl text-slate-300"
-          headerStyle="sm:text-5xl text-white"
-          descStyle="sm:text-lg text-slate-100"
-          className="pb-6 pt-4 text-center"
-        />
+      <Header
+        title="Bathces"
+        header="Join our latest batches"
+        description="Choose from our diverse range of courses and get started on your learning journey today."
+        titleStyle="lg:text-xl text-slate-300"
+        headerStyle="sm:text-5xl text-white"
+        descStyle="sm:text-lg text-slate-100"
+        className="pb-6 pt-4 text-center"
+      />
       <div className="flex gap-5 sm:flex sm:flex-row sm:justify-center sm:gap-10 buttons ">
         <SecondaryButton
           onClick={() => changehandler(jee)}
@@ -71,27 +71,29 @@ const Batch = () => {
               <h5 className="mb-2 font-semibold tracking-tight text-gray-600 dark:text-white">
                 {batch.price}
               </h5>
-              <a
-                href="#"
-                className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-800 rounded-lg w-fit hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-              >
-                Enroll
-                <svg
-                  className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/q2000/svg"
-                  fill="none"
-                  viewBox="0 0 14 10"
+              <Link to="/courses">
+                <button
+                  // href=""
+                  className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-800 rounded-lg w-fit hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
-                  <path
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M1 5h12m0 0L9 1m4 4L9 9"
-                  />
-                </svg>
-              </a>
+                  Enroll
+                  <svg
+                    className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/q2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 10"
+                  >
+                    <path
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9"
+                    />
+                  </svg>
+                </button>
+              </Link>
             </div>
           </div>
         ))}
