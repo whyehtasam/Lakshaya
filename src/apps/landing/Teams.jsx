@@ -4,6 +4,7 @@ import iqbal from "../../assets/iqbalSir.jpg"
 import abul from "../../assets/abulSir.jpg"
 import shahbaz from "../../assets/shahbazSir.jpg"
 import sarfraz from "../../assets/sarfarazSir.jpg"
+import Mehtab from "../../assets/mehtabSir.jpg"
 const Teams = () => {
   const team = [
     {
@@ -18,7 +19,7 @@ const Teams = () => {
       avatar: abul,
       name: "Abul Sir",
       title: "Physics Faculty",
-      desc: "B. Tech in Electrical Engineering, Former Lecturer at GP Dhanbad with 10 Years of Experience in Teaching Physics",
+      desc: "B. Tech in Electrical Engineering, with 10 Years of Experience in Teaching Physics",
       linkedin: "javascript:void(0)",
       twitter: "javascript:void(0)",
     },
@@ -50,15 +51,15 @@ const Teams = () => {
       avatar: "https://i.ibb.co/ynhbWyZ/IMG-20240914-WA0024.jpg",
       name: "Junaid Sir",
       title: "Foundation Faculty",
-      desc: "B.Sc. in Physics, 5 Years of Experience in Teaching and Educational Research",
+      desc: "B.Sc. in Mathematics, 2 Years of Experience in Teaching.",
       linkedin: "javascript:void(0)",
       twitter: "javascript:void(0)",
     },
     {
-      avatar: "https://i.ibb.co/H4jv36Q/Whats-App-Image-2024-09-15-at-18-48-51-ddba8c51.jpg",
+      avatar: Mehtab,
       name: "Mehtab Sir",
       title: "Foundation Faculty",
-      desc: "B.Sc. in Physics, 5 Years of Experience in Teaching and Educational Research",
+      desc: "B.Sc. in Life Science, 5 Years of Experience in Teaching.",
       linkedin: "javascript:void(0)",
       twitter: "javascript:void(0)",
     },
