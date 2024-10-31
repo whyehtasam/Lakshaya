@@ -59,7 +59,7 @@ const Teams = () => {
       avatar: Mehtab,
       name: "Mehtab Sir",
       title: "Foundation Faculty",
-      desc: "B.Sc. in Life Science, 5 Years of Experience in Teaching.",
+      desc: "M.SC in Life Science, 5 Years of Experience in Teaching.",
       linkedin: "javascript:void(0)",
       twitter: "javascript:void(0)",
     },
