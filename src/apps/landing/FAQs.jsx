@@ -81,23 +81,23 @@ const FAQs = () => {
     },
     {
       q: "What is the fee structure?",
-      a: "The fee structure varies depending on the course and duration. Detailed information about the fees can be found on our website or by contacting our support team.",
+      a: "The fee structure varies depending on the course and duration. Detailed information about the fees can be known by contacting our support team.",
     },
     {
       q: "How do I submit the fees?",
-      a: "Fees can be submitted online through our secure payment gateway. We accept various payment methods including credit/debit cards, net banking, and UPI.",
+      a: "Fees can be submitted offline through the cash or UPIs, phonePay , Paytm etc.",
     },
     {
       q: "Do you offer any discounts or scholarships?",
-      a: "Yes, we offer various discounts and scholarships based on merit and financial need. Please visit our scholarships page for more information.",
+      a: "Yes, we offer various discounts and scholarships based on merit and financial need. You can meet personally to talk on this.",
     },
     {
       q: "What is the duration of the courses?",
-      a: "The duration of the courses varies. Some courses are short-term, lasting a few weeks, while others are long-term, spanning several months. Detailed information is available on the course pages.",
+      a: "The duration of the courses varies. Some courses are short-term, lasting a few weeks, while others are long-term, spanning several months. Detailed information can be know by visiting the coaching centre.",
     },
     {
       q: "Can I get a refund if I cancel my enrollment?",
-      a: "Yes, we have a refund policy in place. If you cancel your enrollment within the specified period, you are eligible for a partial or full refund. Please refer to our refund policy for more details.",
+      a: "Yes, we have a refund policy in place. If you cancel your enrollment within the specified period, you are eligible for a partial or full refund.",
     },
   ];
 
