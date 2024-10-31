@@ -68,7 +68,7 @@ function Register() {
         throw new Error(`Failed to submit the form: ${errorText}`);
       }
     
-      const result = await response.json(); // Parse directly as JSON if the response is valid
+      const result = await response.text(); // Parse directly as JSON if the response is valid
     
       if (result.status === "registered") {
         alert("Registration successful!");
