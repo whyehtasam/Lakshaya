@@ -96,7 +96,7 @@ const Contact = () => {
           />
         </svg>
       ),
-      contact: "Mountain View, California, United States.",
+      contact: "KGN Complex , Aara More , Wasseypur Dhanbad Jharkhand 826001.",
     },
   ];
 

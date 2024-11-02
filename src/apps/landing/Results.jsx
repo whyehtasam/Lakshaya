@@ -3,7 +3,7 @@ import Header from '../../components/header/Header'
 import svg from '../../assets/results.svg'
 
 const stats = [
-  { title: 'Students', count: '2.7K' },
+  { title: 'Students', count: '10K+' },
   { title: 'Merits', count: '1.7K' },
   { title: 'Milestone', count: '15yrs' },
   { title: 'Batches', count: '6+' },
@@ -16,8 +16,8 @@ const Results = () => {
         <div className="flex flex-wrap mt-auto mb-auto lg:w-1/2 sm:w-2/3 content-start sm:pr-10">
           <Header
             title="With The Lakshya"
-            header="Unlock Your Potential with Our Comprehensive Courses"
-            description="At our online coaching academy, we are dedicated to helping students succeed. With our extensive collection of video lessons and practice tests, you can enhance your knowledge and skills in no time. Our courses are designed to provide you with the tools and resources you need to excel in your studies and achieve your academic goals."
+            header="Unlock Your Potential within the guidance of our experienced faculties."
+            description="At our coaching 'THE LAKSHYA', we are dedicated to helping students succeed. With our comprehensive teaching style and practice tests, you can enhance your knowledge and skills in no time. Our coaching provides you library and practical lab to demonstrate the concept in practical way so that you excel in your studies and achieve your academic goals."
             titleStyle="lg:text-xl"
             headerStyle="sm:text-5xl text-black"
             descStyle="sm:text-lg text-gray-700"
