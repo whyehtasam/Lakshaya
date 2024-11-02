@@ -72,7 +72,7 @@ const Contact = () => {
           />
         </svg>
       ),
-      contact: "+1 (555) 000-000",
+      contact: "+91-7781882684",
     },
     {
       icon: (
