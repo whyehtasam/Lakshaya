@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const testSeries = [
   {
-    name: "Physics Mastery",
+    name: "Advanced Physics Mastery",
     image: comingsoon,
     startDate: "2024-03-01",
     endDate: "2024-05-31",
