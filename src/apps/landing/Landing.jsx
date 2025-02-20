@@ -14,7 +14,7 @@ import Hero from "./Hero";
 import Results from "./Results";
 import Teams from "./Teams";
 import SkeletonResult from "./SkeletonResult";
-
+import TestSeries from "./TestSeries";
 const Landing = () => {
   const [results, setResults] = useState([]);
   const [showSkeleton, setShowSkeleton] = useState(true);
@@ -115,6 +115,9 @@ const Landing = () => {
           <Batch />
         </Container>
       </div>
+      <Container className="!py-0">
+        <TestSeries />
+      </Container>
       <Container>
         <Benefits />
       </Container>

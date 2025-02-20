@@ -173,6 +173,13 @@ function Register() {
                 <option value="XII (NEET)">XII (NEET)</option>
                 <option value="Dropper (JEE)">Dropper (JEE)</option>
                 <option value="Dropper (NEET)">Dropper (NEET)</option>
+                <option value="Test Series (Foundation)">Test Series (Foundation)</option>
+                <option value="Test Series XI (JEE)">Test Series XI (JEE)</option>
+                <option value="Test Series XI (NEET)">Test Series XI (NEET)</option>
+                <option value="Test Series XII (JEE)">Test Series XII (JEE)</option>
+                <option value="Test Series XII (NEET)">Test Series XII (NEET)</option>
+                <option value="Test Series Dropper (JEE)">Test Series Dropper (JEE)</option>
+                <option value="Test Series Dropper (NEET)">Test Series Dropper (NEET)</option>
               </select>
             </div>
           </div>
