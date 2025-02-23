@@ -53,7 +53,7 @@ const Contact = () => {
           />
         </svg>
       ),
-      contact: "Support@example.com",
+      contact: "thelakshyadhanbad@gmail.com",
     },
     {
       icon: (
