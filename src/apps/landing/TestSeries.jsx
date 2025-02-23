@@ -13,6 +13,7 @@ const testSeries = [
     description:
       "Master advanced physics concepts with our comprehensive test series.",
     syllabusLink: physicsSyllabus,
+    price: "₹1499", // Added price
   },
   {
     name: "Organic Chemistry Challenge",
@@ -23,6 +24,7 @@ const testSeries = [
     description:
       "Conquer organic chemistry with our intensive test series program.",
     syllabusLink: "/chemistry-syllabus.pdf",
+    price: "₹1299", // Added price
   },
   {
     name: "Advanced Mathematics Series",
@@ -33,6 +35,7 @@ const testSeries = [
     description:
       "Excel in advanced mathematics concepts through our comprehensive test series.",
     syllabusLink: "/maths-syllabus.pdf",
+    price: "₹1399", // Added price
   },
   // Add more test series as needed
 ];
@@ -74,20 +77,22 @@ const TestSeries = () => {
                   {series.subject}
                 </span>
               </div>
-              <p className="text-sm text-gray-600 mb-4">{series.description}</p>
+
+              <p className="text-sm text-gray-600 mb-2">{series.description}</p>
+              <p className="text-lg font-semibold text-red-600 mb-3">
+                Price: {series.price}
+              </p> {/* Added price display */}
+
               <div className="flex items-center text-sm text-gray-500 mb-2">
                 <Calendar className="w-4 h-4 mr-2" />
-                <span>
-                  Start: {new Date(series.startDate).toLocaleDateString()}
-                </span>
+                <span>Start: {new Date(series.startDate).toLocaleDateString()}</span>
               </div>
               <div className="flex items-center text-sm text-gray-500">
                 <Clock className="w-4 h-4 mr-2" />
-                <span>
-                  End: {new Date(series.endDate).toLocaleDateString()}
-                </span>
+                <span>End: {new Date(series.endDate).toLocaleDateString()}</span>
               </div>
             </div>
+
             <div className="border-t border-gray-200"></div>
             <div className="p-4 flex justify-between items-center">
               <a
@@ -103,10 +108,7 @@ const TestSeries = () => {
               <Link
                 to="/courses"
                 onClick={() => {
-                  window.scrollTo({
-                    top: 0,
-                    behavior: "smooth",
-                  });
+                  window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
               >
                 <button className="flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-red-800 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-600">
