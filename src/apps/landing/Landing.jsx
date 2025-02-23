@@ -15,6 +15,7 @@ import Results from "./Results";
 import Teams from "./Teams";
 import SkeletonResult from "./SkeletonResult";
 import TestSeries from "./TestSeries";
+import { Testimonials } from "../aboutUs/Testimonials";
 const Landing = () => {
   const [results, setResults] = useState([]);
   const [showSkeleton, setShowSkeleton] = useState(true);
@@ -129,6 +130,9 @@ const Landing = () => {
       <Container>
         <Results />
       </Container>
+      <div>
+        <Testimonials/>
+      </div>
       <Container>
         <Teams />
       </Container>

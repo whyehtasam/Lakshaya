@@ -48,8 +48,8 @@ const Gallery = () => {
         />
       </div>
 
-      <div className="grid lg:grid-cols-5 sm:grid-cols-1 p-5 gap-4">
-        <div className="flex-none p-6 sticky rounded-md shadow">
+      <div className="grid sm:max-w-5xl md:max-w-7xl mx-auto p-5 gap-4">
+        {/* <div className="flex-none p-6 sticky rounded-md shadow">
           <h1 className="text-3xl font-bold text-gray-800 md:text-5xl lg:text-4xl">
             Filter By
           </h1>
@@ -116,25 +116,35 @@ const Gallery = () => {
             className="w-full sm:w-fit gap-2 lg:py-2 font-semibold tracking-wider text-center rounded-md sm:px-6 sm:py-3 sm:text-lg outline outline-2 outline-red-800 outline-offset-2 hover:bg-red-700"
             label="Apply"
           />
-        </div>
+        </div> */}
 
         <div className="grow lg:col-span-4 p-4 px-4 h-[80vh] overflow-y-auto rounded-md shadow">
           {error ? (
             <div className="text-red-500">{error}</div>
           ) : (
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {images.map((img, index) => (
-                <div key={index} className="aspect-square">
-                  <img
-                    className=" relative z-0 rounded-lg transition-all duration-300 hover:scale-95 h-full w-full object-cover "
-                    src={img.image_url}
-                    alt=""
-                  />
+              {images.length > 0 ? (
+                images.map((img, index) => (
+                  <div key={index} className="aspect-square">
+                    <img
+                      className=" relative z-0 rounded-lg transition-all duration-300 hover:scale-95 h-full w-full object-cover "
+                      src={img.image_url}
+                      alt=""
+                    />
+                  </div>
+                ))
+              ) : (
+                <div className="col-span-full h-full text-center">
+                  <div className="p-5">
+                    <h5 className="mb-2 text-lg font-semibold text-gray-500">
+                      Images will be added soon...
+                    </h5>
+                  </div>
                 </div>
-              ))}
+              )}
             </div>
           )}
-          <Pagination />
+          {/* <Pagination /> */}
         </div>
       </div>
     </div>

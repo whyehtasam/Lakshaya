@@ -60,11 +60,11 @@ const Hero = () => {
           </Link>
         </div>
       </div>
-      <div>
+      <div className=" md:rounded-tl-[108px] sm:w-[1000px] ring-8 ring-red-800  md:rounded-br-[108px] md:rounded-tr-md md:rounded-bl-md rounded-md overflow-hidden">
         <img
           src={teachers}
           alt=""
-          className=" md:rounded-tl-[108px] md:rounded-br-[108px] md:rounded-tr-md md:rounded-bl-md rounded-md "
+          className=" md:rounded-tl-[108px] hover:scale-105 transition-all duration-300 sm:w-full md:rounded-br-[108px] md:rounded-tr-md md:rounded-bl-md rounded-md "
         />
       </div>
     </div>

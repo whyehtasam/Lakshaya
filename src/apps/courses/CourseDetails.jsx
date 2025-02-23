@@ -50,7 +50,7 @@ const CourseDetails = () => {
           className={
             isMobile
               ? "flex justify-center gap-2.5 flex-col w-full"
-              : "flex gap-2.5 w-64"
+              : "flex gap-2.5 min-w-80"
           }
         >
           <div

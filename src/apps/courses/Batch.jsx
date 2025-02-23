@@ -4,7 +4,9 @@ import axios from "axios";
 import SecondaryButton from "../../components/buttons/SecondaryButton";
 import { BatchContext } from "../../context/BatchContext";
 import { Link } from "react-router-dom";
-
+import Foundation from "../../assets/Foundation batch.jpg";
+import Target from "../../assets/Target batch.jpg";
+import New from "../../assets/New batch.jpg";
 const Batch = () => {
   const [batches, setBatches] = useState([]); // Original batches
   const [filteredBatches, setFilteredBatches] = useState([]); // Batches to display
@@ -143,8 +145,8 @@ const Batch = () => {
                 key={index}
                 className="sm:grid sm:grid-cols-2 transition-all duration-300 bg-white border border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-700 drop-shadow-lg sm:hover:scale-105 max-h- hover:bg-slate-50"
               >
-                <div className="p-5 h-72 sm:h-auto w-full">
-                  {category === "jee" && (
+                <div className="p-5 h-auto w-full">
+                  {/* {category === "jee" && (
                     <img
                       className="object-cover rounded-lg h-full w-full mx-auto"
                       src="https://www.adarshbarnwal.com/wp-content/uploads/2022/03/Jee-Mains.jpg"
@@ -164,10 +166,47 @@ const Batch = () => {
                       src="https://www.thengpschool.ac.in/asset/frontend/images/about/accrediation/left-banner.jpg"
                       alt={class_name}
                     />
+                  )} */}
+
+                  {batch_name === "Foundation Batch 1"  && (
+                    <img
+                      className="object-cover rounded-lg h-full w-full mx-auto"
+                      src={Foundation}
+                      alt={class_name}
+                    />
                   )}
+                  {batch_name === "Foundation Batch 2"  && (
+                    <img
+                      className="object-cover rounded-lg h-full w-full mx-auto"
+                      src={Foundation}
+                      alt={class_name}
+                    />
+                  )}
+                  {batch_name === "New Batch 1"  && (
+                    <img
+                      className="object-cover rounded-lg h-full w-full mx-auto"
+                      src={New}
+                      alt={class_name}
+                    />
+                  )}
+                  {batch_name === "New Batch 2"  && (
+                    <img
+                      className="object-cover rounded-lg h-full w-full mx-auto"
+                      src={New}
+                      alt={class_name}
+                    />
+                  )}
+                  {batch_name === "Udaan 3.0"  && (
+                    <img
+                      className="object-cover rounded-lg h-full w-full mx-auto"
+                      src={New}
+                      alt={class_name}
+                    />
+                  )}
+                  
                 </div>
-                <div className="grid px-5 py-5">
-                  <h5 className="mb-2 text-lg font-semibold tracking-tight text-gray-900 dark:text-white">
+                <div className="grid px-7 pb-5 sm:px-5 sm:py-5">
+                  <h5 className="mb-2 text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
                     {batch_name}
                   </h5>
                   <h5 className="mb-2 font-semibold tracking-tight text-gray-600 dark:text-white">

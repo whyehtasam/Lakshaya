@@ -44,11 +44,11 @@ export const Testimonials = () => {
           </p>
         </div>
         <div className="mt-12">
-          <ul className={`grid items-center gap-6 ${testimonials.length == 0 ? 'grid' : 'sm:grid-cols-2 lg:grid-cols-3' }`}>
+          <ul className={`grid items-center  gap-6 ${testimonials.length == 0 ? 'grid' : 'sm:grid-cols-2 lg:grid-cols-3' }`}>
             {testimonials.length > 0 ? (
               testimonials.map((item, idx) => (
-                <li key={idx} className="bg-white rounded-xl border shadow-md">
-                  <div className="p-4">
+                <li key={idx} className="bg-white h-full grid   overflow-hidden rounded-xl border shadow-md">
+                  <div className="p-4 h-[80px] bg-slate-100">
                     <svg
                       className="w-9 h-9 text-gray-300"
                       viewBox="0 0 35 35"
@@ -61,13 +61,13 @@ export const Testimonials = () => {
                       />
                     </svg>
                   </div>
-                  <figure>
+                  <figure className="h-full">
                     <blockquote>
-                      <p className="text-gray-800 text-lg font-semibold px-4 py-1">
+                      <p className="text-gray-800 text-lg font-semibold px-4 py-4 text-justify">
                         {item.Description}
                       </p>
                     </blockquote>
-                    <div className="flex items-center gap-x-4 p-4 mt-6 bg-indigo-50">
+                    <div className="flex items-center gap-x-4 p-4  bg-indigo-50">
                       <img
                         src={item.image_url}
                         className="w-16 h-16 rounded-full border-2 border-indigo-500"

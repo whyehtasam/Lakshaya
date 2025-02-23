@@ -49,8 +49,8 @@ const Newsupdates = () => {
 
       {/* <hr className="w-[80%] h-1 mx-auto my-4 bg-gray-100 border-0 rounded  dark:bg-gray-700"></hr> */}
 
-      <div className="grid gap-4 p-5 lg:grid-cols-5 sm:grid-cols-1 ">
-        <div className="sticky flex-none p-6 rounded-md shadow  bg-white">
+      <div className="grid gap-4 p-5 sm:max-w-5xl md:max-w-7xl mx-auto  bg-red-800/80 rounded-md">
+        {/* <div className="sticky flex-none p-6 rounded-md shadow  bg-white">
           <h1 className="text-3xl font-bold text-gray-800 md:text-5xl lg:text-4xl ">
             Filter By
           </h1>
@@ -121,14 +121,14 @@ const Newsupdates = () => {
             className="w-full gap-2 font-semibold tracking-wider text-center rounded-md  sm:w-fit lg:py-2 sm:px-6 sm:py-3 sm:text-lg outline outline-2 outline-red-800 outline-offset-2 hover:bg-red-700"
             label="Apply"
           />
-        </div>
+        </div> */}
 
-        <div className="p-6 rounded-md shadow grow lg:col-span-4">
+        <div className="p-6 rounded-md grid gap-5 shadow grow lg:col-span-4 ">
           {announcement.map(({ title, description }, index) => {
             return (
               <div
                 key={index}
-                className="grid content-center gap-2 p-5 mb-2 rounded-md shadow hover:shadow-md bg-white"
+                className="grid hover:-translate-y-1 transition-all duration-300 content-center gap-2 p-5  rounded-md shadow hover:shadow-md bg-white"
               >
                 <div className="grid content-center ">
                   <h1 className="text-2xl font-bold text-red-800">{title}</h1>
@@ -144,7 +144,7 @@ const Newsupdates = () => {
             );
           })}
 
-          <Pagination />
+          {/* <Pagination /> */}
         </div>
       </div>
       <div>{/* <LastYearChamp /> */}</div>
