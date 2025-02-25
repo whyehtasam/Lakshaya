@@ -199,7 +199,7 @@ const Batch = () => {
                   {batch_name === "Udaan 3.0"  && (
                     <img
                       className="object-cover rounded-lg h-full w-full mx-auto"
-                      src={New}
+                      src={Target}
                       alt={class_name}
                     />
                   )}
